@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "frantic": {
+      "type": "http",
+      "url": "https://api.gofrantic.com/mcp"
+    }
+  }
+}

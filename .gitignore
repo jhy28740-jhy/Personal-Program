@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+
+# 敏感文件
+.env
+*.env
+*_secret*
+*_token*
+*_password*
+config_prod.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志和临时文件
+*.log
+*.tmp
+temp/
+tmp/
+*.bak
+
+# 大文件
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 测试数据
+test_data/
+*.test

@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "name": "竞品A - 无线蓝牙耳机",
+      "url": "https://example.com/product-a",
+      "price": 299.0,
+      "sales": 2850,
+      "rating": 4.8
+    },
+    {
+      "name": "竞品B - 无线蓝牙耳机",
+      "url": "https://example.com/product-b",
+      "price": 259.0,
+      "sales": 3200,
+      "rating": 4.6
+    },
+    {
+      "name": "竞品C - 无线蓝牙耳机",
+      "url": "https://example.com/product-c",
+      "price": 399.0,
+      "sales": 1500,
+      "rating": 4.9
+    }
+  ],
+  "alert_price_change": 10
+}

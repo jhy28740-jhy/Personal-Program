@@ -1,0 +1,14 @@
+{
+  "input_folder": "输入图片",
+  "output_folder": "输出图片",
+  "operations": {
+    "compress": true,
+    "quality": 85,
+    "resize": false,
+    "target_width": 1920,
+    "target_height": 1080,
+    "watermark": false,
+    "watermark_text": "© 2024 我的品牌",
+    "convert_format": null
+  }
+}
