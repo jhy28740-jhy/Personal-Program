@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学可视化教学视频 - Manim作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .video-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .video-card video {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .video-description {
+            font-size: 0.95em;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            border: 1px solid rgba(255, 215, 0, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 50px;
+        }
+
+        .tech-stack {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📐 数学可视化教学</h1>
+            <p class="subtitle">用 Manim 创作的动态数学动画</p>
+        </header>
+
+        <div class="video-grid">
+
+            <div class="video-card">
+                <h2>🎯 函数的奇偶性</h2>
+                <video controls preload="metadata">
+                    <source src="成品视频/02_函数奇偶性教学_高清.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p class="video-description">
+                    完整讲解函数奇偶性的概念、对称性原理，通过 f(x)=x² 和 f(x)=x³ 动态演示偶函数的 y 轴对称与奇函数的原点对称。
+                </p>
+                <div class="tags">
+                    <span class="tag">高中数学</span>
+                    <span class="tag">函数性质</span>
+                    <span class="tag">对称性</span>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <h2>💖 傅里叶级数画心形</h2>
+                <video controls preload="metadata">
+                    <source src="成品视频/01_傅里叶级数画心形_高清.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p class="video-description">
+                    用 15 个旋转圆嵌套叠加，可视化傅里叶级数的几何意义。展示任何闭合曲线都能分解为不同频率的圆周运动。
+                </p>
+                <div class="tags">
+                    <span class="tag">傅里叶分析</span>
+                    <span class="tag">复数</span>
+                    <span class="tag">高等数学</span>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <h2>📊 勾股定理（测试版）</h2>
+                <video controls preload="metadata">
+                    <source src="成品视频/00_勾股定理_测试版.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p class="video-description">
+                    3-4-5 直角三角形的基础演示，验证 a²+b²=c² 公式。环境测试作品。
+                </p>
+                <div class="tags">
+                    <span class="tag">初中数学</span>
+                    <span class="tag">几何</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>🛠️ 技术栈</p>
+            <p class="tech-stack">
+                <strong>Manim Community v0.20.1</strong> | Python 3.13 | FFmpeg
+            </p>
+            <p style="margin-top: 15px;">
+                📧 作者：<a href="https://github.com/jhy28740-jhy">jhy28740-jhy</a>
+            </p>
+            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.7;">
+                © 2026 数学可视化教学项目 | 用心创作每一帧
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
