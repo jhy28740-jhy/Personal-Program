@@ -51,3 +51,15 @@ manim学习/media/Tex/
 manim学习/media/texts/
 manim学习/media/videos/**/partial_movie_files/
 !manim学习/成品视频/
+
+# 子模块转普通文件夹时的 .git 备份
+.git_backup_removed/
+**/.git_backup_removed/
+
+# 虚拟环境（大文件，勿提交）
+agent项目/agent_env/
+
+# 暂时忽略的独立项目（待整理）
+jhy28740-jhy.github.io/
+数学项目/
+desktop-pet/
