@@ -41,10 +41,11 @@
 
 ### 🤖 其他探索项目
 
-- **Agent项目** - AI Agent 应用开发
+- **[agent项目](./agent项目/)** - AI Agent 学习：LangGraph 示例、多智能体、周报生成器
+- **[desktop-pet](./desktop-pet/)** - Python 桌面宠物程序
+- **[数学项目](./数学项目/)** - LaTeX 公式助手网页工具
 - **Python学习** - Python 技术积累
 - **跨境电商数据** (kjds) - 数据分析与处理
-- **Claude 集成** - AI 工具开发
 
 ---
 
@@ -105,7 +106,9 @@
 │   ├── index.html         # 在线展示页面
 │   └── README.md          # 项目文档
 ├── frantic/               # AI数据服务方案
-├── agent项目/             # AI Agent 开发
+├── agent项目/             # AI Agent 学习与开发
+├── desktop-pet/           # 桌面宠物程序
+├── 数学项目/              # LaTeX 公式助手
 ├── kjds/                  # 跨境电商数据分析
 ├── python学习/            # Python技术积累
 └── README.md              # 本文档
