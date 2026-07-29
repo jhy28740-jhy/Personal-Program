@@ -1,0 +1,16 @@
+# 环境变量文件（包含API密钥）
+.env
+
+# Python虚拟环境
+agent_env/
+venv/
+__pycache__/
+*.pyc
+
+# IDE配置
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db

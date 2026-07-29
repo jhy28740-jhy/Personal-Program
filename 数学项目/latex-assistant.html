@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LaTeX 数学公式智能助手</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Microsoft YaHei", "KaTeX_Main", serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    padding: 32px;
+    margin: 20px 0;
+  }
+  h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #ecf0f1;
+  }
+  .tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #7f8c8d;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+  }
+  .tab.active {
+    color: #3498db;
+    border-bottom-color: #3498db;
+    font-weight: 600;
+  }
+  .tab:hover { color: #3498db; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  textarea, input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Courier New", monospace;
+    resize: vertical;
+    transition: border-color 0.2s;
+  }
+  textarea:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  textarea { min-height: 100px; }
+
+  .btn-group {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  button.primary {
+    flex: 1;
+    padding: 12px 24px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  button.primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52,152,219,0.3);
+  }
+  button.primary:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .result-box {
+    margin-top: 20px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    display: none;
+  }
+  .result-box.show { display: block; }
+  .result-box h3 {
+    font-size: 14px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+  }
+  .latex-code {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    overflow-x: auto;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .copy-btn:hover { background: #2980b9; }
+
+  .preview {
+    padding: 16px;
+    background: white;
+    border-radius: 6px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .tip {
+    margin-top: 16px;
+    padding: 12px;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #856404;
+  }
+  .tip strong { color: #856404; }
+
+  footer {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  footer a { color: #3498db; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+<!-- KaTeX for math rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>📐 LaTeX 数学公式智能助手</h1>
+  <p class="subtitle">基于 AI 的 LaTeX 公式补全、纠错与生成工具</p>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('complete')">公式补全</button>
+    <button class="tab" onclick="switchTab('fix')">语法纠错</button>
+    <button class="tab" onclick="switchTab('generate')">自然语言转换</button>
+  </div>
+
+  <!-- 公式补全 -->
+  <div id="complete" class="panel active">
+    <label>输入不完整的 LaTeX 公式</label>
+    <textarea id="completeInput" placeholder="例如: \int_0^{\pi} \sin(x)&#10;系统会自动补全缺失的部分"></textarea>
+
+    <div class="btn-group">
+      <button class="primary" onclick="processComplete()">🔮 智能补全</button>
+    </div>
+
+    <div id="completeResult" class="result-box">
+      <h3>✅ 补全结果</h3>
+      <div class="latex-code">
+        <button class="copy-btn" onclick="copyCode('completeCode')">复制</button>
+        <code id="completeCode"></code>
+      </div>
+      <div class="preview" id="completePreview"></div>
+    </div>
+
+    <div class="tip">
+      <strong>💡 提示:</strong> 这个工具会检测你公式中缺失的括号、缺少的参数、不完整的命令等,并自动补全。
+    </div>
+  </div>
+
+  <!-- 语法纠错 -->
+  <div id="fix" class="panel">
+    <label>输入有错误的 LaTeX 公式</label>
+    <textarea id="fixInput" placeholder="例如: \frac{1}{2  (缺少右括号)&#10;或者: \sum_{i=1}^n x_i  (语法问题)"></textarea>
+
+    <div class="btn-group">
+      <button class="primary" onclick="processFix()">🔧 自动纠错</button>
+    </div>
+
+    <div id="fixResult" class="result-box">
+      <h3>✅ 修正结果</h3>
+      <div class="latex-code">
+        <button class="copy-btn" onclick="copyCode('fixCode')">复制</button>
+        <code id="fixCode"></code>
+      </div>
+      <div class="preview" id="fixPreview"></div>
+      <p style="margin-top:12px; font-size:13px; color:#7f8c8d;" id="fixExplanation"></p>
+    </div>
+
+    <div class="tip">
+      <strong>💡 提示:</strong> AI 会找出语法错误并给出修正建议,同时解释错误原因。
+    </div>
+  </div>
+
+  <!-- 自然语言转换 -->
+  <div id="generate" class="panel">
+    <label>用中文描述你想要的数学公式</label>
+    <textarea id="generateInput" placeholder="例如: 从0到无穷大对 x 的平方乘以 e 的负 x 次方积分&#10;或者: 贝叶斯公式"></textarea>
+
+    <div class="btn-group">
+      <button class="primary" onclick="processGenerate()">✨ 生成公式</button>
+    </div>
+
+    <div id="generateResult" class="result-box">
+      <h3>✅ 生成的 LaTeX 代码</h3>
+      <div class="latex-code">
+        <button class="copy-btn" onclick="copyCode('generateCode')">复制</button>
+        <code id="generateCode"></code>
+      </div>
+      <div class="preview" id="generatePreview"></div>
+    </div>
+
+    <div class="tip">
+      <strong>💡 提示:</strong> 用自然语言描述数学表达式,AI 会将其转换为标准的 LaTeX 代码。
+    </div>
+  </div>
+</div>
+
+<footer>
+  由 <strong>纪浩阳</strong> 开发 ·
+  <a href="https://jhy28740-jhy.github.io" target="_blank">个人主页</a> ·
+  <a href="https://github.com/jhy28740-jhy" target="_blank">GitHub</a>
+</footer>
+
+<script>
+// ===== 标签切换 =====
+function switchTab(tabName) {
+  // 切换标签样式
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  // 切换面板
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(tabName).classList.add('active');
+}
+
+// ===== 渲染 LaTeX 预览 =====
+function renderLatex(code, previewId) {
+  const preview = document.getElementById(previewId);
+  try {
+    katex.render(code, preview, {
+      throwOnError: false,
+      displayMode: true
+    });
+  } catch (e) {
+    preview.innerHTML = '<span style="color:#e74c3c">LaTeX 渲染错误</span>';
+  }
+}
+
+// ===== 复制代码 =====
+function copyCode(codeId) {
+  const code = document.getElementById(codeId).textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    event.target.textContent = '✓ 已复制';
+    setTimeout(() => { event.target.textContent = '复制'; }, 2000);
+  });
+}
+
+// ===== API 配置 (请替换为你的 API) =====
+const API_CONFIG = {
+  // 这里用一个演示模式,你需要替换成真实的 API
+  mode: 'demo', // 'demo' 或 'api'
+  endpoint: 'https://api.example.com/chat', // 替换为你的 API 地址
+  apiKey: 'YOUR_API_KEY' // 替换为你的 API Key
+};
+
+// ===== 调用 AI (演示版本) =====
+async function callAI(prompt, systemPrompt) {
+  if (API_CONFIG.mode === 'demo') {
+    // 演示模式:模拟 AI 响应
+    await new Promise(resolve => setTimeout(resolve, 1000)); // 模拟延迟
+    return getDemoResponse(prompt);
+  } else {
+    // 真实 API 调用 (需要配置)
+    const response = await fetch(API_CONFIG.endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${API_CONFIG.apiKey}`
+      },
+      body: JSON.stringify({
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: prompt }
+        ]
+      })
+    });
+    const data = await response.json();
+    return data.choices[0].message.content;
+  }
+}
+
+// 演示响应 (模拟 AI 行为)
+function getDemoResponse(input) {
+  const lower = input.toLowerCase();
+
+  // 补全演示
+  if (lower.includes('\\int')) {
+    return '\\int_0^{\\pi} \\sin(x) \\, dx';
+  } else if (lower.includes('\\frac{1}{2')) {
+    return '\\frac{1}{2}';
+  } else if (lower.includes('\\sum')) {
+    return '\\sum_{i=1}^{n} x_i';
+  }
+
+  // 纠错演示
+  else if (lower.includes('缺少') || lower.includes('错误')) {
+    return '\\frac{a+b}{c}';
+  }
+
+  // 生成演示
+  else if (lower.includes('积分') || lower.includes('贝叶斯') || lower.includes('泰勒')) {
+    if (lower.includes('贝叶斯')) {
+      return 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}';
+    } else if (lower.includes('泰勒')) {
+      return 'f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n';
+    } else {
+      return '\\int_0^{\\infty} x^2 e^{-x} \\, dx';
+    }
+  }
+
+  // 默认响应
+  return '\\text{演示模式下的示例输出}';
+}
+
+// ===== 公式补全 =====
+async function processComplete() {
+  const input = document.getElementById('completeInput').value.trim();
+  if (!input) {
+    alert('请输入 LaTeX 公式');
+    return;
+  }
+
+  const btn = event.target;
+  btn.disabled = true;
+  btn.textContent = '⏳ 处理中...';
+
+  try {
+    const result = await callAI(
+      `请补全这个不完整的 LaTeX 公式,只返回补全后的完整 LaTeX 代码,不要有任何解释:\n${input}`,
+      '你是一个 LaTeX 专家,擅长补全和修正数学公式。'
+    );
+
+    document.getElementById('completeCode').textContent = result;
+    renderLatex(result, 'completePreview');
+    document.getElementById('completeResult').classList.add('show');
+  } catch (error) {
+    alert('处理失败: ' + error.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '🔮 智能补全';
+  }
+}
+
+// ===== 语法纠错 =====
+async function processFix() {
+  const input = document.getElementById('fixInput').value.trim();
+  if (!input) {
+    alert('请输入 LaTeX 公式');
+    return;
+  }
+
+  const btn = event.target;
+  btn.disabled = true;
+  btn.textContent = '⏳ 处理中...';
+
+  try {
+    const result = await callAI(
+      `这个 LaTeX 公式有语法错误,请修正它并返回正确的代码:\n${input}\n\n只返回修正后的 LaTeX 代码,不要解释。`,
+      '你是一个 LaTeX 专家,擅长发现和修正语法错误。'
+    );
+
+    document.getElementById('fixCode').textContent = result;
+    renderLatex(result, 'fixPreview');
+    document.getElementById('fixExplanation').textContent = '已自动修正语法错误';
+    document.getElementById('fixResult').classList.add('show');
+  } catch (error) {
+    alert('处理失败: ' + error.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '🔧 自动纠错';
+  }
+}
+
+// ===== 自然语言生成 =====
+async function processGenerate() {
+  const input = document.getElementById('generateInput').value.trim();
+  if (!input) {
+    alert('请输入公式描述');
+    return;
+  }
+
+  const btn = event.target;
+  btn.disabled = true;
+  btn.textContent = '⏳ 生成中...';
+
+  try {
+    const result = await callAI(
+      `将这段中文描述转换为 LaTeX 数学公式,只返回 LaTeX 代码:\n${input}`,
+      '你是一个数学公式专家,擅长将自然语言转换为标准 LaTeX 代码。'
+    );
+
+    document.getElementById('generateCode').textContent = result;
+    renderLatex(result, 'generatePreview');
+    document.getElementById('generateResult').classList.add('show');
+  } catch (error) {
+    alert('生成失败: ' + error.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '✨ 生成公式';
+  }
+}
+
+// ===== 页面加载提示 =====
+window.addEventListener('load', () => {
+  if (API_CONFIG.mode === 'demo') {
+    console.log('%c当前为演示模式', 'color: #e67e22; font-size: 14px; font-weight: bold;');
+    console.log('要使用真实 AI,请修改 API_CONFIG 并设置 mode 为 "api"');
+  }
+});
+</script>
+
+</body>
+</html>

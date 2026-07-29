@@ -59,7 +59,8 @@ manim学习/media/videos/**/partial_movie_files/
 # 虚拟环境（大文件，勿提交）
 agent项目/agent_env/
 
-# 暂时忽略的独立项目（待整理）
+# 独立的 GitHub Pages 用户主页仓库（不嵌套，保持独立）
 jhy28740-jhy.github.io/
-数学项目/
-desktop-pet/
+
+# 个人工作文件（含真实姓名/部门，不公开）
+agent项目/周报输出/

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AI Agent 架构深度解析</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;line-height:1.8;color:#333;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);padding:20px;margin:0}
+.container{max-width:1200px;margin:0 auto;background:white;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:60px 40px;text-align:center;border-radius:20px 20px 0 0}
+.header h1{font-size:3em;margin-bottom:20px}
+.content{padding:40px}
+.nav{background:#f8f9fa;padding:25px;border-radius:10px;margin-bottom:30px;position:sticky;top:20px}
+.nav h2{color:#667eea;margin-bottom:15px}
+.nav a{color:#555;text-decoration:none;display:block;padding:8px 12px;margin:5px 0;border-radius:5px;transition:all 0.3s}
+.nav a:hover{background:#667eea;color:white;transform:translateX(5px)}
+.section{margin-bottom:50px}
+h2{color:#667eea;font-size:2em;margin:30px 0 20px;padding-bottom:10px;border-bottom:3px solid #667eea}
+h3{color:#764ba2;font-size:1.5em;margin:25px 0 15px}
+p{margin-bottom:15px;font-size:1.05em}
+ul{margin:15px 0 15px 30px}
+li{margin:8px 0}
+table{width:100%;border-collapse:collapse;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:12px;text-align:left}
+td{padding:12px;border-bottom:1px solid #e0e0e0}
+tr:hover{background:#f8f9fa}
+pre{background:#2d2d2d;color:#f8f8f2;padding:20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,monospace}
+.card{background:#f8f9fa;padding:20px;border-radius:8px;margin:20px 0;border-left:4px solid #667eea;transition:all 0.3s}
+.card:hover{box-shadow:0 5px 15px rgba(102,126,234,0.2);transform:translateY(-2px)}
+a{color:#667eea;text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>🤖 AI Agent 架构深度解析</h1>
+<p>基于2026年主流Agent框架的架构总结</p>
+</div>
+<div class="content">
+<div class="nav">
+<h2>📋 目录</h2>
+<a href="#what">什么是AI Agent</a>
+<a href="#arch">核心架构模式</a>
+<a href="#comp">四大核心组件</a>
+<a href="#patterns">主流设计模式</a>
+<a href="#frameworks">热门框架对比</a>
+</div>
+<section id="what" class="section">
+<h2>🎯 什么是AI Agent</h2>
+<div class="card">
+<p><strong>AI Agent（智能体）</strong>是一个能够自主感知环境、做出决策并执行操作的智能系统。与传统LLM不同，Agent运行在<strong>持续循环</strong>中。</p>
+<ul>
+<li>🎯 自主决策：根据目标分解任务</li>
+<li>🔧 工具调用：使用外部API、数据库</li>
+<li>🧠 记忆系统：保存上下文和历史</li>
+<li>🔄 迭代改进：观察结果并调整</li>
+</ul>
+</div>
+<h3>对比表</h3>
+<table>
+<tr><th>特性</th><th>普通LLM</th><th>AI Agent</th></tr>
+<tr><td>交互模式</td><td>单次输入输出</td><td>持续循环</td></tr>
+<tr><td>工具使用</td><td>❌</td><td>✅</td></tr>
+<tr><td>记忆能力</td><td>对话上下文</td><td>长短期记忆</td></tr>
+<tr><td>自主性</td><td>需要明确指令</td><td>自主规划</td></tr>
+</table>
+</section>
+<section id="arch" class="section">
+<h2>🔁 核心架构模式</h2>
+<h3>Agent循环：Observe → Think → Act</h3>
+<div class="card">
+<pre style="background:#f8f9fa;color:#333;border:2px solid #e0e0e0">
+用户目标 → 观察环境 → LLM思考 → 执行行动
+              ↑                      ↓
+              └──────── 完成? ────────┘
+                        No: 继续循环
+                        Yes: 输出结果
+</pre>
+</div>
+</section>
+<section id="comp" class="section">
+<h2>🧩 四大核心组件</h2>
+<div class="card">
+<h3>1️⃣ LLM核心（Brain）</h3>
+<p>推理、决策、自然语言理解（GPT-4、Claude、Gemini）</p>
+</div>
+<div class="card">
+<h3>2️⃣ 规划器（Planner）</h3>
+<p>任务分解与策略规划</p>
+<ul>
+<li><strong>ReAct</strong>：推理+行动交替</li>
+<li><strong>Plan-and-Execute</strong>：先规划再执行</li>
+<li><strong>Tree of Thoughts</strong>：探索多条路径</li>
+</ul>
+</div>
+<div class="card">
+<h3>3️⃣ 工具层（Tools）</h3>
+<p>搜索、数据库、API、计算器、文件操作等</p>
+</div>
+<div class="card">
+<h3>4️⃣ 记忆系统（Memory）</h3>
+<p>工作记忆（临时）+ 短期记忆（会话）+ 长期记忆（向量数据库）</p>
+</div>
+</section>
+<section id="patterns" class="section">
+<h2>📋 主流设计模式</h2>
+<div class="card">
+<h3>ReAct模式</h3>
+<p>推理和行动交替进行，灵活但成本高</p>
+</div>
+<div class="card">
+<h3>Plan-and-Execute</h3>
+<p>先规划再执行，高效但难调整</p>
+</div>
+<div class="card">
+<h3>Tree of Thoughts</h3>
+<p>探索多条思路，适合创造性任务</p>
+</div>
+</section>
+<section id="frameworks" class="section">
+<h2>🏆 热门框架对比</h2>
+<div class="card">
+<h3>1. AutoGPT ⭐ 185k</h3>
+<p><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank">GitHub链接</a></p>
+<p>最早的自主Agent项目，自动分解任务，支持长期记忆</p>
+</div>
+<div class="card">
+<h3>2. CrewAI ⭐ 40k</h3>
+<p><a href="https://github.com/crewAIInc/crewAI" target="_blank">GitHub链接</a></p>
+<p>多Agent协作框架，角色扮演机制，适合团队工作流</p>
+</div>
+<div class="card">
+<h3>3. LangGraph ⭐ 36.6k</h3>
+<p><a href="https://github.com/langchain-ai/langgraph" target="_blank">GitHub链接</a></p>
+<p>图结构建模，生产级稳定性，适合复杂业务逻辑</p>
+</div>
+<table>
+<tr><th>框架</th><th>Stars</th><th>定位</th><th>难度</th><th>最佳用途</th></tr>
+<tr><td>AutoGPT</td><td>185k</td><td>自主探索</td><td>低</td><td>快速原型</td></tr>
+<tr><td>CrewAI</td><td>40k</td><td>多Agent协作</td><td>低</td><td>团队工作流</td></tr>
+<tr><td>LangGraph</td><td>36.6k</td><td>图工作流</td><td>中</td><td>企业应用</td></tr>
+</table>
+</section>
+<div class="card" style="background:#fff3cd;border-left:4px solid #ffc107">
+<h3>🎯 关键要点</h3>
+<ol>
+<li><strong>循环结构</strong>：Observe → Think → Act</li>
+<li><strong>四大组件</strong>：LLM + Planner + Tools + Memory</li>
+<li><strong>选择框架</strong>：根据场景选择合适的框架</li>
+</ol>
+<p><strong>下一步</strong>：跑通第一个Agent示例 → 理解工具调用 → 完成实战项目</p>
+</div>
+<p style="text-align:center;margin-top:50px;color:#999">文档版本 v1.0 | 2026-07-16</p>
+</div>
+</div>
+</body>
+</html>
