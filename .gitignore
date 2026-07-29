@@ -44,3 +44,10 @@ tmp/
 # 测试数据
 test_data/
 *.test
+
+# Manim 临时文件（保留成品视频）
+manim学习/media/images/
+manim学习/media/Tex/
+manim学习/media/texts/
+manim学习/media/videos/**/partial_movie_files/
+!manim学习/成品视频/
