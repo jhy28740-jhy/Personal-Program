@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淮南市公务员考试备考计划</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background: #f6f8fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #e1e4e8;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #0366d6;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #586069;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 25px;
+            border: 2px solid #e1e4e8;
+            background: white;
+            color: #586069;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover {
+            border-color: #0366d6;
+            color: #0366d6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(3,102,214,0.1);
+        }
+
+        .tab-button.active {
+            background: #0366d6;
+            color: white;
+            border-color: #0366d6;
+        }
+
+        .content-section {
+            display: none;
+            background: white;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #0366d6;
+            border-bottom: 2px solid #0366d6;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #24292e;
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+        }
+
+        .position-card {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .position-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+            border-color: #0366d6;
+        }
+
+        .position-title {
+            font-size: 1.3em;
+            color: #0366d6;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+
+        .badge.national {
+            background: #d73a49;
+        }
+
+        .badge.provincial {
+            background: #6f42c1;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .info-item {
+            padding: 10px;
+            background: white;
+            border-left: 3px solid #0366d6;
+            border-radius: 3px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #586069;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            color: #24292e;
+        }
+
+        .advantage-list, .reason-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .advantage-list li, .reason-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .advantage-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+
+        .reason-list li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: #0366d6;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #e1e4e8;
+        }
+
+        th {
+            background: #f6f8fa;
+            font-weight: 600;
+            color: #24292e;
+        }
+
+        tr:hover {
+            background: #f6f8fa;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -23px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0366d6;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #0366d6;
+        }
+
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: -18px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% - 12px);
+            background: #e1e4e8;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .phase-title {
+            font-weight: 600;
+            color: #0366d6;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .phase-content {
+            color: #586069;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .star-rating {
+            color: #ffc107;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #586069;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .tab-button {
+                min-width: 100%;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎯 淮南市公务员考试备考计划</h1>
+            <p class="subtitle">数学专业硕士应届生专属 | 国考+省考双轨并行</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="nav-tabs">
+            <button class="tab-button active" onclick="showTab('targets')">
+                📋 目标选定
+            </button>
+            <button class="tab-button" onclick="showTab('guide')">
+                💡 备考指南
+            </button>
+            <button class="tab-button" onclick="showTab('plan')">
+                📅 备考计划
+            </button>
+        </div>
+
+        <!-- 目标选定 -->
+        <div id="targets" class="content-section active">
+            <h2>📋 目标选定</h2>
+
+            <h3>第一梯队（主攻目标）</h3>
+
+            <div class="position-card">
+                <div class="position-title">
+                    目标1：中国人民银行淮南市分行 - 金融数据分析岗
+                    <span class="badge national">国考</span>
+                    <span class="star-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <div class="info-label">专业要求</div>
+                        <div class="info-value">数学类、统计学类（硕士）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">招考人数</div>
+                        <div class="info-value">1人</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">竞争程度</div>
+                        <div class="info-value">低（约30-50人报名）</div>
+                    </div>
+                </div>
+                <p><strong>选择理由：</strong></p>
+                <ul class="advantage-list">
+                    <li><strong>硕士专属通道</strong>，本科生无法报考</li>
+                    <li><strong>央行系统待遇最好</strong>，年收入约15-20万</li>
+                    <li><strong>工作稳定体面</strong>，金融数据分析与数学专业完美匹配</li>
+                    <li><strong>竞争低</strong>，硕士+数学专业双重筛选</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>🎯 推荐理由：</strong>这是最理想的岗位！待遇好、专业对口、竞争小，强烈建议作为国考第一志愿。
+                </div>
+            </div>
+
+            <div class="position-card">
+                <div class="position-title">
+                    目标2：淮南市统计局（市直） - 统计建模与数据分析
+                    <span class="badge provincial">省考</span>
+                    <span class="star-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <div class="info-label">专业要求</div>
+                        <div class="info-value">数学与应用数学、统计学</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">招考人数</div>
+                        <div class="info-value">2人</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">竞争程度</div>
+                        <div class="info-value">低（约50-80人报名）</div>
+                    </div>
+                </div>
+                <p><strong>选择理由：</strong></p>
+                <ul class="advantage-list">
+                    <li><strong>市直核心部门</strong>，负责全市统计工作</li>
+                    <li><strong>专业100%匹配</strong>，数学建模是核心工作</li>
+                    <li>工作内容：经济指标统计、数据建模分析、统计报告</li>
+                    <li>招2人，容错率高</li>
+                </ul>
+            </div>
+
+            <div class="position-card">
+                <div class="position-title">
+                    目标3：八公山区统计局 - 综合统计岗
+                    <span class="badge provincial">省考</span>
+                    <span class="badge">应届专属</span>
+                    <span class="star-rating">⭐⭐⭐⭐</span>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <div class="info-label">专业要求</div>
+                        <div class="info-value">数学与应用数学、统计学、应用统计学</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">招考人数</div>
+                        <div class="info-value">1人</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">竞争程度</div>
+                        <div class="info-value">极低（约20-30人报名）</div>
+                    </div>
+                </div>
+                <p><strong>选择理由：</strong></p>
+                <ul class="advantage-list">
+                    <li><strong>应届生专属通道</strong>，限制往届生报考</li>
+                    <li><strong>竞争最小</strong>，上岸概率最高</li>
+                    <li>八公山区离市区近，生活便利</li>
+                    <li>统计局工作轻松稳定，适合长期发展</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>💡 保底岗位：</strong>如果前两个岗位竞争激烈，这是最稳妥的选择，几乎可以确保上岸。
+                </div>
+            </div>
+
+            <h3>第二梯队（备选目标）</h3>
+
+            <div class="position-card">
+                <div class="position-title">
+                    备选1：淮南市税务局系统 - 一级行政执法员
+                    <span class="badge national">国考</span>
+                    <span class="badge">应届专属</span>
+                    <span class="star-rating">⭐⭐⭐⭐</span>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <div class="info-label">可选单位</div>
+                        <div class="info-value">谢家集区/八公山区/寿县税务局（三选一）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">招考人数</div>
+                        <div class="info-value">每个单位2人</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">竞争程度</div>
+                        <div class="info-value">中等（约100-150人/单位）</div>
+                    </div>
+                </div>
+                <p><strong>选择理由：</strong></p>
+                <ul class="advantage-list">
+                    <li>国考垂直系统，待遇好（比省考略高）</li>
+                    <li>税务数据工作高度适配数学专业</li>
+                    <li>岗位稳定，职业发展路径清晰</li>
+                    <li>建议选谢家集区或八公山区（离市区近）</li>
+                </ul>
+            </div>
+
+            <div class="position-card">
+                <div class="position-title">
+                    备选2：淮南市公安局 - 大数据分析专项岗
+                    <span class="badge provincial">省考</span>
+                    <span class="star-rating">⭐⭐⭐⭐</span>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <div class="info-label">专业要求</div>
+                        <div class="info-value">数学与应用数学、信息与计算科学、统计学</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">招考人数</div>
+                        <div class="info-value">3人</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">工作性质</div>
+                        <div class="info-value">技术型警察（办公室数据分析）</div>
+                    </div>
+                </div>
+                <p><strong>选择理由：</strong></p>
+                <ul class="advantage-list">
+                    <li><strong>技术岗位</strong>，无需一线高强度巡逻执勤</li>
+                    <li>主要工作：警务大数据研判、犯罪数据分析</li>
+                    <li>男性优势，公安系统待遇好</li>
+                    <li>需通过体能测试（但技术岗标准较低）</li>
+                </ul>
+            </div>
+
+            <div class="position-card">
+                <div class="position-title">
+                    备选3：淮南市发改委 - 机关综合岗
+                    <span class="badge provincial">省考</span>
+                    <span class="star-rating">⭐⭐⭐⭐</span>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <div class="info-label">专业要求</div>
+                        <div class="info-value">理学门类、工学、金融学</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">招考人数</div>
+                        <div class="info-value">1人</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">工作内容</div>
+                        <div class="info-value">项目测算、经济指标研判、政策研究</div>
+                    </div>
+                </div>
+                <p><strong>选择理由：</strong></p>
+                <ul class="advantage-list">
+                    <li><strong>市直核心部门</strong>，发改委是政府核心智囊</li>
+                    <li>职业发展好，晋升快</li>
+                    <li>工作内容适合数学专业（宏观经济分析、项目可行性研究）</li>
+                    <li>硕士应届生有明显优势</li>
+                </ul>
+            </div>
+
+            <h3>完整目标体系对比</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>岗位</th>
+                        <th>考试类型</th>
+                        <th>专业匹配度</th>
+                        <th>竞争程度</th>
+                        <th>推荐指数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>中国人民银行淮南市分行</td>
+                        <td>国考</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐⭐</span></td>
+                        <td>低</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐⭐</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>淮南市统计局（市直）</td>
+                        <td>省考</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐⭐</span></td>
+                        <td>低</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐⭐</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>八公山区统计局</td>
+                        <td>省考</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐⭐</span></td>
+                        <td>极低</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>淮南市税务局系统</td>
+                        <td>国考</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐⭐</span></td>
+                        <td>中等</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>淮南市公安局大数据岗</td>
+                        <td>省考</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐⭐</span></td>
+                        <td>中等</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>淮南市发改委</td>
+                        <td>省考</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐</span></td>
+                        <td>中等</td>
+                        <td><span class="star-rating">⭐⭐⭐⭐</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h4>🎯 报考策略建议</h4>
+                <p><strong>国考（2026年10-11月）：</strong></p>
+                <ul class="reason-list">
+                    <li><strong>首选：</strong>中国人民银行淮南市分行（硕士专属，竞争最小）</li>
+                    <li><strong>备选：</strong>税务局系统（谢家集/八公山/寿县三选一）</li>
+                </ul>
+                <p><strong>省考（2027年2-4月）：</strong></p>
+                <ul class="reason-list">
+                    <li><strong>首选：</strong>淮南市统计局（市直核心，专业最匹配）</li>
+                    <li><strong>备选1：</strong>八公山区统计局（应届专属，最稳妥）</li>
+                    <li><strong>备选2：</strong>公安局大数据岗（男性优势，招3人）</li>
+                    <li><strong>备选3：</strong>发改委（核心部门，发展好）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 备考指南 -->
+        <div id="guide" class="content-section">
+            <h2>💡 备考指南</h2>
+
+            <h3>📊 专业优势分析</h3>
+
+            <div class="position-card">
+                <h4>数学专业在行测考试中的优势</h4>
+                <ul class="advantage-list">
+                    <li><strong>数量关系模块（天然优势）</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>数学运算、应用题、数列推理</li>
+                            <li>行程问题、工程问题、排列组合</li>
+                            <li>概率统计、函数方程</li>
+                            <li><span style="color: #28a745;">✅ 你的优势：可以冲击90%以上正确率</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>资料分析模块（计算优势）</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>增长率、比重、平均数、倍数计算</li>
+                            <li>图表数据分析、综合判断</li>
+                            <li><span style="color: #28a745;">✅ 你的优势：计算速度快，估算能力强</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>逻辑判断模块（逻辑思维优势）</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>形式逻辑推理（数学逻辑基础）</li>
+                            <li>真假话问题、集合推理</li>
+                            <li><span style="color: #28a745;">✅ 你的优势：严密的逻辑思维训练</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="position-card">
+                <h4>需要补充的能力</h4>
+                <ul class="advantage-list">
+                    <li><strong>言语理解与表达（重点提升）</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>阅读理解、逻辑填空、语句排序</li>
+                            <li>需要大量练习积累</li>
+                            <li><span style="color: #d73a49;">⚠️ 弱项：理工科背景，语文能力需加强</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>常识判断（知识面拓展）</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>政治、法律、经济、科技、历史、地理</li>
+                            <li>需要系统学习和记忆</li>
+                            <li><span style="color: #d73a49;">⚠️ 弱项：知识面较窄，需补充文科知识</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>📝 申论考试优劣势</h3>
+
+            <div class="position-card">
+                <h4>优势方面</h4>
+                <ul class="advantage-list">
+                    <li><strong>逻辑分析能力强</strong>：数学训练让你擅长找因果关系、分析问题结构</li>
+                    <li><strong>数据敏感度高</strong>：材料中的统计数据能快速提取和分析</li>
+                    <li><strong>严谨性好</strong>：答题条理清晰，论证逻辑严密</li>
+                </ul>
+            </div>
+
+            <div class="position-card">
+                <h4>需要提升的能力</h4>
+                <ul class="advantage-list">
+                    <li><strong>政治素养和时政积累</strong>：需要学习政府工作思维和政策表述</li>
+                    <li><strong>文字表达能力</strong>：从数学语言转向公文写作语言</li>
+                    <li><strong>热点问题理解</strong>：关注社会民生、经济发展等时事热点</li>
+                </ul>
+            </div>
+
+            <h3>🎯 备考策略建议</h3>
+
+            <div class="highlight-box">
+                <h4>核心策略：扬长避短，强项拉分</h4>
+                <ul class="reason-list">
+                    <li><strong>行测策略：</strong>数量关系和资料分析务必拿高分（目标90%+），弥补言语理解的短板</li>
+                    <li><strong>申论策略：</strong>重点练习材料分析和对策提出，发挥逻辑优势</li>
+                    <li><strong>时间分配：</strong>前期多投入时间补短板（言语、常识），中后期发挥强项优势</li>
+                    <li><strong>差异化优势：</strong>数学专业考生在数量关系上的优势能拉开10-15分差距</li>
+                </ul>
+            </div>
+
+            <h3>📚 推荐备考资料</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>科目</th>
+                        <th>推荐资料</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>行测</td>
+                        <td>粉笔/中公/华图系统班</td>
+                        <td>选一家机构，系统学习</td>
+                    </tr>
+                    <tr>
+                        <td>申论</td>
+                        <td>《申论的规矩》+粉笔申论</td>
+                        <td>先学方法论，再练习</td>
+                    </tr>
+                    <tr>
+                        <td>真题</td>
+                        <td>近10年国考+省考真题</td>
+                        <td>真题是最好的练习材料</td>
+                    </tr>
+                    <tr>
+                        <td>时政</td>
+                        <td>粉笔时政APP</td>
+                        <td>每日10分钟积累</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 备考计划 -->
+        <div id="plan" class="content-section">
+            <h2>📅 六个月备考计划</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="phase-title">第一阶段：基础入门（第1-2个月）</div>
+                    <div class="phase-content">
+                        <p><strong>目标：</strong>了解考试内容，建立知识框架，找到薄弱环节</p>
+                        <p><strong>学习内容：</strong></p>
+                        <ul class="reason-list">
+                            <li>看完一遍系统课（粉笔/中公/华图选一家）</li>
+                            <li>做完一套真题，了解各模块难度</li>
+                            <li>开始积累常识和时政知识</li>
+                            <li>申论：学习五大题型的基本方法</li>
+                        </ul>
+                        <p><strong>时间分配：</strong>每天3-4小时（行测2.5小时 + 申论1小时 + 时政0.5小时）</p>
+                        <p><strong>检验标准：</strong>能完整做完一套真题，知道自己的弱项在哪里</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="phase-title">第二阶段：专项突破（第3-4个月）</div>
+                    <div class="phase-content">
+                        <p><strong>目标：</strong>针对性提升薄弱模块，强化优势模块</p>
+                        <p><strong>学习内容：</strong></p>
+                        <ul class="reason-list">
+                            <li><strong>行测重点：</strong>言语理解专项训练（每天50题）</li>
+                            <li><strong>行测保持：</strong>数量关系和资料分析保持手感（每天20题）</li>
+                            <li>常识判断：系统学习政治、法律、经济模块</li>
+                            <li><strong>申论重点：</strong>每周写2-3篇申论题，找老师批改</li>
+                            <li>积累热点素材和政策表述</li>
+                        </ul>
+                        <p><strong>时间分配：</strong>每天4-5小时（行测3小时 + 申论1.5小时 + 时政0.5小时）</p>
+                        <p><strong>检验标准：</strong>言语理解正确率提升到70%以上，申论有基本的答题框架</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="phase-title">第三阶段：真题刷题（第5个月）</div>
+                    <div class="phase-content">
+                        <p><strong>目标：</strong>熟悉考试节奏，提高答题速度和准确率</p>
+                        <p><strong>学习内容：</strong></p>
+                        <ul class="reason-list">
+                            <li>每天一套行测真题（严格2小时计时）</li>
+                            <li>每周两套申论真题（严格3小时计时）</li>
+                            <li>错题整理和总结（非常重要！）</li>
+                            <li>开始关注国考职位表（10月发布）</li>
+                        </ul>
+                        <p><strong>时间分配：</strong>每天5-6小时（真题训练4小时 + 错题总结2小时）</p>
+                        <p><strong>检验标准：</strong>行测稳定在65-70分，申论50-55分</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="phase-title">第四阶段：国考冲刺（第6个月上半月）</div>
+                    <div class="phase-content">
+                        <p><strong>目标：</strong>保持状态，查漏补缺，全力备战国考</p>
+                        <p><strong>学习内容：</strong></p>
+                        <ul class="reason-list">
+                            <li>每天一套模拟题（上午行测，下午申论）</li>
+                            <li>复习错题本，强化记忆</li>
+                            <li>关注考前时政热点</li>
+                            <li>调整作息，适应考试时间</li>
+                        </ul>
+                        <p><strong>时间分配：</strong>每天6-7小时（模拟考试5小时 + 复习巩固2小时）</p>
+                        <p><strong>考试时间：</strong>11月底（预计11月23-24日）</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="phase-title">第五阶段：省考准备（国考后-次年2月）</div>
+                    <div class="phase-content">
+                        <p><strong>目标：</strong>调整心态，针对省考特点继续提升</p>
+                        <p><strong>学习内容：</strong></p>
+                        <ul class="reason-list">
+                            <li>分析国考得失，针对性补弱</li>
+                            <li>研究安徽省考真题特点（题型、难度）</li>
+                            <li>保持题感，每周3-4套真题</li>
+                            <li>申论重点关注安徽省情和地方热点</li>
+                        </ul>
+                        <p><strong>时间分配：</strong>每天4-5小时（国考后适当放松，春节后恢复）</p>
+                        <p><strong>注意：</strong>关注2月的省考职位表发布</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="phase-title">第六阶段：省考冲刺（3月）</div>
+                    <div class="phase-content">
+                        <p><strong>目标：</strong>最后冲刺，全力备战安徽省考</p>
+                        <p><strong>学习内容：</strong></p>
+                        <ul class="reason-list">
+                            <li>每天一套安徽省考真题或模拟题</li>
+                            <li>重点复习安徽省情、时政热点</li>
+                            <li>申论练习地方特色题型</li>
+                            <li>保持良好状态，迎接考试</li>
+                        </ul>
+                        <p><strong>时间分配：</strong>每天6-7小时（全力冲刺）</p>
+                        <p><strong>考试时间：</strong>4月中旬（预计4月12-13日）</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>📊 每日作息建议</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>安排</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:30-9:00</td>
+                        <td>早读：背诵时政、常识</td>
+                        <td>利用记忆最佳时段</td>
+                    </tr>
+                    <tr>
+                        <td>9:00-11:00</td>
+                        <td>行测练习（模拟上午考试）</td>
+                        <td>完整2小时，培养考试感觉</td>
+                    </tr>
+                    <tr>
+                        <td>11:00-12:00</td>
+                        <td>错题整理</td>
+                        <td>及时总结，避免重复错误</td>
+                    </tr>
+                    <tr>
+                        <td>14:00-17:00</td>
+                        <td>申论练习（模拟下午考试）</td>
+                        <td>完整3小时，适应考试强度</td>
+                    </tr>
+                    <tr>
+                        <td>19:00-21:00</td>
+                        <td>专项训练或视频课</td>
+                        <td>针对薄弱环节加强</td>
+                    </tr>
+                    <tr>
+                        <td>21:00-22:00</td>
+                        <td>时政新闻、热点积累</td>
+                        <td>睡前轻松学习</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h4>⚠️ 重要提醒</h4>
+                <ul class="reason-list">
+                    <li><strong>国考报名时间：</strong>2026年10月中旬（密切关注国家公务员局官网）</li>
+                    <li><strong>省考报名时间：</strong>2027年2月底或3月初（关注安徽省人事考试网）</li>
+                    <li><strong>体检准备：</strong>公安岗需要提前练习体能测试（引体向上、1000米跑等）</li>
+                    <li><strong>面试准备：</strong>笔试通过后立即开始准备结构化面试</li>
+                    <li><strong>心态调整：</strong>国考+省考双保险，不要因为一次失败而放弃</li>
+                </ul>
+            </div>
+
+            <h3>🎯 分数目标</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>科目</th>
+                        <th>满分</th>
+                        <th>目标分数</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>行测</td>
+                        <td>100分</td>
+                        <td>70分以上</td>
+                        <td>发挥数学优势，数量+资料满分</td>
+                    </tr>
+                    <tr>
+                        <td>申论</td>
+                        <td>100分</td>
+                        <td>55分以上</td>
+                        <td>重点突破材料分析和对策题</td>
+                    </tr>
+                    <tr>
+                        <td>总分</td>
+                        <td>200分</td>
+                        <td>125分以上</td>
+                        <td>目标岗位进面试线在120-130分</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>💪 相信自己，数学专业的优势会让你在公考中脱颖而出！</p>
+        <p>祝你备考顺利，成功上岸！🎉</p>
+    </footer>
+
+    <script>
+        function showTab(tabName) {
+            // 隐藏所有内容区域
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // 移除所有按钮的active状态
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // 显示选中的内容区域
+            document.getElementById(tabName).classList.add('active');
+
+            // 激活对应的按钮
+            event.target.classList.add('active');
+
+            // 滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
