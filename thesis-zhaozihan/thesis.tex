@@ -1,78 +1,82 @@
-% !TeX program = xelatex
-% æœ¬æ–‡ä»¶æŒ‰æ‰€ç»™æ—§ç‰ˆ cctbook æ¨¡æ¿çš„ç‰ˆå¼å‚æ•°ç­‰æ•ˆé‡å»ºã€‚
-% æ­£æ–‡ä¸­çš„ MathType 7 å…¬å¼é‡‡ç”¨åŸç¨¿å¯¼å‡ºçš„é«˜åˆ†è¾¨ç‡é€æ˜å›¾ï¼Œä»¥é¿å…å…¬å¼å†…å®¹æŸå¤±ã€‚
-\documentclass[12pt,oneside,openany,fontset=windows]{ctexbook}
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx}
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}
+\def\az{\alpha}
+\documentclass[12pt,oneside]{cctbook}
+\usepackage{ccmap}
+\usepackage{pifont,color}
+\usepackage{amssymb,amsmath}
 \usepackage{fancyhdr}
-\usepackage{geometry}
+\usepackage{graphicx}
+\input xy
+\xyoption{all}
+\pdfmapfile{+cjk-ttf.map}
+\headsep 0.5 true cm
+\topmargin 0pt
+\oddsidemargin 12pt
+\textwidth 15.3 true cm
+\textheight 22.6 true cm
+\parindent 2\ccwd
+\renewcommand{\baselinestretch}{1.0}
+\def\vz{\varepsilon}
+\def\tri{\bigtriangleup}
+\def\sect #1{\section*{\centerline{\large \bf \heiti #1}}}
+\newtheorem{definition}{\bf{¶¨Òå}}[section]
+\newtheorem{proposition}{\hspace{2em}{\bf{ÃüÌâ}}}[section]
+\newtheorem{property}{\bf{ĞÔÖÊ}}[section]
+\newtheorem{theorem}{\bf{¶¨Àí}}[section]
+\newtheorem{lemma}{\bf{ÒıÀí}}[section]
+\newtheorem{corollary}[theorem]{\hspace{2em}{\bf{ÍÆÂÛ}}}
+\newtheorem{axiom}{\hspace{2em}{\bf{¹«Àí}}}[section]
+\newtheorem{exercise}{\hspace{2em}{\bf{Ï°Ìâ}}}[section]
+\newtheorem{question}{\hspace{2em}{\bf{ÎÊÌâ}}}
+\newtheorem{example}{\bf{Àı}}
+\newtheorem{notation}{\hspace{2em}{\bf{¼ÇºÅ}}}
+\newtheorem{remark}{\bf{×¢¼Ç}}[section]
+\newenvironment{proof}[1][~ Ö¤Ã÷]{\textbf{#1:~~~}}{\hfill\hspace{1cm}$\square$}
 \usepackage{titlesec}
-\usepackage{setspace}
-\usepackage{color}
-
-\geometry{
-  a4paper,
-  left=29.62mm,
-  top=34.92mm,
-  textwidth=15.3cm,
-  textheight=22.6cm,
-  headsep=0.5cm,
-  footskip=29.02pt
-}
-\setmainfont{Times New Roman}
-\setlength{\parindent}{2em}
-\setlength{\parskip}{0pt}
-\setstretch{1.667}
+\numberwithin{equation}{section}
+\providecommand{\refname}{}
+\renewcommand{\refname}{\centerline{²Î¿¼ÎÄÏ×}}
+\setlength{\baselineskip}{1.3em}
+\setlength{\parskip}{1ex}
 \setlength{\emergencystretch}{3em}
 \allowdisplaybreaks[4]
-\graphicspath{{assets/formulas/}}
-
-\ctexset{
-  chapter = {
-    name = {ç¬¬,ç« },
-    number = \chinese{chapter},
-    format = \centering\heiti\zihao{3},
-    nameformat = \heiti\zihao{3},
-    titleformat = \heiti\zihao{3},
-    aftername = \quad,
-    beforeskip = -22pt,
-    afterskip = 15pt,
-    pagestyle = thesis
-  }
-}
-\renewcommand{\contentsname}{ç›®\quad å½•}
-\renewcommand{\bibname}{å‚è€ƒæ–‡çŒ®}
-\numberwithin{equation}{section}
-
-\fancypagestyle{thesis}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{0pt}
-  \cfoot{\thepage}
-}
 
 \begin{document}
+\def\dis{\displaystyle}
+\def\dlimsup{\displaystyle\limsup}
+\def\dist{\mathop\mathrm{\, dist\, }}
+\def\supp{\mathop\mathrm{\, supp\, }}
+\def\atom{\mathop\mathrm{\, atom\, }}
+\def\loc{{\mathop\mathrm{\, loc\, }}}
+\def\essinf{\mathop\mathrm{\, ess\, inf\, }}
+\def\esup{\mathop\mathrm{\, ess\, sup\, }}
+\def\fin{{\mathop\mathrm{fin}}}
+\def\lf{\left}
+\def\r{\right}
+
 \begin{titlepage}
-\vspace*{1cm} \LARGE\heiti\vspace*{-16.5pt}
+\vspace*{1cm} \LARGE\heiti
 \begin{center}
-{\heiti\zihao{2} $(L,M)$-æ¨¡ç³Šç²—ç»“æ„}
+{\heiti\zihao{2} $(L,M)$-Ä£ºı´Ö½á¹¹}
 \end{center}
-\vspace*{2mm}\songti
+\vspace*{8mm}\songti
 
 \begin{center}
-{\Large\zihao{4} èµµå­å‡½}
+{\Large\zihao{4} ÕÔ×Óº¯}
 \end{center}
 
-\Large\vspace*{0mm}
+\Large\vspace*{2mm}
 \begin{center}
-(\zihao{4}å®‰å¾½å¸ˆèŒƒå¤§å­¦æ•°å­¦ä¸ç»Ÿè®¡å­¦é™¢, å®‰å¾½, èŠœæ¹–, 241000)
+(\zihao{4}°²»ÕÊ¦·¶´óÑ§ÊıÑ§ÓëÍ³¼ÆÑ§Ôº, °²»Õ, Îßºş, 241000)
 \end{center}\vspace{6mm}
-\vfill\large\baselineskip=31pt
+\vfill\large
 \begin{center}
-{\zihao{4}å®‰å¾½å¸ˆèŒƒå¤§å­¦ç¡•å£«å­¦ä½è®ºæ–‡}
+{\zihao{4}°²»ÕÊ¦·¶´óÑ§Ë¶Ê¿Ñ§Î»ÂÛÎÄ}
 \end{center}
-\vspace*{-25.4pt}
 \begin{center}
-{\zihao{4}äºŒé›¶äºŒå…­å¹´å…«æœˆ}
+{\zihao{4}¶şÁã¶şÁùÄê°ËÔÂ}
 \end{center}
 \end{titlepage}
 
@@ -80,41 +84,38 @@
 \pagestyle{plain}
 \pagenumbering{Roman}
 \chapter*{}
-\addcontentsline{toc}{chapter}{æ‘˜è¦}
+\addcontentsline{toc}{chapter}{ÕªÒª}
 \begin{center}
-{\heiti\zihao{3} $(L,M)$-æ¨¡ç³Šç²—ç»“æ„}
+{\heiti\zihao{3} $(L,M)$-Ä£ºı´Ö½á¹¹}
 \end{center}
 \begin{center}
-\vspace{-0.13cm} {\zihao{4}\heiti æ‘˜\quad\quad è¦}\\
+\vspace{0.2cm} {\zihao{4}\heiti Õª\quad\quad Òª}\\
 \end{center}
-\baselineskip=24pt
+\baselineskip24pt
 {\zihao{-4}
 
-åŸºäºå®Œå…¨åˆ†é…æ ¼\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0002.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=13.95pt,height=11pt]{assets/formulas/formula-0003.png}}\penalty0\hspace{0pt}, æˆ‘ä»¬æå‡ºäº†ä¸€ç§æ ¼å€¼ç²—ç»“æ„çš„æ–°æ–¹æ³•. é¦–å…ˆ,æˆ‘ä»¬å¼•å…¥äº†\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0004.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µã€\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0005.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„ã€\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0006.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„çš„æ¦‚å¿µ,å¹¶ç ”ç©¶äº†\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0007.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç©ºé—´ä¹‹é—´çš„æ˜ å°„æ€§è´¨. å…¶æ¬¡, æˆ‘ä»¬ä»\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0008.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šå…³ç³»ç­‰æ–¹é¢å‡ºå‘, æ„é€ äº†å…¸å‹çš„\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0009.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„å®ä¾‹. æœ€å, æˆ‘ä»¬å¼•å…¥äº†\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0010.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç»“æ„çš„æ¦‚å¿µ, å¹¶ç”¨å…¶åˆ»ç”»\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0011.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„.
+»ùÓÚÍêÈ«·ÖÅä¸ñ\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$M$\nobreak\hspace{0pt}, ÎÒÃÇÌá³öÁËÒ»ÖÖ¸ñÖµ´Ö½á¹¹µÄĞÂ·½·¨. Ê×ÏÈ,ÎÒÃÇÒıÈëÁË\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ¡¢\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹¡¢\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹µÄ¸ÅÄî,²¢ÑĞ¾¿ÁË\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö¿Õ¼äÖ®¼äµÄÓ³ÉäĞÔÖÊ. Æä´Î, ÎÒÃÇ´Ó\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı¹ØÏµµÈ·½Ãæ³ö·¢, ¹¹ÔìÁËµäĞÍµÄ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹ÊµÀı. ×îºó, ÎÒÃÇÒıÈëÁË\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò½á¹¹µÄ¸ÅÄî, ²¢ÓÃÆä¿Ì»­\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹.
 
-\vspace{0.5cm} {\heiti\zihao{4}å…³é”®è¯:}\,
-\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0012.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„ï¼›\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0013.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç©ºé—´ï¼›\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0014.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šå…³ç³»ï¼›\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0015.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç»“æ„
+\vspace{0.5cm} {\heiti\zihao{4}¹Ø¼ü´Ê:}\,
+\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹£»\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö¿Õ¼ä£»\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı¹ØÏµ£»\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò½á¹¹
 }
 
 \newpage
 \chapter*{}
 \addcontentsline{toc}{chapter}{Abstract}
-\vspace*{9.9pt}
 \begin{center}
-\vspace{0.3cm}{\Large\bfseries $(L,M)$-Fuzzy Coarse Structure}
+\vspace{0.3cm}{\Large\bf Research on $(L,M)$-Fuzzy Coarse Structure}
 \end{center}
-\vspace*{4.2pt}
 \begin{center}
-\vspace{0.2cm} {\large\bfseries Abstract}
+\vspace{0.2cm} {\large \bf Abstract}
 \end{center}
-\vspace*{-6.4pt}
 \zihao{-4}
 
-Based on completely distributive lattices \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0565.png}}\penalty0\hspace{0pt} and \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=13.95pt,height=11pt]{assets/formulas/formula-0566.png}}\penalty0\hspace{0pt}, we propose a novel approach to lattice-valued coarse structures. First, we introduce the concepts of \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=30.25pt,height=14.3pt]{assets/formulas/formula-0567.png}}\penalty0\hspace{0pt}-fuzzy entourage, \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=30.25pt,height=14.3pt]{assets/formulas/formula-0568.png}}\penalty0\hspace{0pt}-fuzzy quasi coarse structures, and\hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=30.25pt,height=14.3pt]{assets/formulas/formula-0569.png}}\penalty0\hspace{0pt}-fuzzy semi coarse structures, and investigate mapping properties between \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=30.25pt,height=14.3pt]{assets/formulas/formula-0570.png}}\penalty0\hspace{0pt}-fuzzy coarse spaces. Second, we construct canonical example of \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=30.25pt,height=14.3pt]{assets/formulas/formula-0571.png}}\penalty0\hspace{0pt}-fuzzy coarse structures from perspectives such as \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=30.25pt,height=14.3pt]{assets/formulas/formula-0572.png}}\penalty0\hspace{0pt}- fuzzy relations. Finally, we introduce the notion of \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=30.25pt,height=14.3pt]{assets/formulas/formula-0573.png}}\penalty0\hspace{0pt}-fuzzy ball structures and employ them to characterize \hspace{0pt}\penalty0\raisebox{0pt}{\includegraphics[width=30.25pt,height=14.3pt]{assets/formulas/formula-0574.png}}\penalty0\hspace{0pt}-fuzzy coarse structures.
+Based on completely distributive lattices \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt} and \hspace{0pt}\penalty0$M$\nobreak\hspace{0pt}, we propose a novel approach to lattice-valued coarse structures. First, we introduce the concepts of \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy entourage, \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy quasi coarse structures, and\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy semi coarse structures, and investigate mapping properties between \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse spaces. Second, we construct canonical example of \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse structures from perspectives such as \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}- fuzzy relations. Finally, we introduce the notion of \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy ball structures and employ them to characterize \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse structures.
 
 \vspace{0.3cm}
-{\large\bfseries Keywords:}\,
-\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0575.png}}\penalty0\hspace{0pt}-fuzzy coarse structure; \hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0576.png}}\penalty0\hspace{0pt}-fuzzy coarse space; \hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0577.png}}\penalty0\hspace{0pt}-fuzzy relation; \hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0578.png}}\penalty0\hspace{0pt}-fuzzy ball structure
+{\large\bf Keywords:}\,
+\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse structure; \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse space; \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy relation; \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy ball structure
 
 \newpage
 {\color{white}1}
@@ -122,394 +123,397 @@ Based on completely distributive lattices \hspace{0pt}\penalty0\raisebox{0pt}{\i
 
 \tableofcontents
 \mainmatter
-\pagestyle{thesis}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
 \zihao{-4}
-\baselineskip=24pt
+\baselineskip24pt
 
-\chapter{å¼•\ \ è¨€}
+\chapter{Òı\ \ ÑÔ}
 \vspace{0.2cm}
-åœ¨ç»å…¸æ‹“æ‰‘å­¦çš„ç ”ç©¶ä¸­, ç ”ç©¶è€…ä»¬é•¿æœŸèšç„¦äºç”±æ‹“æ‰‘å®šä¹‰çš„å°å°ºåº¦ç»“æ„, å¦‚é‚»åŸŸç³»ç»Ÿã€è¿ç»­æ€§ç­‰, åº¦é‡ç©ºé—´ä¸­è¿ç»­æ€§çš„ç ”ç©¶ä¾¿æ˜¯å…¸å‹èŒƒä¾‹. ç„¶è€Œ, åœ¨å®šä¹‰åº¦é‡ç©ºé—´ä¸Šæ˜ å°„çš„è¿ç»­æ€§æ—¶, åº¦é‡æœ¬èº«è•´å«çš„å¤§é‡ä¿¡æ¯å¾€å¾€è¢«å¿½ç•¥. ä¸ç»å…¸æ‹“æ‰‘å­¦ç›¸å¯¹, æ•°å­¦ç ”ç©¶æœ‰æ—¶éœ€å…³æ³¨å…¶å¯¹å¶æƒ…å½¢, å³å¤§å°ºåº¦å‡ ä½•ï¼ˆäº¦ç§°ç²—å‡ ä½•ï¼‰. ç²—å‡ ä½•è¿™ä¸€å­¦ç§‘ç°å·²ä¸æ‹“æ‰‘å­¦ã€æŒ‡æ ‡ç†è®ºç­‰å»ºç«‹äº†æ·±åˆ»è”ç³»\cite{ref1}. Roeåœ¨å…¶ä¸“è‘—ä¸­å¯¹ç²—å‡ ä½•è¿›è¡Œäº†ç³»ç»Ÿè®ºè¿°\cite{ref2}.
+ÔÚ¾­µäÍØÆËÑ§µÄÑĞ¾¿ÖĞ, ÑĞ¾¿ÕßÃÇ³¤ÆÚ¾Û½¹ÓÚÓÉÍØÆË¶¨ÒåµÄĞ¡³ß¶È½á¹¹, ÈçÁÚÓòÏµÍ³¡¢Á¬ĞøĞÔµÈ, ¶ÈÁ¿¿Õ¼äÖĞÁ¬ĞøĞÔµÄÑĞ¾¿±ãÊÇµäĞÍ·¶Àı. È»¶ø, ÔÚ¶¨Òå¶ÈÁ¿¿Õ¼äÉÏÓ³ÉäµÄÁ¬ĞøĞÔÊ±, ¶ÈÁ¿±¾ÉíÔÌº¬µÄ´óÁ¿ĞÅÏ¢ÍùÍù±»ºöÂÔ. Óë¾­µäÍØÆËÑ§Ïà¶Ô, ÊıÑ§ÑĞ¾¿ÓĞÊ±Ğè¹Ø×¢Æä¶ÔÅ¼ÇéĞÎ, ¼´´ó³ß¶È¼¸ºÎ£¨Òà³Æ´Ö¼¸ºÎ£©. ´Ö¼¸ºÎÕâÒ»Ñ§¿ÆÏÖÒÑÓëÍØÆËÑ§¡¢Ö¸±êÀíÂÛµÈ½¨Á¢ÁËÉî¿ÌÁªÏµ\cite{ref1}. RoeÔÚÆä×¨ÖøÖĞ¶Ô´Ö¼¸ºÎ½øĞĞÁËÏµÍ³ÂÛÊö\cite{ref2}.
 
-æ¨¡ç³Šé›†çš„æ¦‚å¿µç”±Zadehé¦–åˆ›, åœ¨Zadehçš„å¼€åˆ›æ€§è®ºæ–‡ä¸­, æ¨¡ç³Šé›†è¢«è§†ä¸ºä¸€ä¸ªå‡½æ•°\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=59pt,height=17pt]{assets/formulas/formula-0016.png}}\penalty0\hspace{0pt}, å…¶å€¼\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=24.95pt,height=17pt]{assets/formulas/formula-0017.png}}\penalty0\hspace{0pt}é€šå¸¸è§£é‡Šä¸ºå…ƒç´ \hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=9pt,height=10pt]{assets/formulas/formula-0018.png}}\penalty0\hspace{0pt}å±äºè¯¥æ¨¡ç³Šé›†çš„ç¡®å®šç¨‹åº¦\cite{ref3}. ä¼—æ‰€å‘¨çŸ¥, æ¨¡ç³Šé›†ç†è®ºå·²å‘å±•æˆä¸ºä¸€ä¸ªæä¸ºæ´»è·ƒçš„ç ”ç©¶é¢†åŸŸ. å°½ç®¡ç²—å‡ ä½•ç†è®ºåœ¨æ•°å­¦çš„è¯¸å¤šåˆ†æ”¯ä¸­æ‰®æ¼”ç€é‡è¦è§’è‰², ä½†åœ¨Zarichnyiäº2009å¹´çš„å·¥ä½œä¹‹å‰\cite{ref4}, ç²—å‡ ä½•ä»æœªåœ¨æ¨¡ç³ŠèƒŒæ™¯ä¸‹è¢«ç³»ç»Ÿç ”ç©¶. æ®æˆ‘ä»¬æ‰€çŸ¥, è¿„ä»Šä¸ºæ­¢å…³äºæ¨¡ç³Šç²—ç»“æ„æœ¬èº«çš„ç ”ç©¶å¹¶ä¸å¤šï¼ˆè¿‘æœŸä¸€äº›è®ºæ–‡æ¢è®¨äº†æ¨¡ç³Šåº¦é‡ç©ºé—´ä¸­çš„å¤§å°ºåº¦å‡ ä½•æ€§è´¨, ä½†å…¶ç²—ç»“æ„é›†æœ¬èº«ä»æ˜¯ç»å…¸çš„ï¼‰. è€Œä¸”, ç°æœ‰çš„æ¨¡ç³Šç²—ç»“æ„ç ”ç©¶å¤šåŸºäºå•ä¸€æ ¼\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0019.png}}\penalty0\hspace{0pt}, è¿™ç§å•æ ¼æ¡†æ¶åœ¨å¤„ç†æŸäº›å¤æ‚çš„æ¸è¿‘è¡Œä¸ºæˆ–éœ€è¦åŒæ—¶åˆ»ç”»ä¸åŒå±‚æ¬¡çš„ä¸ç¡®å®šæ€§æ—¶å¯èƒ½ä¼šä¸å¤Ÿåˆé€‚\cite{ref5}. ä¸ºæ›´ç²¾ç»†ã€æ›´çµæ´»åœ°æè¿°å¤§å°ºåº¦æ¨¡ç³Šç»“æ„, äºŸéœ€å¼•å…¥åŒæ ¼æ¡†æ¶.
+Ä£ºı¼¯µÄ¸ÅÄîÓÉZadehÊ×´´, ÔÚZadehµÄ¿ª´´ĞÔÂÛÎÄÖĞ, Ä£ºı¼¯±»ÊÓÎªÒ»¸öº¯Êı\hspace{0pt}\penalty0$f:X\to \left ( { 0,1 } \right )$\nobreak\hspace{0pt}, ÆäÖµ\hspace{0pt}\penalty0$f\left ( { x } \right )$\penalty0\hspace{0pt}Í¨³£½âÊÍÎªÔªËØ\hspace{0pt}\penalty0$x$\penalty0\hspace{0pt}ÊôÓÚ¸ÃÄ£ºı¼¯µÄÈ·¶¨³Ì¶È\cite{ref3}. ÖÚËùÖÜÖª, Ä£ºı¼¯ÀíÂÛÒÑ·¢Õ¹³ÉÎªÒ»¸ö¼«Îª»îÔ¾µÄÑĞ¾¿ÁìÓò. ¾¡¹Ü´Ö¼¸ºÎÀíÂÛÔÚÊıÑ§µÄÖî¶à·ÖÖ§ÖĞ°çÑİ×ÅÖØÒª½ÇÉ«, µ«ÔÚZarichnyiÓÚ2009ÄêµÄ¹¤×÷Ö®Ç°\cite{ref4}, ´Ö¼¸ºÎ´ÓÎ´ÔÚÄ£ºı±³¾°ÏÂ±»ÏµÍ³ÑĞ¾¿. ¾İÎÒÃÇËùÖª, Æù½ñÎªÖ¹¹ØÓÚÄ£ºı´Ö½á¹¹±¾ÉíµÄÑĞ¾¿²¢²»¶à£¨½üÆÚÒ»Ğ©ÂÛÎÄÌ½ÌÖÁËÄ£ºı¶ÈÁ¿¿Õ¼äÖĞµÄ´ó³ß¶È¼¸ºÎĞÔÖÊ, µ«Æä´Ö½á¹¹¼¯±¾ÉíÈÔÊÇ¾­µäµÄ£©. ¶øÇÒ, ÏÖÓĞµÄÄ£ºı´Ö½á¹¹ÑĞ¾¿¶à»ùÓÚµ¥Ò»¸ñ\hspace{0pt}\penalty0$L$\nobreak\hspace{0pt}, ÕâÖÖµ¥¸ñ¿ò¼ÜÔÚ´¦ÀíÄ³Ğ©¸´ÔÓµÄ½¥½üĞĞÎª»òĞèÒªÍ¬Ê±¿Ì»­²»Í¬²ã´ÎµÄ²»È·¶¨ĞÔÊ±¿ÉÄÜ»á²»¹»ºÏÊÊ\cite{ref5}. Îª¸ü¾«Ï¸¡¢¸üÁé»îµØÃèÊö´ó³ß¶ÈÄ£ºı½á¹¹, Ø½ĞèÒıÈëË«¸ñ¿ò¼Ü.
 
-å—ä¸¥ä»åå’Œç‹æ°¸è¶…å¯¹ç²—ç»“æ„æ¨¡ç³ŠåŒ–å·¥ä½œçš„å¯å‘\cite{ref6}, æœ¬æ–‡å°†å¼•å…¥\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0020.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„çš„æ¦‚å¿µ, å¹¶ç»™å‡ºå…¶ç­‰ä»·åˆ»ç”». æœ¬æ–‡çš„ç»“æ„å¦‚ä¸‹ï¼šåœ¨ç¬¬äºŒèŠ‚ä¸­, æˆ‘ä»¬åˆ—å‡ºä¸€äº›å®Œå…¨åˆ†é…æ ¼ã€æ¨¡ç³Šå…³ç³»ã€å•æ ¼æ¨¡ç³Šç²—ç»“æ„çš„åŸºæœ¬æ¦‚å¿µä¸ç»“æœ. åœ¨ç¬¬ä¸‰èŠ‚ä¸­, æˆ‘ä»¬ç»™å‡º\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0021.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„æ¦‚å¿µå’Œ\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0022.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç©ºé—´ä¹‹é—´çš„æ€å°„, å¹¶åˆ—ä¸¾äº†\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0023.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„å®ä¾‹. åœ¨ç¬¬å››èŠ‚ä¸­, æˆ‘ä»¬å¼•å…¥\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0024.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç»“æ„çš„æ¦‚å¿µ, å¹¶å»ºç«‹å…¶ä¸\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0025.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„ä¹‹é—´çš„ç›¸äº’åˆ»ç”»å…³ç³».
+ÊÜÑÏ´Ó»ªºÍÍõÓÀ³¬¶Ô´Ö½á¹¹Ä£ºı»¯¹¤×÷µÄÆô·¢\cite{ref6}, ±¾ÎÄ½«ÒıÈë\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹µÄ¸ÅÄî, ²¢¸ø³öÆäµÈ¼Û¿Ì»­. ±¾ÎÄµÄ½á¹¹ÈçÏÂ£ºÔÚµÚ¶ş½ÚÖĞ, ÎÒÃÇÁĞ³öÒ»Ğ©ÍêÈ«·ÖÅä¸ñ¡¢Ä£ºı¹ØÏµ¡¢µ¥¸ñÄ£ºı´Ö½á¹¹µÄ»ù±¾¸ÅÄîÓë½á¹û. ÔÚµÚÈı½ÚÖĞ, ÎÒÃÇ¸ø³ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹¸ÅÄîºÍ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö¿Õ¼äÖ®¼äµÄÌ¬Éä, ²¢ÁĞ¾ÙÁË\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹ÊµÀı. ÔÚµÚËÄ½ÚÖĞ, ÎÒÃÇÒıÈë\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò½á¹¹µÄ¸ÅÄî, ²¢½¨Á¢ÆäÓë\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹Ö®¼äµÄÏà»¥¿Ì»­¹ØÏµ.
 
 
-\chapter{é¢„å¤‡çŸ¥è¯†}
+\chapter{Ô¤±¸ÖªÊ¶}
 \vspace{0.2cm}
-åœ¨æœ¬æ–‡ä¸­, ç§°ä¸€ä¸ªéç©ºé›†åˆ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0026.png}}\penalty0\hspace{0pt}ä¸ºä¸€ä¸ªååºé›†, å¦‚æœå®ƒä¸­çš„ä¸€ä¸ªäºŒå…ƒå…³ç³»\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10.5pt,height=10.5pt]{assets/formulas/formula-0027.png}}\penalty0\hspace{0pt}æ»¡è¶³è‡ªåæ€§ã€åå¯¹ç§°æ€§å’Œä¼ é€’æ€§. ç§°\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0028.png}}\penalty0\hspace{0pt}çš„å­é›†\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0029.png}}\penalty0\hspace{0pt}ä¸ºæœ‰å‘çš„, å¦‚æœå®ƒæ˜¯éç©ºçš„, å¹¶ä¸”\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0030.png}}\penalty0\hspace{0pt}çš„æ¯ä¸ªæœ‰é™å­é›†åœ¨\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0031.png}}\penalty0\hspace{0pt}ä¸­éƒ½æœ‰ä¸Šç•Œ\cite{ref7}.
+ÔÚ±¾ÎÄÖĞ, ³ÆÒ»¸ö·Ç¿Õ¼¯ºÏ\hspace{0pt}\penalty0$P$\penalty0\hspace{0pt}ÎªÒ»¸öÆ«Ğò¼¯, Èç¹ûËüÖĞµÄÒ»¸ö¶şÔª¹ØÏµ\hspace{0pt}\penalty0$\leq$\penalty0\hspace{0pt}Âú×ã×Ô·´ĞÔ¡¢·´¶Ô³ÆĞÔºÍ´«µİĞÔ. ³Æ\hspace{0pt}\penalty0$P$\penalty0\hspace{0pt}µÄ×Ó¼¯\hspace{0pt}\penalty0$D$\penalty0\hspace{0pt}ÎªÓĞÏòµÄ, Èç¹ûËüÊÇ·Ç¿ÕµÄ, ²¢ÇÒ\hspace{0pt}\penalty0$D$\penalty0\hspace{0pt}µÄÃ¿¸öÓĞÏŞ×Ó¼¯ÔÚ\hspace{0pt}\penalty0$D$\penalty0\hspace{0pt}ÖĞ¶¼ÓĞÉÏ½ç\cite{ref7}.
 
-æœ¬æ–‡ä¸­, \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0032.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=13.95pt,height=11pt]{assets/formulas/formula-0033.png}}\penalty0\hspace{0pt}éƒ½æ˜¯å®Œå…¨åˆ†é…æ ¼, å®ƒä»¬çš„æœ€å¤§å…ƒè®°ä¸º\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=12.05pt,height=12.05pt]{assets/formulas/formula-0034.png}}\penalty0\hspace{0pt}, æœ€å°å…ƒè®°ä¸º\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=9.65pt,height=13.1pt]{assets/formulas/formula-0035.png}}\penalty0\hspace{0pt}. \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0036.png}}\penalty0\hspace{0pt}ä¸Šçš„ä¸€ä¸ªäºŒå…ƒå…³ç³»\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0037.png}}\penalty0\hspace{0pt}å®šä¹‰ä¸º, å¯¹\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=41.55pt,height=13.5pt]{assets/formulas/formula-0038.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=23.7pt,height=14.45pt]{assets/formulas/formula-0039.png}}\penalty0\hspace{0pt}å½“ä¸”ä»…å½“å¯¹\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=39pt,height=13pt]{assets/formulas/formula-0040.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=38pt,height=13.05pt]{assets/formulas/formula-0041.png}}\penalty0\hspace{0pt}, å­˜åœ¨ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=31pt,height=13.05pt]{assets/formulas/formula-0042.png}}\penalty0\hspace{0pt}, ä½¿å¾—\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=26pt,height=13.05pt]{assets/formulas/formula-0043.png}}\penalty0\hspace{0pt}. æ˜ å°„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=49pt,height=18pt]{assets/formulas/formula-0044.png}}\penalty0\hspace{0pt}å®šä¹‰ä¸º\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=101pt,height=18pt]{assets/formulas/formula-0045.png}}\penalty0\hspace{0pt}, ä¸”æ»¡è¶³å¯¹\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=55pt,height=17pt]{assets/formulas/formula-0046.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-12pt}{\includegraphics[width=83pt,height=26pt]{assets/formulas/formula-0047.png}}\penalty0\hspace{0pt}\cite{ref7}.
+±¾ÎÄÖĞ, \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$M$\penalty0\hspace{0pt}¶¼ÊÇÍêÈ«·ÖÅä¸ñ, ËüÃÇµÄ×î´óÔª¼ÇÎª\hspace{0pt}\penalty0$~\top$\nobreak\hspace{0pt}, ×îĞ¡Ôª¼ÇÎª\hspace{0pt}\penalty0$\bot$\nobreak\hspace{0pt}. \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}ÉÏµÄÒ»¸ö¶şÔª¹ØÏµ\hspace{0pt}\penalty0$\prec$\penalty0\hspace{0pt}¶¨ÒåÎª, ¶Ô\hspace{0pt}\penalty0$\forall a,b\in L$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$a\prec b$\penalty0\hspace{0pt}µ±ÇÒ½öµ±¶Ô\hspace{0pt}\penalty0$\forall M\subseteq L$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$b\le \vee M$\nobreak\hspace{0pt}, ´æÔÚÒ»¸ö\hspace{0pt}\penalty0$d\in M$\nobreak\hspace{0pt}, Ê¹µÃ\hspace{0pt}\penalty0$a\le d$\nobreak\hspace{0pt}. Ó³Éä\hspace{0pt}\penalty0$\beta :L\to 2 ^ { L }$\penalty0\hspace{0pt}¶¨ÒåÎª\hspace{0pt}\penalty0$\beta(a)=\{b\in L:b\prec a\}$\nobreak\hspace{0pt}, ÇÒÂú×ã¶Ô\hspace{0pt}\penalty0$\forall \left \{ \begin{array}{l} a_{ i } \end{array} \right \}_{ i\in I } \subseteq L$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\beta\left(\bigvee_{i\in I}a_i\right)=\bigcup_{i\in I}\beta(a_i)$\penalty0\hspace{0pt}\cite{ref7}.
 
-\textbf{å®šä¹‰2.1}\cite{ref8}  \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0048.png}}\penalty0\hspace{0pt}ä¸Šçš„ä¸€ä¸ªéç©ºå­é›†\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=42pt,height=15pt]{assets/formulas/formula-0049.png}}\penalty0\hspace{0pt}ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0050.png}}\penalty0\hspace{0pt}-ç†µ,å¦‚æœå®ƒæ»¡è¶³ä»¥ä¸‹æ€§è´¨ï¼š
+\textbf{¶¨Òå2.1}\cite{ref8}  \hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏµÄÒ»¸ö·Ç¿Õ×Ó¼¯\hspace{0pt}\penalty0$\mathcal{C}\subseteq L ^ { X\times X }$\penalty0\hspace{0pt}³ÆÎª\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ìØ,Èç¹ûËüÂú×ãÒÔÏÂĞÔÖÊ£º
 
-ï¼ˆE1ï¼‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=36pt,height=18pt]{assets/formulas/formula-0051.png}}\penalty0\hspace{0pt}ï¼›
+£¨E1£©\hspace{0pt}\penalty0$\Delta _{ X } \in \mathcal{C}$\nobreak\hspace{0pt}£»
 
-ï¼ˆE2ï¼‰å¦‚æœ\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=29pt,height=12.05pt]{assets/formulas/formula-0052.png}}\penalty0\hspace{0pt},ä¸”\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=30pt,height=11pt]{assets/formulas/formula-0053.png}}\penalty0\hspace{0pt},åˆ™\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=30pt,height=12.05pt]{assets/formulas/formula-0054.png}}\penalty0\hspace{0pt}ï¼›
+£¨E2£©Èç¹û\hspace{0pt}\penalty0$E\in \mathcal{C}$\nobreak\hspace{0pt},ÇÒ\hspace{0pt}\penalty0$D\le E$\nobreak\hspace{0pt},Ôò\hspace{0pt}\penalty0$D\in \mathcal{C}$\nobreak\hspace{0pt}£»
 
-ï¼ˆE3ï¼‰\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=47pt,height=13pt]{assets/formulas/formula-0055.png}}\penalty0\hspace{0pt},åˆ™\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=48pt,height=12.05pt]{assets/formulas/formula-0056.png}}\penalty0\hspace{0pt}ï¼›
+£¨E3£©\hspace{0pt}\penalty0$\forall E,F\in \mathcal{C}$\nobreak\hspace{0pt},Ôò\hspace{0pt}\penalty0$E\vee F\in \mathcal{C}$\nobreak\hspace{0pt}£»
 
-ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0057.png}}\penalty0\hspace{0pt}-ç†µ\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=42pt,height=15pt]{assets/formulas/formula-0058.png}}\penalty0\hspace{0pt}ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0059.png}}\penalty0\hspace{0pt}-æ‹Ÿç²—ç»“æ„,å¦‚æœå®ƒåˆæ»¡è¶³ï¼ˆE4ï¼‰ï¼š
+Ò»¸ö\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ìØ\hspace{0pt}\penalty0$\mathcal{C}\subseteq L ^ { X\times X }$\penalty0\hspace{0pt}³ÆÎª\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-Äâ´Ö½á¹¹,Èç¹ûËüÓÖÂú×ã£¨E4£©£º
 
-ï¼ˆE4ï¼‰\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=47pt,height=13pt]{assets/formulas/formula-0060.png}}\penalty0\hspace{0pt},åˆ™\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=44.05pt,height=12.05pt]{assets/formulas/formula-0061.png}}\penalty0\hspace{0pt}ï¼›
+£¨E4£©\hspace{0pt}\penalty0$\forall E,F\in \mathcal{C}$\nobreak\hspace{0pt},Ôò\hspace{0pt}\penalty0$E\circ F\in \mathcal{C}$\nobreak\hspace{0pt}£»
 
-ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0062.png}}\penalty0\hspace{0pt}-ç†µ\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=42pt,height=15pt]{assets/formulas/formula-0063.png}}\penalty0\hspace{0pt}ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0064.png}}\penalty0\hspace{0pt}-åŠç²—ç»“æ„,å¦‚æœå®ƒåˆæ»¡è¶³ï¼ˆE5ï¼‰ï¼š
+Ò»¸ö\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ìØ\hspace{0pt}\penalty0$\mathcal{C}\subseteq L ^ { X\times X }$\penalty0\hspace{0pt}³ÆÎª\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-°ë´Ö½á¹¹,Èç¹ûËüÓÖÂú×ã£¨E5£©£º
 
-ï¼ˆE5ï¼‰\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=35pt,height=12.05pt]{assets/formulas/formula-0065.png}}\penalty0\hspace{0pt},åˆ™\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=37pt,height=16pt]{assets/formulas/formula-0066.png}}\penalty0\hspace{0pt}.
+£¨E5£©\hspace{0pt}\penalty0$\forall E\in \mathcal{C}$\nobreak\hspace{0pt},Ôò\hspace{0pt}\penalty0$E ^ { -1 } \in \mathcal{C}$\nobreak\hspace{0pt}.
 
-æ­¤å¤–, ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0067.png}}\penalty0\hspace{0pt}-ç†µ\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=42pt,height=15pt]{assets/formulas/formula-0068.png}}\penalty0\hspace{0pt}ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0069.png}}\penalty0\hspace{0pt}-ç²—ç»“æ„, å¦‚æœå®ƒæ—¢æ˜¯\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0070.png}}\penalty0\hspace{0pt}-æ‹Ÿç²—ç»“æ„, åˆæ˜¯\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0071.png}}\penalty0\hspace{0pt}-åŠç²—ç»“æ„.ç›¸åº”åœ°, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=33pt,height=18pt]{assets/formulas/formula-0072.png}}\penalty0\hspace{0pt}åˆåˆ†åˆ«ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0073.png}}\penalty0\hspace{0pt}-ç†µç©ºé—´, \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0074.png}}\penalty0\hspace{0pt}-æ‹Ÿç²—ç©ºé—´, \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0075.png}}\penalty0\hspace{0pt}-åŠç²—ç©ºé—´, \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0076.png}}\penalty0\hspace{0pt}-ç²—ç©ºé—´\cite{ref7}.
+´ËÍâ, Ò»¸ö\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ìØ\hspace{0pt}\penalty0$\mathcal{C}\subseteq L ^ { X\times X }$\penalty0\hspace{0pt}³ÆÎª\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-´Ö½á¹¹, Èç¹ûËü¼ÈÊÇ\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-Äâ´Ö½á¹¹, ÓÖÊÇ\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-°ë´Ö½á¹¹.ÏàÓ¦µØ, \hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}ÓÖ·Ö±ğ³ÆÎª\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ìØ¿Õ¼ä, \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-Äâ´Ö¿Õ¼ä, \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-°ë´Ö¿Õ¼ä, \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-´Ö¿Õ¼ä\cite{ref7}.
 
-\textbf{å®šä¹‰2.2}\cite{ref8}å¯¹é›†åˆ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0077.png}}\penalty0\hspace{0pt}åŠ\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=82pt,height=15pt]{assets/formulas/formula-0078.png}}\penalty0\hspace{0pt}, æˆ‘ä»¬å®šä¹‰
-
-\begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=157pt,height=19pt]{assets/formulas/formula-0079.png}}\penalty0\hspace{0pt},
-\end{center}
-\begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=231pt,height=19pt]{assets/formulas/formula-0080.png}}\penalty0\hspace{0pt}.
-\end{center}
-å¯¹äºä¸Šè¿°è¿ç®—ï¼Œå…¶å•ä½å…ƒæ˜¯\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=45pt,height=16pt]{assets/formulas/formula-0081.png}}\penalty0\hspace{0pt}ï¼Œå®šä¹‰ä¸º
+\textbf{¶¨Òå2.2}\cite{ref8}¶Ô¼¯ºÏ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}¼°\hspace{0pt}\penalty0$\forall E,E_{ 1 } ,E_{ 2 } \subseteq X\times X$\nobreak\hspace{0pt}, ÎÒÃÇ¶¨Òå
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-13pt}{\includegraphics[width=90pt,height=31pt]{assets/formulas/formula-0082.png}}\penalty0\hspace{0pt}. \cite{ref7}
+\noindent \hspace{0pt}\penalty0$E^{-1}=\{(y,x)\in X\times X:(x,y)\in E\}$\nobreak\hspace{0pt},
 \end{center}
-\textbf{å®šä¹‰2.3}\cite{ref9}\textbf{  }æ˜ å°„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=69pt,height=12.05pt]{assets/formulas/formula-0083.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12.05pt,height=11pt]{assets/formulas/formula-0084.png}}\penalty0\hspace{0pt}ä¸Šä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0085.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šå…³ç³», ç§°ä¸ºï¼š
+\begin{center}
+\noindent \hspace{0pt}\penalty0$E_{ 1 } \circ E_{ 2 } =\left \{ \begin{array}{l} \left ( { x,y } \right )\in X\times X:\exists z\in X,\left ( { x,z } \right )\in E_{ 1 } ,\left ( { z,y } \right )\in E_{ 2 } \end{array} \right \}$\nobreak\hspace{0pt}.
+\end{center}
+¶ÔÓÚÉÏÊöÔËËã£¬Æäµ¥Î»ÔªÊÇ\hspace{0pt}\penalty0$\Delta _{ X } \in L ^ { X\times X }$\nobreak\hspace{0pt}£¬¶¨ÒåÎª
 
-ï¼ˆ1ï¼‰è‡ªå: \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=48pt,height=17pt]{assets/formulas/formula-0086.png}}\penalty0\hspace{0pt}ï¼›
+\begin{center}
+\noindent \hspace{0pt}\penalty0$\Delta_X(x,y)=\begin{cases}\top,&x=y,\\ \bot,&x\ne y,\end{cases}$\nobreak\hspace{0pt}. \cite{ref7}
+\end{center}
+\textbf{¶¨Òå2.}\textbf{3}\cite{ref9}\textbf{  }Ó³Éä\hspace{0pt}\penalty0$R:X\times X\to M$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı¹ØÏµ, ³ÆÎª£º
 
-ï¼ˆ2ï¼‰å¯¹ç§°: \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=73pt,height=17pt]{assets/formulas/formula-0087.png}}\penalty0\hspace{0pt}ï¼›
+£¨1£©×Ô·´: \hspace{0pt}\penalty0$R\left ( { x,x } \right )=\top$\nobreak\hspace{0pt}£»
 
-ï¼ˆ3ï¼‰ä¼ é€’: \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=42.95pt,height=11pt]{assets/formulas/formula-0088.png}}\penalty0\hspace{0pt}, å…¶ä¸­\hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=139.95pt,height=21pt]{assets/formulas/formula-0089.png}}\penalty0\hspace{0pt}.
+£¨2£©¶Ô³Æ: \hspace{0pt}\penalty0$R\left ( { x,y } \right )=R\left ( { y,x } \right )$\nobreak\hspace{0pt}£»
 
-ä¸€ä¸ªæ»¡è¶³è‡ªåã€å¯¹ç§°å’Œä¼ é€’çš„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0090.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šå…³ç³»\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0091.png}}\penalty0\hspace{0pt}ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0092.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç­‰ä»·å…³ç³», å¦‚æœ\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=69pt,height=12.05pt]{assets/formulas/formula-0093.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12.05pt,height=11pt]{assets/formulas/formula-0094.png}}\penalty0\hspace{0pt}ä¸Šä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0095.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šå…³ç³», åˆ™ç§°\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=30pt,height=17pt]{assets/formulas/formula-0096.png}}\penalty0\hspace{0pt}ä¸º\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0097.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šå…³ç³»ç©ºé—´\cite{ref9}.
+£¨3£©´«µİ: \hspace{0pt}\penalty0$R\circ R\le R$\nobreak\hspace{0pt}, ÆäÖĞ\hspace{0pt}\penalty0$R\circ R(x,y)=\bigvee_{ z\in X } R(x,z)\wedge R(z,y)$\nobreak\hspace{0pt}.
+
+Ò»¸öÂú×ã×Ô·´¡¢¶Ô³ÆºÍ´«µİµÄ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı¹ØÏµ\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}³ÆÎª\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıµÈ¼Û¹ØÏµ, Èç¹û\hspace{0pt}\penalty0$R:X\times X\to M$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı¹ØÏµ, Ôò³Æ\hspace{0pt}\penalty0$\left ( { X,R } \right )$\penalty0\hspace{0pt}Îª\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı¹ØÏµ¿Õ¼ä\cite{ref9}.
 
 
-\chapter{$(L,M)$-æ¨¡ç³Šç²—ç»“æ„}
+\chapter{$(L,M)$-Ä£ºı´Ö½á¹¹}
 \vspace{0.2cm}
-\textbf{å®šä¹‰3.1}  é›†åˆ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12.05pt,height=11pt]{assets/formulas/formula-0099.png}}\penalty0\hspace{0pt}ä¸Šçš„ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0100.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„æ˜¯ä¸€ä¸ªæ˜ å°„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12.05pt]{assets/formulas/formula-0101.png}}\penalty0\hspace{0pt}\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=55pt,height=16pt]{assets/formulas/formula-0102.png}}\penalty0\hspace{0pt}æ»¡è¶³ä»¥ä¸‹æ¡ä»¶ï¼š
+\textbf{¶¨Òå3.1}  ¼¯ºÏ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏµÄÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹ÊÇÒ»¸öÓ³Éä\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}\hspace{0pt}\penalty0$:L ^ { X\times X } \to M$\penalty0\hspace{0pt}Âú×ãÒÔÏÂÌõ¼ş£º
 
-ï¼ˆME1ï¼‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=48pt,height=17pt]{assets/formulas/formula-0103.png}}\penalty0\hspace{0pt}ï¼›
+£¨ME1£©\hspace{0pt}\penalty0$\mathcal{C}\left ( { \Delta _{ X } } \right )=\top$\nobreak\hspace{0pt}£»
 
-ï¼ˆME2ï¼‰\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=60pt,height=17pt]{assets/formulas/formula-0104.png}}\penalty0\hspace{0pt}, ä¸”\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=29pt,height=11pt]{assets/formulas/formula-0105.png}}\penalty0\hspace{0pt},åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=60pt,height=17pt]{assets/formulas/formula-0106.png}}\penalty0\hspace{0pt}ï¼›
+£¨ME2£©\hspace{0pt}\penalty0$\forall E,F\in L ^ { X\times X }$\nobreak\hspace{0pt}, ÇÒ\hspace{0pt}\penalty0$E\le F$\nobreak\hspace{0pt},Ôò\hspace{0pt}\penalty0$\mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E } \right )$\nobreak\hspace{0pt}£»
 
-ï¼ˆME3ï¼‰\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=60pt,height=17pt]{assets/formulas/formula-0107.png}}\penalty0\hspace{0pt}, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=112pt,height=17pt]{assets/formulas/formula-0108.png}}\penalty0\hspace{0pt}ï¼›
+£¨ME3£©\hspace{0pt}\penalty0$\forall E,F\in L ^ { X\times X }$\nobreak\hspace{0pt}, Ôò\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E\vee F } \right )$\nobreak\hspace{0pt}£»
 
-\quad ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0109.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12.05pt]{assets/formulas/formula-0110.png}}\penalty0\hspace{0pt}ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0111.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„, è‹¥å®ƒåˆæ»¡è¶³ï¼ˆME4ï¼‰ï¼š
+\quad Ò»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}³ÆÎª\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹, ÈôËüÓÖÂú×ã£¨ME4£©£º
 
-ï¼ˆME4ï¼‰\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=57pt,height=15pt]{assets/formulas/formula-0112.png}}\penalty0\hspace{0pt}, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=108pt,height=17pt]{assets/formulas/formula-0113.png}}\penalty0\hspace{0pt}ï¼›
+£¨ME4£©\hspace{0pt}\penalty0$\forall E,F\in L^{X\times X}$\nobreak\hspace{0pt}, Ôò\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E\circ F } \right )$\nobreak\hspace{0pt}£»
 
-\quad ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0114.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12.05pt]{assets/formulas/formula-0115.png}}\penalty0\hspace{0pt}ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0116.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„, è‹¥å®ƒåˆæ»¡è¶³ï¼ˆME5ï¼‰ï¼š
+\quad Ò»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}³ÆÎª\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹, ÈôËüÓÖÂú×ã£¨ME5£©£º
 
-ï¼ˆME5ï¼‰\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=49.95pt,height=15pt]{assets/formulas/formula-0117.png}}\penalty0\hspace{0pt}, åˆ™\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=67.95pt,height=19pt]{assets/formulas/formula-0118.png}}\penalty0\hspace{0pt}.
+£¨ME5£©\hspace{0pt}\penalty0$\forall E\in L^{X\times X}$\nobreak\hspace{0pt}, Ôò\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )=\mathcal{C}\left ( { E ^ { -1 } } \right )$\nobreak\hspace{0pt}.
 
-è‹¥ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0119.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12.05pt]{assets/formulas/formula-0120.png}}\penalty0\hspace{0pt}æ—¢æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0121.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„, åˆæ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0122.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„, åˆ™ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0123.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„. ç›¸åº”åœ°, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0124.png}}\penalty0\hspace{0pt}åˆ†åˆ«ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0125.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç©ºé—´, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0126.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç©ºé—´, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0127.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç©ºé—´, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0128.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç©ºé—´.
+ÈôÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}¼ÈÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹, ÓÖÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹, Ôò³ÆÎª\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹. ÏàÓ¦µØ, \hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}·Ö±ğ³ÆÎª\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ¿Õ¼ä, \hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö¿Õ¼ä, \hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö¿Õ¼ä, \hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´Ö¿Õ¼ä.
 
-\textbf{æ³¨ 3.2}  ä¸Šè¿°å®šä¹‰ä¸­çš„ï¼ˆME2ï¼‰å’Œï¼ˆME3ï¼‰å¯ç­‰ä»·äºï¼ˆME2\&3ï¼‰ï¼š\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=112pt,height=17pt]{assets/formulas/formula-0129.png}}\penalty0\hspace{0pt}.
+\textbf{×¢ 3.2}  ÉÏÊö¶¨ÒåÖĞµÄ£¨ME2£©ºÍ£¨ME3£©¿ÉµÈ¼ÛÓÚ£¨ME2\&3£©£º\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )=\mathcal{C}\left ( { E\vee F } \right )$\nobreak\hspace{0pt}.
 
-\textbf{å®šä¹‰3.3}  é›†åˆ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0130.png}}\penalty0\hspace{0pt}ä¸Šçš„æ˜ å°„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=60.95pt,height=13.95pt]{assets/formulas/formula-0131.png}}\penalty0\hspace{0pt}ç§°ä¸ºä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0132.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„ï¼ˆæˆ–\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0133.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„ã€\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0134.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„ã€\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0135.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„ï¼‰\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12.05pt]{assets/formulas/formula-0136.png}}\penalty0\hspace{0pt}çš„åŸº, è‹¥å®ƒæ»¡è¶³ï¼šå¯¹\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=46pt,height=13pt]{assets/formulas/formula-0137.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=71.05pt,height=18pt]{assets/formulas/formula-0138.png}}\penalty0\hspace{0pt}.
+\textbf{¶¨Òå3.3}  ¼¯ºÏ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏµÄÓ³Éä\hspace{0pt}\penalty0$\mathcal{S}:L ^ { X\times X } \to M$\penalty0\hspace{0pt}³ÆÎªÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹£¨»ò\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹¡¢\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹¡¢\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹£©\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}µÄ»ù, ÈôËüÂú×ã£º¶Ô\hspace{0pt}\penalty0$\forall E\in L ^ { X\times X }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )=\bigvee_{ E\le B } \mathcal{S}\left ( { B } \right )$\nobreak\hspace{0pt}.
 
-\textbf{å®šä¹‰3.4}  é›†åˆ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0139.png}}\penalty0\hspace{0pt}ä¸Šçš„æ˜ å°„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=65pt,height=16pt]{assets/formulas/formula-0140.png}}\penalty0\hspace{0pt}ç§°ä¸ºä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0141.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„çš„åŸº, è‹¥å®ƒæ»¡è¶³ï¼š
+\textbf{¶¨Òå3.4}  ¼¯ºÏ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏµÄÓ³Éä\hspace{0pt}\penalty0$\mathcal{S}:L ^ { X\times X } \to M$\penalty0\hspace{0pt}³ÆÎªÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹µÄ»ù, ÈôËüÂú×ã£º
 
-\quad ï¼ˆB1ï¼‰\hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=59pt,height=19pt]{assets/formulas/formula-0142.png}}\penalty0\hspace{0pt}ï¼›
+\quad £¨B1£©\hspace{0pt}\penalty0$\bigvee_{\Delta_X\leq B}\mathcal{S}(B)=\top$\nobreak\hspace{0pt}£»
 
-\quad ï¼ˆB2ï¼‰\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=62pt,height=16pt]{assets/formulas/formula-0143.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=121.95pt,height=21pt]{assets/formulas/formula-0144.png}}\penalty0\hspace{0pt}ï¼›
+\quad £¨B2£©\hspace{0pt}\penalty0$\forall B_{ 1 } ,B_{ 2 } \in L ^ { X\times X }$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\mathcal{S}\left ( { B_{ 1 } } \right )\wedge \mathcal{S}\left ( { B_{ 2 } } \right )\le \bigvee_{ B_{ 1 } \vee B_{ 2 } \le B } \mathcal{S}\left ( { B } \right )$\nobreak\hspace{0pt}£»
 
-\quad \hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=65pt,height=16pt]{assets/formulas/formula-0145.png}}\penalty0\hspace{0pt}ç§°ä¸ºä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0146.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„çš„åŸº, å¦‚æœå®ƒè¿˜æ»¡è¶³ï¼ˆB3ï¼‰ï¼š
+\quad \hspace{0pt}\penalty0$\mathcal{S}:L ^ { X\times X } \to M$\penalty0\hspace{0pt}³ÆÎªÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹µÄ»ù, Èç¹ûËü»¹Âú×ã£¨B3£©£º
 
-\quad ï¼ˆB3ï¼‰\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=62pt,height=16pt]{assets/formulas/formula-0147.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=120pt,height=21pt]{assets/formulas/formula-0148.png}}\penalty0\hspace{0pt}ï¼›
+\quad £¨B3£©\hspace{0pt}\penalty0$\forall B_{ 1 } ,B_{ 2 } \in L ^ { X\times X }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{S}\left ( { B_{ 1 } } \right )\wedge \mathcal{S}\left ( { B_{ 2 } } \right )\le \bigvee_{ B_{ 1 } \circ B_{ 2 } \le B } \mathcal{S}\left ( { B } \right )$\nobreak\hspace{0pt}£»
 
-\quad \hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=65pt,height=16pt]{assets/formulas/formula-0149.png}}\penalty0\hspace{0pt}ç§°ä¸ºä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0150.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„çš„åŸº, å¦‚æœå®ƒè¿˜æ»¡è¶³ï¼ˆB4ï¼‰ï¼š
+\quad \hspace{0pt}\penalty0$\mathcal{S}:L ^ { X\times X } \to M$\penalty0\hspace{0pt}³ÆÎªÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹µÄ»ù, Èç¹ûËü»¹Âú×ã£¨B4£©£º
 
-\quad ï¼ˆB4ï¼‰\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=46pt,height=13pt]{assets/formulas/formula-0151.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-9pt}{\includegraphics[width=77pt,height=20pt]{assets/formulas/formula-0152.png}}\penalty0\hspace{0pt}ï¼›
+\quad £¨B4£©\hspace{0pt}\penalty0$\forall E\in L ^ { X\times X }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{S}\left ( { E } \right )\le \bigvee_{ E ^ { -1 } \le B } \mathcal{S}\left ( { B } \right )$\nobreak\hspace{0pt}£»
 
-è‹¥\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11.05pt]{assets/formulas/formula-0153.png}}\penalty0\hspace{0pt}åŒæ—¶æ»¡è¶³ï¼ˆB1ï¼‰ï¼ˆB4ï¼‰, åˆ™ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0154.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„çš„åŸº.
+Èô\hspace{0pt}\penalty0$\mathcal{S}$\penalty0\hspace{0pt}Í¬Ê±Âú×ã£¨B1£©£¨B4£©, Ôò³ÆÎª\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹µÄ»ù.
 
-ç”±ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0155.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„ï¼ˆæˆ–\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0156.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„ã€\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0157.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„ã€\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0158.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„ï¼‰\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12.05pt]{assets/formulas/formula-0159.png}}\penalty0\hspace{0pt}çš„åŸº\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=10pt,height=13.05pt]{assets/formulas/formula-0160.png}}\penalty0\hspace{0pt}, å¯ä»¥é€šè¿‡\hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=72.05pt,height=19pt]{assets/formulas/formula-0161.png}}\penalty0\hspace{0pt}ç”Ÿæˆä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0162.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„ï¼ˆæˆ–\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0163.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0164.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„,\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0165.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„ï¼‰.
+ÓÉÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹£¨»ò\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹¡¢\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹¡¢\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹£©\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}µÄ»ù\hspace{0pt}\penalty0$S$\nobreak\hspace{0pt}, ¿ÉÒÔÍ¨¹ı\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )=\bigvee_{ E\le B } \mathcal{S}\left ( { B } \right )$\penalty0\hspace{0pt}Éú³ÉÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹£¨»ò\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹, \hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹,\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹£©.
 
-\textbf{å®šä¹‰3.5}  ä¸¤ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0166.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç©ºé—´ä¹‹é—´çš„æ˜ å°„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=89pt,height=17pt]{assets/formulas/formula-0167.png}}\penalty0\hspace{0pt}ç§°ä¸ºï¼š
+\textbf{¶¨Òå3.5}  Á½¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ¿Õ¼äÖ®¼äµÄÓ³Éä\hspace{0pt}\penalty0$f:\left ( { X,\mathcal{C}_{ X } } \right )\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}³ÆÎª£º
 
-\quad ï¼ˆ1ï¼‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0168.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„, è‹¥å¯¹\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=46pt,height=13pt]{assets/formulas/formula-0169.png}}\penalty0\hspace{0pt}, æœ‰\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=89pt,height=19pt]{assets/formulas/formula-0170.png}}\penalty0\hspace{0pt}ï¼›
+\quad £¨1£©\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éä, Èô¶Ô\hspace{0pt}\penalty0$\forall E\in L ^ { X\times X }$\nobreak\hspace{0pt}, ÓĞ\hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { E } \right )\le \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { E } \right ) } \right )$\nobreak\hspace{0pt}£»
 
-\quad ï¼ˆ2ï¼‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0171.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæœ‰æ•ˆé€†ç´§æ˜ å°„, è‹¥å¯¹\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=46pt,height=13pt]{assets/formulas/formula-0172.png}}\penalty0\hspace{0pt},æœ‰\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=90pt,height=19pt]{assets/formulas/formula-0173.png}}\penalty0\hspace{0pt}ï¼›
+\quad £¨2£©\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÓĞĞ§Äæ½ôÓ³Éä, Èô¶Ô\hspace{0pt}\penalty0$\forall F\in L ^ { X\times X }$\nobreak\hspace{0pt},ÓĞ\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { F } \right )\le \mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { F } \right ) } \right )$\nobreak\hspace{0pt}£»
 
-\quad ï¼ˆ3ï¼‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0174.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—è•´å«æ˜ å°„, è‹¥\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0175.png}}\penalty0\hspace{0pt}æ—¢æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0176.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œ, åˆæ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0177.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæœ‰æ•ˆé€†ç´§çš„ï¼›
+\quad £¨3£©\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´ÖÔÌº¬Ó³Éä, Èô\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}¼ÈÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½ç, ÓÖÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÓĞĞ§Äæ½ôµÄ£»
 
-\quad ï¼ˆ4ï¼‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0178.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—æ˜ å°„, è‹¥\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0179.png}}\penalty0\hspace{0pt}æ—¢æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0180.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œçš„, åˆæ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0181.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæœ‰æ•ˆé€†ç´§çš„.
+\quad £¨4£©\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´ÖÓ³Éä, Èô\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}¼ÈÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çµÄ, ÓÖÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÓĞĞ§Äæ½ôµÄ.
 
-\textbf{å‘½é¢˜3.6}  å·²çŸ¥\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=35pt,height=17pt]{assets/formulas/formula-0182.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0183.png}}\penalty0\hspace{0pt}æ˜¯ä¸¤ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0184.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç©ºé—´, æ˜ å°„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=46pt,height=15pt]{assets/formulas/formula-0185.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31.95pt,height=18pt]{assets/formulas/formula-0186.png}}\penalty0\hspace{0pt}åˆ†åˆ«æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=15pt,height=18pt]{assets/formulas/formula-0187.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0188.png}}\penalty0\hspace{0pt}çš„åŸº, åˆ™ï¼š
+\textbf{ÃüÌâ3.6}  ÒÑÖª\hspace{0pt}\penalty0$\left ( { X,\mathcal{C}_{ X } } \right )$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}ÊÇÁ½¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ¿Õ¼ä, Ó³Éä\hspace{0pt}\penalty0$f:X\to Y$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\mathcal{S}_{ X } ,\mathcal{S}_{ Y }$\penalty0\hspace{0pt}·Ö±ğÊÇ\hspace{0pt}\penalty0$\mathcal{C}_{ X }$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\mathcal{C}_{ Y }$\penalty0\hspace{0pt}µÄ»ù, Ôò£º
 
-\quad ï¼ˆ1ï¼‰\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0189.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0190.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„å½“ä¸”ä»…å½“\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=89pt,height=19pt]{assets/formulas/formula-0191.png}}\penalty0\hspace{0pt}ï¼›
+\quad £¨1£©\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éäµ±ÇÒ½öµ±\hspace{0pt}\penalty0$\mathcal{S}_{ X } \left ( { B } \right )\le \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { B } \right ) } \right )$\nobreak\hspace{0pt}£»
 
-\quad ï¼ˆ2ï¼‰\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0192.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0193.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæœ‰æ•ˆé€†ç´§æ˜ å°„å½“ä¸”ä»…å½“\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=91pt,height=19pt]{assets/formulas/formula-0194.png}}\penalty0\hspace{0pt}.
+\quad £¨2£©\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÓĞĞ§Äæ½ôÓ³Éäµ±ÇÒ½öµ±\hspace{0pt}\penalty0$\mathcal{S}_{ Y } \left ( { D } \right )\le \mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { D } \right ) } \right )$\nobreak\hspace{0pt}.
 
-è¯æ˜ ï¼ˆ1ï¼‰â€œå¿…è¦æ€§â€: ç”±äº\hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=82pt,height=19pt]{assets/formulas/formula-0195.png}}\penalty0\hspace{0pt}, æ•…\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=126pt,height=19pt]{assets/formulas/formula-0196.png}}\penalty0\hspace{0pt}.
+Ö¤Ã÷ £¨1£©``±ØÒªĞÔ'': ÓÉÓÚ\hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { B } \right )=\bigvee_{ B\le E } \mathcal{S}_{ X } \left ( { E } \right )$\nobreak\hspace{0pt}, ¹Ê\hspace{0pt}\penalty0$\mathcal{S}_{ X } \left ( { B } \right )\le \mathcal{C}_{ X } \left ( { B } \right )\le \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { B } \right ) } \right )$\nobreak\hspace{0pt}.
 
-â€œå……åˆ†æ€§â€: \hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=211pt,height=20pt]{assets/formulas/formula-0197.png}}\penalty0\hspace{0pt}, æ•…å¾—è¯\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0198.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0199.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„.
+``³ä·ÖĞÔ'': \hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { B } \right )=\bigvee_{ B\le E } \mathcal{S}_{ X } \left ( { E } \right )\le \bigvee_{ B\le E } \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { E } \right ) } \right )=\mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { B } \right ) } \right )$\nobreak\hspace{0pt}, ¹ÊµÃÖ¤\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éä.
 
-ï¼ˆ2ï¼‰â€œå¿…è¦æ€§â€: ç”±äº\hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=81pt,height=19pt]{assets/formulas/formula-0200.png}}\penalty0\hspace{0pt}, åˆ™\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=128pt,height=19pt]{assets/formulas/formula-0201.png}}\penalty0\hspace{0pt}.
+£¨2£©``±ØÒªĞÔ'': ÓÉÓÚ\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { D } \right )=\bigvee_{ D\le F } \mathcal{S}_{ Y } \left ( { F } \right )$\nobreak\hspace{0pt}, Ôò\hspace{0pt}\penalty0$\mathcal{S}_{ Y } \left ( { D } \right )\le \mathcal{C}_{ Y } \left ( { D } \right )\le \mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { D } \right ) } \right )$\nobreak\hspace{0pt}.
 
-â€œå……åˆ†æ€§â€: å› \hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=216pt,height=20pt]{assets/formulas/formula-0202.png}}\penalty0\hspace{0pt}, æ•…\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0203.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0204.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæœ‰æ•ˆé€†ç´§æ˜ å°„.
+``³ä·ÖĞÔ'': Òò\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { D } \right )=\bigvee_{ D\le F } \mathcal{S}_{ Y } \left ( { F } \right )\le \bigvee_{ D\le F } \mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { F } \right ) } \right )=\mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { D } \right ) } \right )$\nobreak\hspace{0pt}, ¹Ê\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÓĞĞ§Äæ½ôÓ³Éä.
 
-\textbf{å®šä¹‰3.7}  \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=35pt,height=17pt]{assets/formulas/formula-0205.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0206.png}}\penalty0\hspace{0pt}æ˜¯ä¸¤ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0207.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç©ºé—´,
+\textbf{¶¨Òå3.7}  \hspace{0pt}\penalty0$\left ( { X,\mathcal{C}_{ X } } \right )$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}ÊÇÁ½¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´Ö¿Õ¼ä,
 
-ï¼ˆ1ï¼‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=77pt,height=17pt]{assets/formulas/formula-0208.png}}\penalty0\hspace{0pt}æ˜¯ä¸¤ä¸ªæ˜ å°„, \hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0209.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=10pt,height=12pt]{assets/formulas/formula-0210.png}}\penalty0\hspace{0pt}ç§°ä¸ºæœ‰ç•Œæ¥è¿‘çš„, è¡¨ç¤ºä¸º\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=28.05pt,height=15pt]{assets/formulas/formula-0211.png}}\penalty0\hspace{0pt}, å¦‚æœ
-
-\begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=175.95pt,height=26pt]{assets/formulas/formula-0212.png}}\penalty0\hspace{0pt}ï¼›
-\end{center}
-ï¼ˆ2ï¼‰æ˜ å°„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=89pt,height=17pt]{assets/formulas/formula-0213.png}}\penalty0\hspace{0pt}ç§°ä¸º\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0214.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç­‰ä»·, è‹¥å¯¹\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=51pt,height=16pt]{assets/formulas/formula-0215.png}}\penalty0\hspace{0pt}, \newline æœ‰\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=100pt,height=19pt]{assets/formulas/formula-0216.png}}\penalty0\hspace{0pt}, ä¸”å­˜åœ¨æ˜ å°„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=89pt,height=17pt]{assets/formulas/formula-0217.png}}\penalty0\hspace{0pt}, \newline æ»¡è¶³å¯¹\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=47pt,height=16pt]{assets/formulas/formula-0218.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=96.95pt,height=19pt]{assets/formulas/formula-0219.png}}\penalty0\hspace{0pt}, æœ‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=49pt,height=18pt]{assets/formulas/formula-0220.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=49.95pt,height=18pt]{assets/formulas/formula-0221.png}}\penalty0\hspace{0pt}. ï¼ˆå³\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0222.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0223.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„, å­˜åœ¨\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=10pt,height=12pt]{assets/formulas/formula-0224.png}}\penalty0\hspace{0pt}ä¹Ÿæ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0225.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„, ä½¿å¾—\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=49pt,height=18pt]{assets/formulas/formula-0226.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=49.95pt,height=18pt]{assets/formulas/formula-0227.png}}\penalty0\hspace{0pt}. ï¼‰
-
-\textbf{å‘½é¢˜3.8  }\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=77pt,height=17pt]{assets/formulas/formula-0228.png}}\penalty0\hspace{0pt}æ˜¯ä¸¤ä¸ªæ˜ å°„, è‹¥\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0229.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=10pt,height=12pt]{assets/formulas/formula-0230.png}}\penalty0\hspace{0pt}æ˜¯æœ‰ç•Œæ¥è¿‘çš„, åˆ™æ˜ å°„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0231.png}}\penalty0\hspace{0pt}ä¸\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=10pt,height=12pt]{assets/formulas/formula-0232.png}}\penalty0\hspace{0pt}ç­‰ä»·.
-
-è¯æ˜ â€œè‡ªåæ€§â€: ç”±äº
+£¨1£©\hspace{0pt}\penalty0$f,g:X\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}ÊÇÁ½¸öÓ³Éä, \hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$g$\penalty0\hspace{0pt}³ÆÎªÓĞ½ç½Ó½üµÄ, ±íÊ¾Îª\hspace{0pt}\penalty0$f\sim g$\nobreak\hspace{0pt}, Èç¹û
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=307pt,height=26pt]{assets/formulas/formula-0233.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\bigvee_{ E_{ Y } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ Y } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ Y } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right ) } \right )=\top$\nobreak\hspace{0pt}£»
 \end{center}
-å³\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=29pt,height=15pt]{assets/formulas/formula-0234.png}}\penalty0\hspace{0pt},æ»¡è¶³è‡ªåæ€§.
+£¨2£©Ó³Éä\hspace{0pt}\penalty0$f:\left ( { X,\mathcal{C}_{ X } } \right )\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}³ÆÎª\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´ÖµÈ¼Û, Èô¶Ô\hspace{0pt}\penalty0$\forall E_{ X } \in L ^ { X\times X }$\nobreak\hspace{0pt}, ÓĞ\hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { E_{ X } } \right )\le \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { E_{ X } } \right ) } \right )$\nobreak\hspace{0pt}, ÇÒ´æÔÚÓ³Éä\hspace{0pt}\penalty0$g:\left ( { Y,\mathcal{C}_{ Y } } \right )\to \left ( { X,\mathcal{C}_{ X } } \right )$\nobreak\hspace{0pt}, Âú×ã¶Ô\hspace{0pt}\penalty0$\forall E_{ Y } \in L ^ { Y\times Y }$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { E_{ Y } } \right )\le \mathcal{C}_{ X } \left ( { g ^ { \to } \left ( { E_{ Y } } \right ) } \right )$\nobreak\hspace{0pt}, ÓĞ\hspace{0pt}\penalty0$f\circ g\sim id_{ Y }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$g\circ f\sim id_{ X }$\nobreak\hspace{0pt}. £¨¼´\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éä, ´æÔÚ\hspace{0pt}\penalty0$g$\penalty0\hspace{0pt}Ò²ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éä, Ê¹µÃ\hspace{0pt}\penalty0$f\circ g\sim id_{ Y }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$g\circ f\sim id_{ X }$\nobreak\hspace{0pt}. £©
 
-â€œå¯¹ç§°æ€§â€: å‡è®¾ä¸¤ä¸ªæ˜ å°„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=21pt,height=15pt]{assets/formulas/formula-0235.png}}\penalty0\hspace{0pt}æ»¡è¶³\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=28.05pt,height=15pt]{assets/formulas/formula-0236.png}}\penalty0\hspace{0pt}, åˆ™
+\textbf{ÃüÌâ3.8  }\hspace{0pt}\penalty0$f,g:X\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}ÊÇÁ½¸öÓ³Éä, Èô\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$g$\penalty0\hspace{0pt}ÊÇÓĞ½ç½Ó½üµÄ, ÔòÓ³Éä\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}Óë\hspace{0pt}\penalty0$g$\penalty0\hspace{0pt}µÈ¼Û.
+
+Ö¤Ã÷ ``×Ô·´ĞÔ'': ÓÉÓÚ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=348pt,height=26pt]{assets/formulas/formula-0237.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\bigvee_{ E_{ Y } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ Y } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ Y } \left ( { f\left ( { x } \right ),f\left ( { x } \right ) } \right ) } \right ) } \right )\ge \mathcal{C}_{ Y } \left ( { \Delta _{ Y } } \right )\wedge \bigwedge_{ x\in X } \Delta _{ Y } \left ( { f\left ( { x } \right ),f\left ( { x } \right ) } \right )=\top$\nobreak\hspace{0pt},
 \end{center}
-æ•…\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=28.05pt,height=15pt]{assets/formulas/formula-0238.png}}\penalty0\hspace{0pt}å¾—è¯, æ»¡è¶³å¯¹ç§°æ€§.
+¼´\hspace{0pt}\penalty0$f\sim f$\nobreak\hspace{0pt},Âú×ã×Ô·´ĞÔ.
 
-â€œä¼ é€’æ€§â€: å‡è®¾åˆå­˜åœ¨ä¸€ä¸ªæ˜ å°„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=65pt,height=17pt]{assets/formulas/formula-0239.png}}\penalty0\hspace{0pt}æ»¡è¶³\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=28.05pt,height=15pt]{assets/formulas/formula-0240.png}}\penalty0\hspace{0pt}ä¸”\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=27pt,height=15pt]{assets/formulas/formula-0241.png}}\penalty0\hspace{0pt}, åˆ™
+``¶Ô³ÆĞÔ'': ¼ÙÉèÁ½¸öÓ³Éä\hspace{0pt}\penalty0$f,g$\penalty0\hspace{0pt}Âú×ã\hspace{0pt}\penalty0$f\sim g$\nobreak\hspace{0pt}, Ôò
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=173pt,height=26pt]{assets/formulas/formula-0242.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=170pt,height=26pt]{assets/formulas/formula-0243.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\bigvee_{ E_{ Y } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ Y } ^ { -1 } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ Y } ^ { -1 } \left ( { g\left ( { x } \right ),f\left ( { x } \right ) } \right ) } \right ) } \right )\ge \bigvee_{ E_{ Y } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ Y } } \right )\wedge \bigwedge_{ x\in X } E_{ Y } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right )=\top$\nobreak\hspace{0pt},
 \end{center}
-åˆè®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=49pt,height=17pt]{assets/formulas/formula-0244.png}}\penalty0\hspace{0pt}, æ»¡è¶³
+¹Ê\hspace{0pt}\penalty0$g\sim f$\penalty0\hspace{0pt}µÃÖ¤, Âú×ã¶Ô³ÆĞÔ.
+
+``´«µİĞÔ'': ¼ÙÉèÓÖ´æÔÚÒ»¸öÓ³Éä\hspace{0pt}\penalty0$h:X\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}Âú×ã\hspace{0pt}\penalty0$f\sim g$\penalty0\hspace{0pt}ÇÒ\hspace{0pt}\penalty0$g\sim h$\nobreak\hspace{0pt}, Ôò
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=174pt,height=26pt]{assets/formulas/formula-0245.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=170pt,height=26pt]{assets/formulas/formula-0246.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\bigvee_{ E_{ s } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ s } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ s } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right ) } \right )=\top$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\bigvee_{ E_{ t } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ t } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ t } \left ( { g\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right ) } \right )=\top$\nobreak\hspace{0pt},
 \end{center}
-åˆ™å­˜åœ¨\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=42pt,height=19pt]{assets/formulas/formula-0247.png}}\penalty0\hspace{0pt}, ä½¿å¾—\hspace{0pt}\penalty0\raisebox{-9pt}{\includegraphics[width=142pt,height=23pt]{assets/formulas/formula-0248.png}}\penalty0\hspace{0pt}, ä¸”\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=47pt,height=17pt]{assets/formulas/formula-0249.png}}\penalty0\hspace{0pt}, åŒç†, å­˜åœ¨\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=42.95pt,height=19pt]{assets/formulas/formula-0250.png}}\penalty0\hspace{0pt}, ä½¿å¾—\hspace{0pt}\penalty0\raisebox{-9pt}{\includegraphics[width=142pt,height=23pt]{assets/formulas/formula-0251.png}}\penalty0\hspace{0pt}, ä¸”\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=49pt,height=17pt]{assets/formulas/formula-0252.png}}\penalty0\hspace{0pt}. ä»¤\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=49.95pt,height=18pt]{assets/formulas/formula-0253.png}}\penalty0\hspace{0pt}, \newline æ˜¾ç„¶\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=143pt,height=17pt]{assets/formulas/formula-0254.png}}\penalty0\hspace{0pt},
+ÓÖÉè\hspace{0pt}\penalty0$\forall a\in \beta \left ( { \top } \right )$\nobreak\hspace{0pt}, Âú×ã
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=379pt,height=19pt]{assets/formulas/formula-0255.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$a\prec \bigvee_{ E_{ s } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ s } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ s } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right ) } \right )$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$a\prec \bigvee_{ E_{ t } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ t } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ t } \left ( { g\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right ) } \right )$\nobreak\hspace{0pt},
 \end{center}
-å¾—\hspace{0pt}\penalty0\raisebox{-9pt}{\includegraphics[width=136pt,height=23pt]{assets/formulas/formula-0256.png}}\penalty0\hspace{0pt}. æ•…\hspace{0pt}\penalty0\raisebox{-9pt}{\includegraphics[width=136pt,height=23pt]{assets/formulas/formula-0257.png}}\penalty0\hspace{0pt}, åˆ™
+Ôò´æÔÚ\hspace{0pt}\penalty0$E_{ 1 } \in L ^ { Y\times Y }$\nobreak\hspace{0pt}, Ê¹µÃ\hspace{0pt}\penalty0$a\le \mathcal{C}_{ Y } \left ( { E_{ 1 } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ 1 } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right )$\nobreak\hspace{0pt}, ÇÒ\hspace{0pt}\penalty0$a\le \mathcal{C}_{ Y } \left ( { E_{ 1 } } \right )$\nobreak\hspace{0pt}, Í¬Àí, ´æÔÚ\hspace{0pt}\penalty0$E_{ 2 } \in L ^ { Y\times Y }$\nobreak\hspace{0pt}, Ê¹µÃ\hspace{0pt}\penalty0$a\le \mathcal{C}_{ Y } \left ( { E_{ 2 } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ 2 } \left ( { g\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right )$\nobreak\hspace{0pt}, ÇÒ\hspace{0pt}\penalty0$a\le \mathcal{C}_{ Y } \left ( { E_{ 2 } } \right )$\nobreak\hspace{0pt}. Áî\hspace{0pt}\penalty0$E=E_{ 1 } \circ E_{ 2 }$\nobreak\hspace{0pt}, ÏÔÈ»\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { E_{ 1 } \circ E_{ 2 } } \right )\ge \mathcal{C}_{ Y } \left ( { E_{ 1 } } \right )\wedge \mathcal{C}_{ Y } \left ( { E_{ 2 } } \right )\ge a$\nobreak\hspace{0pt},
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=164pt,height=24.95pt]{assets/formulas/formula-0258.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\left ( { E_{ 1 } \circ E_{ 2 } } \right )\left ( { f\left ( { x } \right ),h\left ( { x } \right ) } \right )=\bigvee_{ z\in Y } E_{ 2 } \left ( { f\left ( { x } \right ),z } \right )\wedge E_{ 1 } \left ( { z,h\left ( { x } \right ) } \right )\ge E_{ 2 } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right )\wedge E_{ 1 } \left ( { g\left ( { x } \right ),h\left ( { x } \right ) } \right )\ge a$\nobreak\hspace{0pt},
 \end{center}
-æ»¡è¶³ä¼ é€’æ€§.
-
-\textbf{ä¾‹ }\textbf{3}\textbf{-1}\textbf{  }æ˜ å°„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=69pt,height=12.05pt]{assets/formulas/formula-0259.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12.05pt,height=11pt]{assets/formulas/formula-0260.png}}\penalty0\hspace{0pt}ä¸Šä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0261.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šå…³ç³», å®šä¹‰
+µÃ\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { E } \right )\wedge \left ( { \bigwedge_{ x\in X } E\left ( { f\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right )\ge a$\nobreak\hspace{0pt}. ¹Ê\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { E } \right )\wedge \left ( { \bigwedge_{ x\in X } E\left ( { f\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right )=\top$\nobreak\hspace{0pt}, Ôò
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=49pt,height=15pt]{assets/formulas/formula-0262.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-13pt}{\includegraphics[width=87pt,height=31pt]{assets/formulas/formula-0263.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\bigvee_{ E\in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E } \right )\wedge \left ( { \bigwedge_{ x\in X } E\left ( { f\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right ) } \right )=\top$\nobreak\hspace{0pt},
 \end{center}
-åˆ™:
+Âú×ã´«µİĞÔ.
 
-ï¼ˆ1ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0264.png}}\penalty0\hspace{0pt}ä¸ºè‡ªåçš„, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0265.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0266.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„ï¼›
+\textbf{Àı 3}\textbf{-1  }Ó³Éä\hspace{0pt}\penalty0$R:X\times X\to M$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏÒ»¸ö\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı¹ØÏµ, ¶¨Òå
 
-ï¼ˆ2ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0267.png}}\penalty0\hspace{0pt}ä¸ºå¯¹ç§°çš„, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0268.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0269.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„ï¼›
+\begin{center}
+\noindent \hspace{0pt}\penalty0$\forall E\in L ^ { X\times X }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{C}_R(E)=\begin{cases}\top,&E\leq R,\\ \bot,&E\nleqslant R,\end{cases}$\nobreak\hspace{0pt},
+\end{center}
+Ôò:
 
-ï¼ˆ3ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0270.png}}\penalty0\hspace{0pt}ä¸ºä¼ é€’çš„, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0271.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0272.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„ï¼›
+£¨1£©Èô\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}Îª×Ô·´µÄ, Ôò\hspace{0pt}\penalty0$\mathcal{C}_{ R }$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹£»
 
-ï¼ˆ4ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0273.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0274.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç­‰ä»·å…³ç³», åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0275.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0276.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„.
+£¨2£©Èô\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}Îª¶Ô³ÆµÄ, Ôò\hspace{0pt}\penalty0$\mathcal{C}_{ R }$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹£»
+
+£¨3£©Èô\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}Îª´«µİµÄ, Ôò\hspace{0pt}\penalty0$\mathcal{C}_{ R }$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹£»
+
+£¨4£©Èô\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºıµÈ¼Û¹ØÏµ, Ôò\hspace{0pt}\penalty0$\mathcal{C}_{ R }$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹.
 
 
-\chapter{$(L,M)$-æ¨¡ç³Šçƒç»“æ„}
+\chapter{$(L,M)$-Ä£ºıÇò½á¹¹}
 \vspace{0.2cm}
-\textbf{å®šä¹‰}\textbf{4}\textbf{.1}  ï¼ˆ1ï¼‰ä¸€ä¸ªæ˜ å°„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=78.95pt,height=12pt]{assets/formulas/formula-0278.png}}\penalty0\hspace{0pt}ç§°ä¸ºé›†åˆ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0279.png}}\penalty0\hspace{0pt}ä¸Šå…³äºé›†åˆ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0280.png}}\penalty0\hspace{0pt}çš„ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0281.png}}\penalty0\hspace{0pt}-çƒæ˜ å°„,å¦‚æœæ»¡è¶³ï¼š\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=34pt,height=12pt]{assets/formulas/formula-0282.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=31.95pt,height=11pt]{assets/formulas/formula-0283.png}}\penalty0\hspace{0pt}, æœ‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=57pt,height=17pt]{assets/formulas/formula-0284.png}}\penalty0\hspace{0pt}. è¿›ä¸€æ­¥, è®°\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=101pt,height=19pt]{assets/formulas/formula-0285.png}}\penalty0\hspace{0pt}æ˜¯äºŒå…ƒæ˜ å°„æ—,å…¶ä¸­äºŒå…ƒæ˜ å°„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=66pt,height=15pt]{assets/formulas/formula-0286.png}}\penalty0\hspace{0pt}å®šä¹‰ä¸ºï¼š\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=42.95pt,height=13.95pt]{assets/formulas/formula-0287.png}}\penalty0\hspace{0pt}, æœ‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=85.95pt,height=17pt]{assets/formulas/formula-0288.png}}\penalty0\hspace{0pt}.
+\textbf{¶¨Òå4}\textbf{.1}  £¨1£©Ò»¸öÓ³Éä\hspace{0pt}\penalty0$\mathcal{B}:X\times P\times X\to L$\penalty0\hspace{0pt}³ÆÎª¼¯ºÏ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏ¹ØÓÚ¼¯ºÏ\hspace{0pt}\penalty0$P$\penalty0\hspace{0pt}µÄÒ»¸ö\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ÇòÓ³Éä,Èç¹ûÂú×ã£º\hspace{0pt}\penalty0$\forall x\in X$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, ÓĞ\hspace{0pt}\penalty0$\mathcal{B}\left ( { x,r,x } \right )=\top$\nobreak\hspace{0pt}. ½øÒ»²½, ¼Ç\hspace{0pt}\penalty0$R_{ \mathcal{B} } =\left \{ \begin{array}{l} \mathcal{B}_{ r } \in L ^ { X\times X } :r\in P \end{array} \right \}$\penalty0\hspace{0pt}ÊÇ¶şÔªÓ³Éä×å,ÆäÖĞ¶şÔªÓ³Éä\hspace{0pt}\penalty0$\mathcal{B}_{ r } :X\times X\to L$\penalty0\hspace{0pt}¶¨ÒåÎª£º\hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, ÓĞ\hspace{0pt}\penalty0$\mathcal{B}_{ r } \left ( { x,y } \right )=\mathcal{B}\left ( { x,r,y } \right )$\nobreak\hspace{0pt}.
 
-ï¼ˆ2ï¼‰ç§°æ˜ å°„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=59pt,height=15pt]{assets/formulas/formula-0289.png}}\penalty0\hspace{0pt}ä¸º\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0290.png}}\penalty0\hspace{0pt}ä¸Šçš„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0291.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç»“æ„, è‹¥å¯¹\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=38pt,height=13pt]{assets/formulas/formula-0292.png}}\penalty0\hspace{0pt}, æœ‰
-
-\begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=138pt,height=17pt]{assets/formulas/formula-0293.png}}\penalty0\hspace{0pt}.
-\end{center}
-å¯¹äº\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0294.png}}\penalty0\hspace{0pt}ä¸Šçš„å…³äºé›†åˆ\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=11pt,height=11pt]{assets/formulas/formula-0295.png}}\penalty0\hspace{0pt}çš„ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0296.png}}\penalty0\hspace{0pt}-çƒæ˜ å°„\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=77pt,height=12pt]{assets/formulas/formula-0297.png}}\penalty0\hspace{0pt}å’Œä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0298.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç»“æ„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=59pt,height=15pt]{assets/formulas/formula-0299.png}}\penalty0\hspace{0pt}, ç§°å››å…ƒç»„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=58pt,height=17pt]{assets/formulas/formula-0300.png}}\penalty0\hspace{0pt}ä¸ºä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0301.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ.
-
-\textbf{å®šä¹‰}\textbf{4}\textbf{.2  }\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=77pt,height=17pt]{assets/formulas/formula-0302.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0303.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, ç§°\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0304.png}}\penalty0\hspace{0pt}æ»¡è¶³ï¼š
-
-\quad ï¼ˆ1ï¼‰å¼±ä¸Šä¹˜ä¿æŒæ€§, è‹¥\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=38pt,height=13pt]{assets/formulas/formula-0305.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=124pt,height=21pt]{assets/formulas/formula-0306.png}}\penalty0\hspace{0pt}ï¼›
-
-ï¼ˆ2ï¼‰ä¸Šä¹˜ä¿æŒæ€§, è‹¥\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=38pt,height=13pt]{assets/formulas/formula-0307.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=120pt,height=21pt]{assets/formulas/formula-0308.png}}\penalty0\hspace{0pt}, å…¶ä¸­\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=85pt,height=15pt]{assets/formulas/formula-0309.png}}\penalty0\hspace{0pt}å®šä¹‰ä¸º: \hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=42.95pt,height=13.95pt]{assets/formulas/formula-0310.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=159pt,height=19pt]{assets/formulas/formula-0311.png}}\penalty0\hspace{0pt}ï¼›
-
-ï¼ˆ3ï¼‰ä¸Šå¯¹ç§°æ€§, è‹¥\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=31.95pt,height=11pt]{assets/formulas/formula-0312.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=81pt,height=19pt]{assets/formulas/formula-0313.png}}\penalty0\hspace{0pt},å…¶ä¸­\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=73pt,height=16pt]{assets/formulas/formula-0314.png}}\penalty0\hspace{0pt}å®šä¹‰ä¸º: \hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=42.95pt,height=13.95pt]{assets/formulas/formula-0315.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=84pt,height=17pt]{assets/formulas/formula-0316.png}}\penalty0\hspace{0pt}.
-
-\textbf{å®šä¹‰}\textbf{4}\textbf{.3}\textbf{  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=77pt,height=17pt]{assets/formulas/formula-0317.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0318.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, åˆ™\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0319.png}}\penalty0\hspace{0pt}è¢«ç§°ä¸º:
-
-ï¼ˆ1ï¼‰\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0320.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿçƒç©ºé—´, è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0321.png}}\penalty0\hspace{0pt}æ»¡è¶³ä¸Šä¹˜ä¿æŒæ€§ï¼›
-
-ï¼ˆ2ï¼‰\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0322.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠçƒç©ºé—´, è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0323.png}}\penalty0\hspace{0pt}æ—¢æ»¡è¶³å¼±ä¸Šä¹˜ä¿æŒæ€§, åˆæ»¡è¶³ä¸Šå¯¹ç§°æ€§ï¼›
-
-ï¼ˆ3ï¼‰\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0324.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç©ºé—´, è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0325.png}}\penalty0\hspace{0pt}æ—¢æ˜¯\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0326.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¼ªçƒç©ºé—´, åˆæ˜¯\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0327.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠçƒç©ºé—´.
-
-\textbf{å®šä¹‰}\textbf{4}\textbf{.4  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=88pt,height=17pt]{assets/formulas/formula-0328.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=90pt,height=19pt]{assets/formulas/formula-0329.png}}\penalty0\hspace{0pt}ä¸ºä¸Š\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0330.png}}\penalty0\hspace{0pt}çš„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0331.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, è®°\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=38pt,height=16pt]{assets/formulas/formula-0332.png}}\penalty0\hspace{0pt}, è‹¥å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=24.95pt,height=11pt]{assets/formulas/formula-0333.png}}\penalty0\hspace{0pt}, æœ‰\hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=119pt,height=20pt]{assets/formulas/formula-0334.png}}\penalty0\hspace{0pt}, å…¶ä¸­
+£¨2£©³ÆÓ³Éä\hspace{0pt}\penalty0$N:R_{\mathcal{B}}\to M$\penalty0\hspace{0pt}Îª\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}ÉÏµÄ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò½á¹¹, Èô¶Ô\hspace{0pt}\penalty0$\forall s,t\in P$\nobreak\hspace{0pt}, ÓĞ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=195pt,height=16pt]{assets/formulas/formula-0335.png}}\penalty0\hspace{0pt}.
+\noindent \hspace{0pt}\penalty0$\mathcal{N}\left ( { \mathcal{B}_{ s } \vee \mathcal{B}_{ t } } \right )\ge \mathcal{N}\left ( { \mathcal{B}_{ s } } \right )\wedge \mathcal{N}\left ( { \mathcal{B}_{ t } } \right )$\nobreak\hspace{0pt}.
 \end{center}
-è¿›ä¸€æ­¥, æˆ‘ä»¬è®°\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=39pt,height=16pt]{assets/formulas/formula-0336.png}}\penalty0\hspace{0pt}, è‹¥\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=38pt,height=16pt]{assets/formulas/formula-0337.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=38pt,height=16pt]{assets/formulas/formula-0338.png}}\penalty0\hspace{0pt}éƒ½æˆç«‹.
+¶ÔÓÚ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏµÄ¹ØÓÚ¼¯ºÏ\hspace{0pt}\penalty0$P$\penalty0\hspace{0pt}µÄÒ»¸ö\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ÇòÓ³Éä\hspace{0pt}\penalty0$\mathcal{B}:X\times P\times X\to L$\penalty0\hspace{0pt}ºÍÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò½á¹¹\hspace{0pt}\penalty0$N:R_{\mathcal{B}}\to M$\nobreak\hspace{0pt}, ³ÆËÄÔª×é\hspace{0pt}\penalty0$\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}ÎªÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³.
 
-\textbf{å®šä¹‰}\textbf{4}\textbf{.5}è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=91pt,height=17pt]{assets/formulas/formula-0339.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=85pt,height=17pt]{assets/formulas/formula-0340.png}}\penalty0\hspace{0pt}ä¸º\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0341.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, ç§°æ˜ å°„\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=45pt,height=13pt]{assets/formulas/formula-0342.png}}\penalty0\hspace{0pt}ä¸ºä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0343.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒä¿æŒæ˜ å°„, å¦‚æœå¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=24.95pt,height=11pt]{assets/formulas/formula-0344.png}}\penalty0\hspace{0pt}å’Œä»»æ„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=37pt,height=13.95pt]{assets/formulas/formula-0345.png}}\penalty0\hspace{0pt}, éƒ½æœ‰\hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=121pt,height=21pt]{assets/formulas/formula-0346.png}}\penalty0\hspace{0pt}, å…¶ä¸­\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=226pt,height=16pt]{assets/formulas/formula-0347.png}}\penalty0\hspace{0pt}.
+\textbf{¶¨Òå4}\textbf{.2  }\hspace{0pt}\penalty0$\mathcal{B} =\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, ³Æ\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}Âú×ã£º
 
-æ¥ä¸‹æ¥, æˆ‘ä»¬è¦å»ºç«‹\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0348.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿä¸\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0349.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„ä¹‹é—´çš„å…³ç³».
+\quad £¨1£©ÈõÉÏ³Ë±£³ÖĞÔ, Èô\hspace{0pt}\penalty0$\forall s,t\in P$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{N}\left ( { \mathcal{B}_{ s } \vee \mathcal{B}_{ t } } \right )\le \bigvee_{ \mathcal{B}_{ s } \vee \mathcal{B}_{ t } \le \mathcal{B}_{ r } } \mathcal{N}\left ( { \mathcal{B}_{ r } } \right )$\nobreak\hspace{0pt}£»
 
-\textbf{å‘½é¢˜}\textbf{4}\textbf{.}\textbf{6  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0350.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0351.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç©ºé—´, è®°\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=99.8pt,height=14.8pt]{assets/formulas/formula-0352.png}}\penalty0\hspace{0pt}, å¯¹\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=37pt,height=15pt]{assets/formulas/formula-0353.png}}\penalty0\hspace{0pt}, å®šä¹‰æ˜ å°„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=84pt,height=15pt]{assets/formulas/formula-0354.png}}\penalty0\hspace{0pt}ä¸º: \hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=42.95pt,height=13.95pt]{assets/formulas/formula-0355.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=37pt,height=15pt]{assets/formulas/formula-0356.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=90pt,height=17pt]{assets/formulas/formula-0357.png}}\penalty0\hspace{0pt}, åˆ™\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=13.95pt,height=15pt]{assets/formulas/formula-0358.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0359.png}}\penalty0\hspace{0pt}ä¸Šå…³äº\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=13.95pt,height=15pt]{assets/formulas/formula-0360.png}}\penalty0\hspace{0pt}çš„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0361.png}}\penalty0\hspace{0pt}-çƒæ˜ å°„. è¿›ä¸€æ­¥, ä»¤\hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=124.75pt,height=20.45pt]{assets/formulas/formula-0362.png}}\penalty0\hspace{0pt}.å…¶ä¸­å¯¹\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=38pt,height=15pt]{assets/formulas/formula-0363.png}}\penalty0\hspace{0pt}, å®šä¹‰æ˜ å°„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=81pt,height=16pt]{assets/formulas/formula-0364.png}}\penalty0\hspace{0pt}ä¸º: \hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=42.95pt,height=13.95pt]{assets/formulas/formula-0365.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=107pt,height=17pt]{assets/formulas/formula-0366.png}}\penalty0\hspace{0pt}. å®šä¹‰æ˜ å°„\hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=67pt,height=18pt]{assets/formulas/formula-0367.png}}\penalty0\hspace{0pt}ä¸º:
+£¨2£©ÉÏ³Ë±£³ÖĞÔ, Èô\hspace{0pt}\penalty0$\forall s,t\in P$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{N}\left ( { \mathcal{B}_{ s } \circ \mathcal{B}_{ t } } \right )\le \bigvee_{ \mathcal{B}_{ s } \circ \mathcal{B}_{ t } \le \mathcal{B}_{ r } } \mathcal{N}\left ( { \mathcal{B}_{ r } } \right )$\nobreak\hspace{0pt}, ÆäÖĞ\hspace{0pt}\penalty0$\mathcal{B}_{ s } \circ \mathcal{B}_{ t } :X\times X\to M$\penalty0\hspace{0pt}¶¨ÒåÎª: \hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ s } \circ \mathcal{B}_{ t } } \right )\left ( { x,y } \right )=\bigvee_{ z\in X } \mathcal{B}_{ t } \left ( { x,z } \right )\wedge \mathcal{B}_{ s } \left ( { z,y } \right )$\nobreak\hspace{0pt}£»
+
+£¨3£©ÉÏ¶Ô³ÆĞÔ, Èô\hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{N}\left ( { \mathcal{B}_{ r } } \right )\le \mathcal{N}\left ( { \mathcal{B}_{ r } ^ { * } } \right )$\nobreak\hspace{0pt},ÆäÖĞ\hspace{0pt}\penalty0$\mathcal{B}_{ r } ^ { * } :X\times X\to M$\penalty0\hspace{0pt}¶¨ÒåÎª: \hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{B}_{ r } ^ { * } \left ( { x,y } \right )=\mathcal{B}_{ r } \left ( { y,x } \right )$\nobreak\hspace{0pt}.
+
+\textbf{¶¨Òå4}\textbf{.3  }Éè\hspace{0pt}\penalty0$\mathcal{B} =\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, Ôò\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}±»³ÆÎª:
+
+£¨1£©\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâÇò¿Õ¼ä, Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}Âú×ãÉÏ³Ë±£³ÖĞÔ£»
+
+£¨2£©\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ëÇò¿Õ¼ä, Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}¼ÈÂú×ãÈõÉÏ³Ë±£³ÖĞÔ, ÓÖÂú×ãÉÏ¶Ô³ÆĞÔ£»
+
+£¨3£©\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò¿Õ¼ä, Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}¼ÈÊÇ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÎ±Çò¿Õ¼ä, ÓÖÊÇ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ëÇò¿Õ¼ä.
+
+\textbf{¶¨Òå4}\textbf{.4  }Éè\hspace{0pt}\penalty0$\mathcal{B} _{ P } =\left ( { X,P,\mathcal{B}_{ P } ,\mathcal{N}_{ P } } \right )$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\mathcal{B} _{ Q } =\left ( { X,Q,\mathcal{B}_{ Q } ,\mathcal{N}_{ Q } } \right )$\penalty0\hspace{0pt}ÎªÉÏ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}µÄ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, ¼Ç\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\nobreak\hspace{0pt}, Èô¶ÔÈÎÒâ\hspace{0pt}\penalty0$r\in P$\nobreak\hspace{0pt}, ÓĞ\hspace{0pt}\penalty0$\mathcal{N}_{ P } ((\mathcal{B}_{ P } )_{ r } )\le \bigvee_{ s\in Q_{ r } } \mathcal{N}_{ Q } ((\mathcal{B}_{ Q } )_{ s } )$\nobreak\hspace{0pt}, ÆäÖĞ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=37pt,height=15pt]{assets/formulas/formula-0368.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=87pt,height=19pt]{assets/formulas/formula-0369.png}}\penalty0\hspace{0pt}.
+\noindent \hspace{0pt}\penalty0$Q_{ r } =\{s\in Q:\forall x,y\in X,\mathcal{B}_{ P } (x,r,y)\le \mathcal{B}_{ Q } (x,s,y)\}$\nobreak\hspace{0pt}.
 \end{center}
-åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=93pt,height=17pt]{assets/formulas/formula-0370.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0371.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, ä¸”\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0372.png}}\penalty0\hspace{0pt}æ»¡è¶³å¼±ä¸Šä¹˜ä¿æŒæ€§. æ­¤å¤–,
+½øÒ»²½, ÎÒÃÇ¼Ç\hspace{0pt}\penalty0$\mathcal{B} _{ P } \simeq \mathcal{B} _{ Q }$\nobreak\hspace{0pt}, Èô\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\mathcal{B} _{ Q } \prec \mathcal{B} _{ P }$\penalty0\hspace{0pt}¶¼³ÉÁ¢.
 
-ï¼ˆ1ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0373.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0374.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„, åˆ™\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0375.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0376.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠçƒç©ºé—´ï¼›
+\textbf{¶¨Òå4}\textbf{.5}Éè\hspace{0pt}\penalty0$\mathcal{B} _{ X } =\left ( { X,P,\mathcal{B}_{ X } ,\mathcal{N}_{ X } } \right )$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\mathcal{B} _{ Y } =\left ( { Y,P,\mathcal{B}_{ Y } ,\mathcal{N}_{ Y } } \right )$\penalty0\hspace{0pt}Îª\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, ³ÆÓ³Éä\hspace{0pt}\penalty0$f:X\to Y$\penalty0\hspace{0pt}ÎªÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò±£³ÖÓ³Éä, Èç¹û¶ÔÈÎÒâ\hspace{0pt}\penalty0$r\in P$\penalty0\hspace{0pt}ºÍÈÎÒâ\hspace{0pt}\penalty0$x,y\in X$\nobreak\hspace{0pt}, ¶¼ÓĞ\hspace{0pt}\penalty0$\mathcal{N}_{ X } ((\mathcal{B}_{ X } )_{ r } )\le \bigvee_{ s\in Q_{ r } ^{ f } } \mathcal{N}_{ Y } ((\mathcal{B}_{ Y } )_{ s } )$\nobreak\hspace{0pt}, ÆäÖĞ\hspace{0pt}\penalty0$Q_{ r } ^{ f }=\{s\in Q:\forall x,y\in X,\mathcal{B}_{ X } (x,r,y)\le \mathcal{B}_{ Y } (f(x),s,f(y))\}$\nobreak\hspace{0pt}.
 
-ï¼ˆ2ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0377.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0378.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„, åˆ™\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0379.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0380.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿçƒç©ºé—´ï¼›
+½ÓÏÂÀ´, ÎÒÃÇÒª½¨Á¢\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³Óë\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹Ö®¼äµÄ¹ØÏµ.
 
-ï¼ˆ3ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0381.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0382.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„, åˆ™\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0383.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0384.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç©ºé—´.
-
-è¯æ˜ å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0385.png}}\penalty0\hspace{0pt}, ç”±\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=67pt,height=19pt]{assets/formulas/formula-0386.png}}\penalty0\hspace{0pt}, å¾—\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=152pt,height=17pt]{assets/formulas/formula-0387.png}}\penalty0\hspace{0pt}, è¿™è¯´æ˜\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=27pt,height=16pt]{assets/formulas/formula-0388.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=10pt,height=11pt]{assets/formulas/formula-0389.png}}\penalty0\hspace{0pt}-çƒæ˜ å°„, å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=42pt,height=15pt]{assets/formulas/formula-0390.png}}\penalty0\hspace{0pt}, ç”±\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0391.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0392.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç©ºé—´, å¾—
+\textbf{ÃüÌâ4}\textbf{.6  }Éè\hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ¿Õ¼ä, ¼Ç\hspace{0pt}\penalty0$P_X=\{E\in L^{X\times X}:\Delta_X\leq E\}$\nobreak\hspace{0pt}, ¶Ô\hspace{0pt}\penalty0$\forall E\in P_{ X }$\nobreak\hspace{0pt}, ¶¨ÒåÓ³Éä\hspace{0pt}\penalty0$\mathcal{B}_{ \mathcal{C} } :X\times E\times X\to L$\penalty0\hspace{0pt}Îª: \hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\forall E\in P_{ X }$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\mathcal{B}_{ \mathcal{C} } \left ( { x,E,y } \right )=E\left ( { x,y } \right )$\nobreak\hspace{0pt}, Ôò\hspace{0pt}\penalty0$\mathcal{B}_{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}ÉÏ¹ØÓÚ\hspace{0pt}\penalty0$P_{ X }$\penalty0\hspace{0pt}µÄ\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ÇòÓ³Éä. ½øÒ»²½, Áî\hspace{0pt}\penalty0$R_{ \mathcal{B}_{ \mathcal{C} } } =\left \{ \begin{array}{l} \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \in L ^ { X\times X } :E\in P_{ X } \end{array} \right \}$\nobreak\hspace{0pt}.ÆäÖĞ¶Ô\hspace{0pt}\penalty0$\forall F\in P_{ X }$\nobreak\hspace{0pt}, ¶¨ÒåÓ³Éä\hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } :X\times X\to L$\penalty0\hspace{0pt}Îª: \hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } (x,y)=\mathcal{B}_{ \mathcal{C} } \left ( { x,F,y } \right )$\nobreak\hspace{0pt}. ¶¨ÒåÓ³Éä\hspace{0pt}\penalty0$N_{\mathcal{C}}:R_{\mathcal{B}_{\mathcal{C}}}\to M$\penalty0\hspace{0pt}Îª:
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=394pt,height=19pt]{assets/formulas/formula-0393.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\forall E\in P_{ X }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } } \right )=\mathcal{C}\left ( { E } \right )$\nobreak\hspace{0pt}.
 \end{center}
-æ•…\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=19pt,height=15pt]{assets/formulas/formula-0394.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0395.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç»“æ„, å› æ­¤, \hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0396.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0397.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ.
+Ôò\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} } =\left ( { X,P_{ X } ,\mathcal{B}_{ \mathcal{C} } ,\mathcal{N}_{ \mathcal{C} } } \right )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, ÇÒ\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}Âú×ãÈõÉÏ³Ë±£³ÖĞÔ. ´ËÍâ,
 
-å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=42pt,height=15pt]{assets/formulas/formula-0398.png}}\penalty0\hspace{0pt}, æœ‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=51pt,height=18pt]{assets/formulas/formula-0399.png}}\penalty0\hspace{0pt}, ä¸”å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=29pt,height=11pt]{assets/formulas/formula-0400.png}}\penalty0\hspace{0pt}, å½“\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=48pt,height=11pt]{assets/formulas/formula-0401.png}}\penalty0\hspace{0pt}æ—¶, æœ‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=60pt,height=16pt]{assets/formulas/formula-0402.png}}\penalty0\hspace{0pt}. ç”±
+£¨1£©Èô\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹, Ôò\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ëÇò¿Õ¼ä£»
+
+£¨2£©Èô\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹, Ôò\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâÇò¿Õ¼ä£»
+
+£¨3£©Èô\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹, Ôò\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò¿Õ¼ä.
+
+Ö¤Ã÷ ¶ÔÈÎÒâ\hspace{0pt}\penalty0$E\in P_{ X }$\nobreak\hspace{0pt}, ÓÉ\hspace{0pt}\penalty0$\Delta _{ X } \le E\in L ^ { X\times X }$\nobreak\hspace{0pt}, µÃ\hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \left ( { x,x } \right )=E\left ( { ,x } \right )\ge \Delta _{ X } \left ( { x,x } \right )=\top$\nobreak\hspace{0pt}, ÕâËµÃ÷\hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-ÇòÓ³Éä, ¶ÔÈÎÒâ\hspace{0pt}\penalty0$E,F\in P_{ X }$\nobreak\hspace{0pt}, ÓÉ\hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ¿Õ¼ä, µÃ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=345pt,height=23pt]{assets/formulas/formula-0403.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } } \right )\wedge \mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } } \right )=\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )=\mathcal{C}\left ( { E\vee F } \right )=\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E\vee F } } \right )=\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \vee \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } } \right )$\nobreak\hspace{0pt},
 \end{center}
-çŸ¥\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0404.png}}\penalty0\hspace{0pt}æ»¡è¶³å¼±ä¸Šä¹˜ä¿æŒæ€§.
+¹Ê\hspace{0pt}\penalty0$\mathcal{N}_{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò½á¹¹, Òò´Ë, \hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³.
 
-ï¼ˆ1ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0405.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0406.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„, åˆ™å¯¹\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=34pt,height=11pt]{assets/formulas/formula-0407.png}}\penalty0\hspace{0pt},
+¶ÔÈÎÒâ\hspace{0pt}\penalty0$E,F\in P_{ X }$\nobreak\hspace{0pt}, ÓĞ\hspace{0pt}\penalty0$E\vee F\in P_X$\nobreak\hspace{0pt}, ÇÒ¶ÔÈÎÒâ\hspace{0pt}\penalty0$H\in P$\nobreak\hspace{0pt}, µ±\hspace{0pt}\penalty0$E\vee F\le H$\penalty0\hspace{0pt}Ê±, ÓĞ\hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ G } \le \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ H }$\nobreak\hspace{0pt}. ÓÉ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=188pt,height=21pt]{assets/formulas/formula-0408.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \vee \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } } \right )=\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E\vee F } } \right )\le \bigvee_{ E\vee F\le H\in P } \mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ H } } \right )=\bigvee_{ \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E\vee F } \le \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ H } } \mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ H } } \right )$\nobreak\hspace{0pt},
 \end{center}
-æ•…\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0409.png}}\penalty0\hspace{0pt}æ»¡è¶³ä¸Šå¯¹ç§°æ€§, å› æ­¤\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0410.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0411.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠçƒç©ºé—´.
+Öª\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}Âú×ãÈõÉÏ³Ë±£³ÖĞÔ.
 
-ï¼ˆ2ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0412.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0413.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„, å¯¹\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=45pt,height=13pt]{assets/formulas/formula-0414.png}}\penalty0\hspace{0pt}, æ˜¾ç„¶æœ‰\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=44pt,height=11pt]{assets/formulas/formula-0415.png}}\penalty0\hspace{0pt}, ç”±
+£¨1£©Èô\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹, Ôò¶Ô\hspace{0pt}\penalty0$\forall E\in P$\nobreak\hspace{0pt},
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-8pt}{\includegraphics[width=\linewidth]{assets/formulas/formula-0416.png}}\penalty0\hspace{0pt}
+\noindent \hspace{0pt}\penalty0$\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } } \right )=\mathcal{C}\left ( { E } \right )\le \mathcal{C}\left ( { E ^ { -1 } } \right )=\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } ^ { * } } \right )$\nobreak\hspace{0pt},
 \end{center}
-çŸ¥\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=96.95pt,height=16pt]{assets/formulas/formula-0417.png}}\penalty0\hspace{0pt}, äºæ˜¯
+¹Ê\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}Âú×ãÉÏ¶Ô³ÆĞÔ, Òò´Ë\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ëÇò¿Õ¼ä.
+
+£¨2£©Èô\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹, ¶Ô\hspace{0pt}\penalty0$\forall E,F\in P$\nobreak\hspace{0pt}, ÏÔÈ»ÓĞ\hspace{0pt}\penalty0$E\circ F\in P$\nobreak\hspace{0pt}, ÓÉ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=341pt,height=23pt]{assets/formulas/formula-0418.png}}\penalty0\hspace{0pt},
+\noindent \resizebox{\linewidth}{!}{$\displaystyle \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \circ \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } } \right )\left ( { x,y } \right )=\bigvee_{ z\in X } \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } \left ( { x,z } \right )\wedge \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \left ( { z,y } \right )=\bigvee_{ z\in X } F\left ( { x,z } \right )\wedge E\left ( { z,y } \right )=\left ( { E\circ F } \right )\left ( { x,y } \right )=\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E\circ F } \left ( { x,y } \right )$}
 \end{center}
-æ•…\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0419.png}}\penalty0\hspace{0pt}æ»¡è¶³ä¸Šä¹˜ä¿æŒæ€§, å› æ­¤\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0420.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0421.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿçƒç©ºé—´.
-
-ï¼ˆ3ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0422.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0423.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„, åˆ™ç”±ï¼ˆ1ï¼‰å’Œï¼ˆ2ï¼‰, çŸ¥é“\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=15pt,height=15pt]{assets/formulas/formula-0424.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0425.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç©ºé—´.
-
-\textbf{å‘½é¢˜ }\textbf{4}\textbf{.7  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=35pt,height=17pt]{assets/formulas/formula-0426.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0427.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0428.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç©ºé—´, åˆ™\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=48pt,height=15pt]{assets/formulas/formula-0429.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0430.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„å½“ä¸”ä»…å½“\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=163pt,height=17.05pt]{assets/formulas/formula-0431.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0432.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒä¿æŒæ˜ å°„.
-
-è¯æ˜ â€œå¿…è¦æ€§â€: å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31.9pt,height=16.15pt]{assets/formulas/formula-0433.png}}\penalty0\hspace{0pt}, å®¹æ˜“éªŒè¯\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=55.8pt,height=14.35pt]{assets/formulas/formula-0434.png}}\penalty0\hspace{0pt}, äºæ˜¯
+Öª\hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \circ \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } =\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E\circ F }$\nobreak\hspace{0pt}, ÓÚÊÇ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=322pt,height=26pt]{assets/formulas/formula-0435.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \circ \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } } \right )=\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E\circ F } } \right )\le \bigvee_{ E\circ F\le H\in P } \mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ H } } \right )=\bigvee_{ \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E\circ F } \le \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ H } } \mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ H } } \right )$\nobreak\hspace{0pt},
 \end{center}
-è¿™è¯´æ˜\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=9.75pt,height=13.45pt]{assets/formulas/formula-0436.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0437.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒä¿æŒæ˜ å°„.
+¹Ê\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}Âú×ãÉÏ³Ë±£³ÖĞÔ, Òò´Ë\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâÇò¿Õ¼ä.
 
-â€œå……åˆ†æ€§â€: å¯¹\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=32.75pt,height=13.45pt]{assets/formulas/formula-0438.png}}\penalty0\hspace{0pt}åŠ\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=38.05pt,height=12.5pt]{assets/formulas/formula-0439.png}}\penalty0\hspace{0pt}, è‹¥\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=37.2pt,height=14.35pt]{assets/formulas/formula-0440.png}}\penalty0\hspace{0pt}, åˆ™\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=91.25pt,height=13.45pt]{assets/formulas/formula-0441.png}}\penalty0\hspace{0pt}, å³\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=46.05pt,height=17.05pt]{assets/formulas/formula-0442.png}}\penalty0\hspace{0pt}. äºæ˜¯\hspace{0pt}\penalty0\raisebox{-12pt}{\includegraphics[width=326pt,height=29pt]{assets/formulas/formula-0443.png}}\penalty0\hspace{0pt}, æ•…\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=11pt,height=15pt]{assets/formulas/formula-0444.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0445.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„.
+£¨3£©Èô\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹, ÔòÓÉ£¨1£©ºÍ£¨2£©, ÖªµÀ\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò¿Õ¼ä.
 
-å‘½é¢˜4.6 è¯´æ˜äº†ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0446.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„å¯ä»¥è¯±å¯¼ç”Ÿæˆä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0447.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç©ºé—´. æ¥ä¸‹æ¥, æˆ‘ä»¬ä»ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0448.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç©ºé—´æ„é€ å‡ºä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0449.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„.
+\textbf{ÃüÌâ 4}\textbf{.7  }Éè\hspace{0pt}\penalty0$\left ( { X,\mathcal{C}_{ X } } \right )$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ¿Õ¼ä, Ôò\hspace{0pt}\penalty0$f:X\to Y$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éäµ±ÇÒ½öµ±\hspace{0pt}\penalty0$f:(X,P_{ X } ,\mathcal{B}_{ \mathcal{C}_{ X } } ,\mathcal{N}_{ \mathcal{C}_{ X } } )\to (Y,P_{ Y } ,\mathcal{B}_{ \mathcal{C}_{ Y } } ,\mathcal{N}_{ \mathcal{C}_{ Y } } )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò±£³ÖÓ³Éä.
 
-\textbf{å‘½é¢˜}\textbf{4}\textbf{.8  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=76pt,height=17pt]{assets/formulas/formula-0450.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0451.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=31.95pt,height=11pt]{assets/formulas/formula-0452.png}}\penalty0\hspace{0pt}, å®šä¹‰æ˜ å°„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=66pt,height=15pt]{assets/formulas/formula-0453.png}}\penalty0\hspace{0pt}ä¸ºï¼š\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=42.95pt,height=13.95pt]{assets/formulas/formula-0454.png}}\penalty0\hspace{0pt},\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=81pt,height=17pt]{assets/formulas/formula-0455.png}}\penalty0\hspace{0pt}. æ˜¾ç„¶æœ‰\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=100pt,height=19.05pt]{assets/formulas/formula-0456.png}}\penalty0\hspace{0pt}. å®šä¹‰æ˜ å°„\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=66pt,height=19.05pt]{assets/formulas/formula-0457.png}}\penalty0\hspace{0pt}ä¸º
+Ö¤Ã÷ ``±ØÒªĞÔ'': ¶ÔÈÎÒâ\hspace{0pt}\penalty0$E\in P_{ X }$\nobreak\hspace{0pt}, ÈİÒ×ÑéÖ¤\hspace{0pt}\penalty0$f_{ L } ^{ \to }(E)\in (P_{ Y } )_{ E } ^{ f }$\nobreak\hspace{0pt}, ÓÚÊÇ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=37pt,height=13pt]{assets/formulas/formula-0458.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-12pt}{\includegraphics[width=123pt,height=30.1pt]{assets/formulas/formula-0459.png}}\penalty0\hspace{0pt}
+\noindent \hspace{0pt}\penalty0$\mathcal{N}_{ \mathcal{C}_{ X } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ X } } } \right )_{ E } } \right )=\mathcal{C}_{ X } \left ( { E } \right )\le \mathcal{C}_{ Y } \left ( { f_{ L } ^{ \to }(E) } \right )=\mathcal{N}_{ \mathcal{C}_{ Y } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ Y } } } \right )_{ f_{ L } ^{ \to }(E) } } \right )\le \bigvee_{ F\in (P_{ Y } )_{ E } ^{ f } } \mathcal{N}_{ \mathcal{C}_{ Y } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ Y } } } \right )_{ F } } \right )$\nobreak\hspace{0pt},
 \end{center}
-åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18.05pt]{assets/formulas/formula-0460.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0461.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„çš„åŸº, å®ƒç”Ÿæˆçš„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0462.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„è®°ä¸º\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0463.png}}\penalty0\hspace{0pt}. æ­¤å¤–,
+ÕâËµÃ÷\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò±£³ÖÓ³Éä.
 
-ï¼ˆ1ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0464.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0465.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠçƒç©ºé—´, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0466.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0467.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„ï¼›
+``³ä·ÖĞÔ'': ¶Ô\hspace{0pt}\penalty0$\forall E\in P_{ X }$\penalty0\hspace{0pt}¼°\hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, Èô\hspace{0pt}\penalty0$F\in (P_{ Y } )_{ E } ^{ f }$\nobreak\hspace{0pt}, Ôò\hspace{0pt}\penalty0$E(x,y)\le F(f(x),f(y))$\nobreak\hspace{0pt}, ¼´\hspace{0pt}\penalty0$f_{ L } ^{ \to }(E)\le F$\nobreak\hspace{0pt}. ÓÚÊÇ\hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { E } \right )=\mathcal{N}_{ \mathcal{C}_{ X } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ X } } } \right )_{ E } } \right )\le \bigvee_{ F\in (P_{ Y } )_{ E } ^{ f } } \mathcal{N}_{ \mathcal{C}_{ Y } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ Y } } } \right )_{ F } } \right )=\mathcal{N}_{ \mathcal{C}_{ Y } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ Y } } } \right )_{ f_{ L } ^{ \to }(E) } } \right )=\mathcal{C}_{ Y } \left ( { f_{ L } ^{ \to }(E) } \right )$\nobreak\hspace{0pt}, ¹Ê\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éä.
 
-ï¼ˆ2ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0468.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0469.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿçƒç©ºé—´, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0470.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0471.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„ï¼›
+ÃüÌâ4.6 ËµÃ÷ÁËÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹¿ÉÒÔÓÕµ¼Éú³ÉÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò¿Õ¼ä. ½ÓÏÂÀ´, ÎÒÃÇ´ÓÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò¿Õ¼ä¹¹Ôì³öÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹.
 
-ï¼ˆ3ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0472.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0473.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç©ºé—´, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0474.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0475.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„.
-
-è¯æ˜ ï¼ˆB1ï¼‰\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=34pt,height=12pt]{assets/formulas/formula-0476.png}}\penalty0\hspace{0pt}, \hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=34pt,height=12pt]{assets/formulas/formula-0477.png}}\penalty0\hspace{0pt}, ç”±\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=139pt,height=17pt]{assets/formulas/formula-0478.png}}\penalty0\hspace{0pt}, å¾—\hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=62pt,height=20pt]{assets/formulas/formula-0479.png}}\penalty0\hspace{0pt}
-
-\hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=66pt,height=20pt]{assets/formulas/formula-0480.png}}\penalty0\hspace{0pt}.
-
-ï¼ˆB2ï¼‰\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=63pt,height=16pt]{assets/formulas/formula-0481.png}}\penalty0\hspace{0pt}, æœ‰
+\textbf{ÃüÌâ4}\textbf{.8  }Éè\hspace{0pt}\penalty0$\mathcal{B} =\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, \hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, ¶¨ÒåÓ³Éä\hspace{0pt}\penalty0$E_{ r } :X\times X\to L$\penalty0\hspace{0pt}Îª£º\hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$E_{ r } \left ( { x,y } \right )=\mathcal{B}_{ r } \left ( { x,y } \right )$\nobreak\hspace{0pt}. ÏÔÈ»ÓĞ\hspace{0pt}\penalty0$\mathcal{E}=\left \{ \begin{array}{l} E_{ r } :r\in P \end{array} \right \}\subset L ^ { X\times X }$\nobreak\hspace{0pt}. ¶¨ÒåÓ³Éä\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} } :L ^ { X\times X } \to M$\penalty0\hspace{0pt}Îª
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-12pt}{\includegraphics[width=387pt,height=22pt]{assets/formulas/formula-0482.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\forall E\in L^{X\times X}$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{S}_{\mathcal{B}}(E)=\begin{cases}N(\mathcal{B}_r),&E=E_r\in\mathcal{E};\\\bot,&E\notin\mathcal{E}.\end{cases}$\penalty0\hspace{0pt}
 \end{center}
-æ•…\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13pt,height=18pt]{assets/formulas/formula-0483.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0484.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„çš„åŸº.
+Ôò\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹µÄ»ù, ËüÉú³ÉµÄ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹¼ÇÎª\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\nobreak\hspace{0pt}. ´ËÍâ,
 
-ï¼ˆ1ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0485.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0486.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠçƒç©ºé—´, åˆ™\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=31.4pt,height=11.05pt]{assets/formulas/formula-0487.png}}\penalty0\hspace{0pt}, æœ‰
+£¨1£©Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ëÇò¿Õ¼ä, Ôò\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹£»
+
+£¨2£©Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâÇò¿Õ¼ä, Ôò\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹£»
+
+£¨3£©Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò¿Õ¼ä, Ôò\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹.
+
+Ö¤Ã÷ £¨B1£©\hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\forall x\in X$\nobreak\hspace{0pt}, ÓÉ\hspace{0pt}\penalty0$E_{ r } \left ( { x,x } \right )=\mathcal{B}_{ r } \left ( { x,x } \right )=\top =\Delta _{ X } \left ( { x,x } \right )$\nobreak\hspace{0pt}, µÃ\hspace{0pt}\penalty0$\bigvee_{ \Delta _{ X } \le E_{ r } } \mathcal{N}_{ \mathcal{B} } \left ( { E_{ r } } \right )=$\penalty0\hspace{0pt}
+
+\hspace{0pt}\penalty0$\bigvee_{ \Delta _{ X } \le B_{ r } } \mathcal{N}\left ( { \mathcal{B}_{ r } } \right )=\top$\nobreak\hspace{0pt}.
+
+£¨B2£©\hspace{0pt}\penalty0$\forall E_{ r } ,E_{ s } \in L ^ { X\times X }$\nobreak\hspace{0pt}, ÓĞ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-12pt}{\includegraphics[width=265.95pt,height=24pt]{assets/formulas/formula-0488.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} } \left ( { E_{ r } } \right )\wedge \mathcal{S}_{ \mathcal{B} } \left ( { E_{ s } } \right )=\mathcal{N}\left ( { \mathcal{B}_{ r } } \right )\wedge \mathcal{N}\left ( { \mathcal{B}_{ s } } \right )\le \mathcal{N}\left ( { \mathcal{B}_{ r } \vee \mathcal{B}_{ s } } \right )\le \bigvee_{ \mathcal{B}_{ r } \vee \mathcal{B}_{ s } \le \mathcal{B}_{ t } } \mathcal{N}\left ( { \mathcal{B}_{ t } } \right )=\bigvee_{ E_{ r } \vee E_{ s } \le E_{ t } } \mathcal{S}_{ \mathcal{B} } \left ( { E_{ t } } \right )\le \bigvee_{ E_{ r } \vee E_{ s } \le E } \mathcal{S}_{ \mathcal{B} } \left ( { E } \right )$\nobreak\hspace{0pt},
 \end{center}
-æ•…\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18.05pt]{assets/formulas/formula-0489.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0490.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„çš„åŸº, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0491.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0492.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„.
+¹Ê\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹µÄ»ù.
 
-ï¼ˆ2ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0493.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0494.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿçƒç©ºé—´, åˆ™\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=38.85pt,height=13.45pt]{assets/formulas/formula-0495.png}}\penalty0\hspace{0pt}, æœ‰
+£¨1£©Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ëÇò¿Õ¼ä, Ôò\hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, ÓĞ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=\linewidth]{assets/formulas/formula-0496.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} } \left ( { E_{ r } } \right )=\mathcal{N}\left ( { \mathcal{B}_{ r } } \right )=\mathcal{N}\left ( { \mathcal{B}_{ r } ^ { * } } \right )=\mathcal{S}_{ \mathcal{B} } \left ( { E_{ r } ^ { -1 } } \right )\le \bigvee_{ E_{ r } ^ { -1 } \le E_{ t } } \mathcal{S}_{ \mathcal{B} } \left ( { E_{ t } } \right )\le \bigvee_{ E_{ r } ^ { -1 } \le E } \mathcal{S}_{ \mathcal{B} } \left ( { E } \right )$\nobreak\hspace{0pt},
 \end{center}
-æ•…\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18.05pt]{assets/formulas/formula-0497.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0498.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„çš„åŸº, \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18pt]{assets/formulas/formula-0499.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0500.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„.
+¹Ê\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹µÄ»ù, \hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹.
 
-ï¼ˆ3ï¼‰è‹¥\hspace{0pt}\penalty0\raisebox{-3pt}{\includegraphics[width=11pt,height=12pt]{assets/formulas/formula-0501.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0502.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç©ºé—´, åˆ™æ˜¾ç„¶\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=13.95pt,height=18.05pt]{assets/formulas/formula-0503.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0504.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„.
-
-\textbf{å®šç†}\textbf{4}\textbf{.9  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=31pt,height=17pt]{assets/formulas/formula-0505.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0506.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç©ºé—´, åˆ™\hspace{0pt}\penalty0\raisebox{-9pt}{\includegraphics[width=37pt,height=19pt]{assets/formulas/formula-0507.png}}\penalty0\hspace{0pt}.
-
-è¯æ˜ è®¾\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=39pt,height=13pt]{assets/formulas/formula-0508.png}}\penalty0\hspace{0pt}, åˆ™\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=112pt,height=17pt]{assets/formulas/formula-0509.png}}\penalty0\hspace{0pt}. äºæ˜¯å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=39pt,height=13pt]{assets/formulas/formula-0510.png}}\penalty0\hspace{0pt}, æœ‰
+£¨2£©Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâÇò¿Õ¼ä, Ôò\hspace{0pt}\penalty0$\forall r,s\in P$\nobreak\hspace{0pt}, ÓĞ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=172pt,height=21pt]{assets/formulas/formula-0511.png}}\penalty0\hspace{0pt},
+\noindent \resizebox{\linewidth}{!}{$\displaystyle \mathcal{S}_{ \mathcal{B} } \left ( { E_{ r } } \right )\wedge \mathcal{S}_{ \mathcal{B} } \left ( { E_{ s } } \right )=\mathcal{N}\left ( { \mathcal{B}_{ r } } \right )\wedge \mathcal{N}\left ( { \mathcal{B}_{ s } } \right )\le \mathcal{N}\left ( { \mathcal{B}_{ r } \vee \mathcal{B}_{ s } } \right )\le \mathcal{N}\left ( { \mathcal{B}_{ r } \circ \mathcal{B}_{ s } } \right )\le \bigvee_{ \mathcal{B}_{ r } \circ \mathcal{B}_{ s } \le \mathcal{B}_{ t } } \mathcal{N}\left ( { \mathcal{B}_{ t } } \right )=\bigvee_{ E_{ r } \circ E_{ s } \le E_{ t } } \mathcal{S}_{ \mathcal{B} } \left ( { E_{ t } } \right )\le \bigvee_{ E_{ r } \circ E_{ s } \le E } \mathcal{S}_{ \mathcal{B} } \left ( { E } \right )$},
 \end{center}
-æ•…\hspace{0pt}\penalty0\raisebox{-9pt}{\includegraphics[width=38pt,height=19pt]{assets/formulas/formula-0512.png}}\penalty0\hspace{0pt}.
+¹Ê\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹µÄ»ù, \hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹.
 
-\textbf{å‘½é¢˜}\textbf{4}\textbf{.10  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=91pt,height=17pt]{assets/formulas/formula-0513.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=85.95pt,height=17pt]{assets/formulas/formula-0514.png}}\penalty0\hspace{0pt}æ˜¯\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0515.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, åˆ™\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=48pt,height=15pt]{assets/formulas/formula-0516.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0517.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒä¿æŒæ˜ å°„å½“ä¸”ä»…å½“\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=81.5pt,height=15.25pt]{assets/formulas/formula-0518.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0519.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„.
+£¨3£©Èô\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò¿Õ¼ä, ÔòÏÔÈ»\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹.
 
-è¯æ˜ â€œå¿…è¦æ€§â€:å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=39pt,height=13pt]{assets/formulas/formula-0520.png}}\penalty0\hspace{0pt}, æœ‰
+\textbf{¶¨Àí4}\textbf{.9  }Éè\hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ¿Õ¼ä, Ôò\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ \mathcal{C} } } =\mathcal{C}$\nobreak\hspace{0pt}.
+
+Ö¤Ã÷ Éè\hspace{0pt}\penalty0$E\in L ^ { X\times X }$\nobreak\hspace{0pt}, Ôò\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} _{ \mathcal{C} } } \left ( { F } \right )=\mathcal{N}_{ \mathcal{C} } \left ( { \mathcal{B}_{ F } } \right )=\mathcal{C}\left ( { F } \right )$\nobreak\hspace{0pt}. ÓÚÊÇ¶ÔÈÎÒâ\hspace{0pt}\penalty0$E\in L ^ { X\times X }$\nobreak\hspace{0pt}, ÓĞ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-15pt}{\includegraphics[width=396.4pt,height=22.8pt]{assets/formulas/formula-0521.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} } \left ( { E } \right )=\bigvee_{ E\le F } \mathcal{S}_{ \mathcal{B} _{ \mathcal{C} } } \left ( { F } \right )=\bigvee_{ E\le F } \mathcal{C}\left ( { F } \right )=\mathcal{C}\left ( { E } \right )$\nobreak\hspace{0pt},
 \end{center}
-è¿™è¯´æ˜\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=81.5pt,height=15.25pt]{assets/formulas/formula-0522.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0523.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šä¿æœ‰ç•Œæ˜ å°„.
+¹Ê\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ \mathcal{C} } } =\mathcal{C}$\nobreak\hspace{0pt}.
 
-â€œå……åˆ†æ€§â€:è®¾\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=24.55pt,height=13.35pt]{assets/formulas/formula-0524.png}}\penalty0\hspace{0pt}, å› 
+\textbf{ÃüÌâ4}\textbf{.10  }Éè\hspace{0pt}\penalty0$\mathcal{B} _{ X } =\left ( { X,P,\mathcal{B}_{ X } ,\mathcal{N}_{ X } } \right )$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\mathcal{B} _{ Y } =\left ( { Y,Q,\mathcal{B}_{ Y } ,\mathcal{N}_{ Y } } \right )$\penalty0\hspace{0pt}ÊÇ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, Ôò\hspace{0pt}\penalty0$f:X\to Y$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò±£³ÖÓ³Éäµ±ÇÒ½öµ±\hspace{0pt}\penalty0$f:(X,\mathcal{C}_{ \mathcal{B} _{ X } } )\to (Y,\mathcal{C}_{ \mathcal{B} _{ Y } } )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éä.
+
+Ö¤Ã÷ ``±ØÒªĞÔ'':¶ÔÈÎÒâ\hspace{0pt}\penalty0$E\in L ^ { X\times X }$\nobreak\hspace{0pt}, ÓĞ
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-15pt}{\includegraphics[width=327pt,height=26pt]{assets/formulas/formula-0525.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ X } } (E)=\bigvee_{ E\le F } \mathcal{S}_{ \mathcal{B} _{ X } } (E)=\bigvee_{ E\le E_{ r } } \mathcal{N}_{ X } ((\mathcal{B}_{ X } )_{ r } )\le \bigvee_{ f_{ L } ^{ \to }(E)\le f_{ L } ^{ \to }(E_{ r } ) } \bigvee_{ s\in (P_{ Y } )_{ r } ^{ f } } \mathcal{N}_{ Y } ((\mathcal{B}_{ X } )_{ s } )\le \bigvee_{ f_{ L } ^{ \to }(E)\le E_{ s } } \mathcal{N}_{ Y } ((\mathcal{B}_{ X } )_{ s } )=\mathcal{C}_{ \mathcal{B} _{ Y } } (f_{ L } ^{ \to }(E))$\nobreak\hspace{0pt},
 \end{center}
-å¯å¾—\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=10pt,height=13pt]{assets/formulas/formula-0526.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0527.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒä¿æŒæ˜ å°„.
+ÕâËµÃ÷\hspace{0pt}\penalty0$f:(X,\mathcal{C}_{ \mathcal{B} _{ X } } )\to (Y,\mathcal{C}_{ \mathcal{B} _{ Y } } )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı±£ÓĞ½çÓ³Éä.
 
-\textbf{å‘½é¢˜}\textbf{4}\textbf{.11  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=88pt,height=17pt]{assets/formulas/formula-0528.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=90pt,height=19pt]{assets/formulas/formula-0529.png}}\penalty0\hspace{0pt}ä¸ºä¸Š\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0530.png}}\penalty0\hspace{0pt}çš„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0531.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, åˆ™\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=39pt,height=16pt]{assets/formulas/formula-0532.png}}\penalty0\hspace{0pt}å½“ä¸”ä»…å½“\hspace{0pt}\penalty0\raisebox{-9pt}{\includegraphics[width=40pt,height=19pt]{assets/formulas/formula-0533.png}}\penalty0\hspace{0pt}.
-
-è¯æ˜ â€œå¿…è¦æ€§â€:å› \hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=37pt,height=16pt]{assets/formulas/formula-0534.png}}\penalty0\hspace{0pt}, å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=24.55pt,height=11.5pt]{assets/formulas/formula-0535.png}}\penalty0\hspace{0pt}, æœ‰\hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=119pt,height=20pt]{assets/formulas/formula-0536.png}}\penalty0\hspace{0pt}. å¯¹ä»»æ„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=34.15pt,height=11.55pt]{assets/formulas/formula-0537.png}}\penalty0\hspace{0pt},
+``³ä·ÖĞÔ'':Éè\hspace{0pt}\penalty0$r\in P_{ X }$\nobreak\hspace{0pt}, Òò
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-12pt}{\includegraphics[width=378.3pt,height=21.55pt]{assets/formulas/formula-0538.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{N}_{ X } ((\mathcal{B}_{ X } )_{ r } )=\mathcal{C}_{ \mathcal{B} _{ X } } (E_{ r } )\le \mathcal{C}_{ \mathcal{B} _{ Y } } (f_{ L } ^{ \to }(E_{ r } ))=\bigvee_{ f_{ L } ^{ \to }(E_{ r } )\le E_{ s } } \mathcal{N}_{ Y } ((\mathcal{B}_{ X } )_{ s } )=\bigvee_{ s\in (P_{ Y } )_{ r } ^{ f } } \mathcal{N}_{ Y } ((\mathcal{B}_{ X } )_{ s } )$\nobreak\hspace{0pt},
 \end{center}
-è¿™è¯´æ˜\hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=45pt,height=23pt]{assets/formulas/formula-0539.png}}\penalty0\hspace{0pt}.
+¿ÉµÃ\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò±£³ÖÓ³Éä.
 
-â€œå……åˆ†æ€§â€:å¯¹äºä»»æ„\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=24.55pt,height=11.5pt]{assets/formulas/formula-0540.png}}\penalty0\hspace{0pt}, ç”±\hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=45pt,height=23pt]{assets/formulas/formula-0541.png}}\penalty0\hspace{0pt}, å¾—
+\textbf{ÃüÌâ4}\textbf{.11  }Éè\hspace{0pt}\penalty0$\mathcal{B} _{ P } =\left ( { X,P,\mathcal{B}_{ P } ,\mathcal{N}_{ P } } \right )$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\mathcal{B} _{ Q } =\left ( { X,Q,\mathcal{B}_{ Q } ,\mathcal{N}_{ Q } } \right )$\penalty0\hspace{0pt}ÎªÉÏ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}µÄ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, Ôò\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\penalty0\hspace{0pt}µ±ÇÒ½öµ±\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } \le \mathcal{C}_{ \mathcal{B} _{ Q } }$\nobreak\hspace{0pt}.
+
+Ö¤Ã÷ ``±ØÒªĞÔ'':Òò\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\nobreak\hspace{0pt}, ¶ÔÈÎÒâ\hspace{0pt}\penalty0$r\in P$\nobreak\hspace{0pt}, ÓĞ\hspace{0pt}\penalty0$\mathcal{N}_{ P } ((\mathcal{B}_{ P } )_{ r } )\le \bigvee_{ s\in Q_{ r } } \mathcal{N}_{ Q } ((\mathcal{B}_{ Q } )_{ s } )$\nobreak\hspace{0pt}. ¶ÔÈÎÒâ\hspace{0pt}\penalty0$E\in L ^ { X\times X }$\nobreak\hspace{0pt},
 
 \begin{center}
-\noindent \hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=404pt,height=22pt]{assets/formulas/formula-0542.png}}\penalty0\hspace{0pt},
+\noindent \hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } \left ( { E } \right )=\bigvee_{ E\le F } \mathcal{S}_{ \mathcal{B} _{ P } } \left ( { F } \right )=\bigvee_{ E\le E_{ r } } \mathcal{S}_{ \mathcal{B} _{ P } } \left ( { E_{ r } } \right )=\bigvee_{ E\le E_{ r } } \mathcal{N}_{ P } \left ( { \mathcal{B}_{ r } } \right )\le \bigvee_{ E\le E_{ r } } \bigvee_{ s\in Q_{ r } } \mathcal{N}_{ Q } \left ( { \mathcal{B}_{ s } } \right )\le \bigvee_{ E\le E_{ s } } \mathcal{S}_{ \mathcal{B} _{ Q } } \left ( { E_{ s } } \right )=\mathcal{C}_{ \mathcal{B} _{ Q } } \left ( { E } \right )$\nobreak\hspace{0pt},
 \end{center}
-è¿™è¯´æ˜\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=39pt,height=19pt]{assets/formulas/formula-0543.png}}\penalty0\hspace{0pt}.
+ÕâËµÃ÷\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } \le \mathcal{C}_{ \mathcal{B} _{ Q } }$\nobreak\hspace{0pt}.
 
-\textbf{æ¨è®º}\textbf{4}\textbf{.12  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=88pt,height=17pt]{assets/formulas/formula-0544.png}}\penalty0\hspace{0pt}å’Œ\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=90pt,height=19pt]{assets/formulas/formula-0545.png}}\penalty0\hspace{0pt}ä¸ºä¸Š\hspace{0pt}\penalty0\raisebox{-2pt}{\includegraphics[width=12pt,height=11pt]{assets/formulas/formula-0546.png}}\penalty0\hspace{0pt}çš„\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0547.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, åˆ™\hspace{0pt}\penalty0\raisebox{-7pt}{\includegraphics[width=39pt,height=19pt]{assets/formulas/formula-0548.png}}\penalty0\hspace{0pt}å½“ä¸”ä»…å½“\hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=45pt,height=23pt]{assets/formulas/formula-0549.png}}\penalty0\hspace{0pt}.
+``³ä·ÖĞÔ'':¶ÔÓÚÈÎÒâ\hspace{0pt}\penalty0$r\in P$\nobreak\hspace{0pt}, ÓÉ\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } \le \mathcal{C}_{ \mathcal{B} _{ Q } }$\nobreak\hspace{0pt}, µÃ
 
-\textbf{å®šç†}\textbf{4}\textbf{.}\textbf{1}\textbf{3  }è®¾\hspace{0pt}\penalty0\raisebox{-6pt}{\includegraphics[width=76pt,height=17pt]{assets/formulas/formula-0550.png}}\penalty0\hspace{0pt}æ˜¯ä¸€ä¸ª\hspace{0pt}\penalty0\raisebox{-5pt}{\includegraphics[width=31pt,height=15pt]{assets/formulas/formula-0551.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿ, åˆ™\hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=38pt,height=22pt]{assets/formulas/formula-0552.png}}\penalty0\hspace{0pt}.
+\begin{center}
+\noindent \hspace{0pt}\penalty0$\mathcal{N}_{ P } \left ( { \left ( { \mathcal{B}_{ P } } \right )_{ r } } \right )=\mathcal{C}_{ \mathcal{B} _{ P } } \left ( { E_{ r } } \right )\le \mathcal{C}_{ \mathcal{B} _{ Q } } \left ( { E_{ r } } \right )=\bigvee_{ E_{ r } \le F } \mathcal{S}_{ \mathcal{B} _{ Q } } \left ( { F } \right )=\bigvee_{ E_{ r } \le E_{ s } } \mathcal{S}_{ \mathcal{B} _{ Q } } \left ( { E_{ s } } \right )=\bigvee_{ E_{ r } \le E_{ s } } \mathcal{N}_{ Q } ((\mathcal{B}_{ Q } )_{ s } )=\bigvee_{ s\in Q_{ r } } \mathcal{N}_{ Q } ((\mathcal{B}_{ Q } )_{ s } )$\nobreak\hspace{0pt},
+\end{center}
+ÕâËµÃ÷\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\nobreak\hspace{0pt}.
 
-è¯æ˜ ç”±å®šç†4.9,æˆ‘ä»¬æœ‰\hspace{0pt}\penalty0\raisebox{-11pt}{\includegraphics[width=44pt,height=23pt]{assets/formulas/formula-0553.png}}\penalty0\hspace{0pt}. æ•…ç”±æ¨è®º4.12,å¯å¾—\hspace{0pt}\penalty0\raisebox{-10pt}{\includegraphics[width=38pt,height=22pt]{assets/formulas/formula-0554.png}}\penalty0\hspace{0pt}.
+\textbf{ÍÆÂÛ4}\textbf{.12  }Éè\hspace{0pt}\penalty0$\mathcal{B} _{ P } =\left ( { X,P,\mathcal{B}_{ P } ,\mathcal{N}_{ P } } \right )$\penalty0\hspace{0pt}ºÍ\hspace{0pt}\penalty0$\mathcal{B} _{ Q } =\left ( { X,Q,\mathcal{B}_{ Q } ,\mathcal{N}_{ Q } } \right )$\penalty0\hspace{0pt}ÎªÉÏ\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}µÄ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, Ôò\hspace{0pt}\penalty0$\mathcal{B} _{ P } \simeq \mathcal{B} _{ Q }$\penalty0\hspace{0pt}µ±ÇÒ½öµ±\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } =\mathcal{C}_{ \mathcal{B} _{ Q } }$\nobreak\hspace{0pt}.
+
+\textbf{¶¨Àí4}\textbf{.1}\textbf{3  }Éè\hspace{0pt}\penalty0$\mathcal{B} =\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}ÊÇÒ»¸ö\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³, Ôò\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C}_{ \mathcal{B} } } \simeq \mathcal{B}$\nobreak\hspace{0pt}.
+
+Ö¤Ã÷ ÓÉ¶¨Àí4.9,ÎÒÃÇÓĞ\hspace{0pt}\penalty0$\mathcal{C}_{\mathcal{B}_{\mathcal{C}_{\mathcal{B}}}}=\mathcal{C}_{\mathcal{B}}$\nobreak\hspace{0pt}. ¹ÊÓÉÍÆÂÛ4.12,¿ÉµÃ\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C}_{ \mathcal{B} } } \simeq \mathcal{B}$\nobreak\hspace{0pt}.
 
 
-\chapter{æ€»ç»“ä¸å±•æœ›}
+\chapter{×Ü\ \ ½á}
 \vspace{0.2cm}
-åœ¨æœ¬æ–‡ä¸­, æˆ‘ä»¬æå‡ºäº†\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0555.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„ã€\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0556.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šæ‹Ÿç²—ç»“æ„ã€\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0557.png}}\penalty0\hspace{0pt}-æ¨¡ç³ŠåŠç²—ç»“æ„å’Œ\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0558.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç²—ç»“æ„çš„æ¦‚å¿µ, å¹¶ä»\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0559.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šå…³ç³»æ–¹é¢ç»™å‡ºäº†ä¾‹å­. ç‰¹åˆ«æ˜¯æˆ‘ä»¬é€šè¿‡\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0560.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç»“æ„ç»™å‡ºäº†\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0561.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿçš„å®šä¹‰, å¹¶ç ”ç©¶äº†\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0562.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šçƒç³»ç»Ÿä¸\hspace{0pt}\penalty0\raisebox{-4pt}{\includegraphics[width=29pt,height=13pt]{assets/formulas/formula-0563.png}}\penalty0\hspace{0pt}-æ¨¡ç³Šç†µç»“æ„ä¹‹é—´çš„ç›¸äº’åˆ»ç”»å…³ç³». è¿™ä¸ºæ ¼å€¼ç²—ç»“æ„çš„ç ”ç©¶æä¾›äº†ä¸€ä¸ªæ–°çš„ç†è®ºæ¡†æ¶.
+ÔÚ±¾ÎÄÖĞ, ÎÒÃÇÌá³öÁË\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹¡¢\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÄâ´Ö½á¹¹¡¢\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı°ë´Ö½á¹¹ºÍ\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı´Ö½á¹¹µÄ¸ÅÄî, ²¢´Ó\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºı¹ØÏµ·½Ãæ¸ø³öÁËÀı×Ó. ÌØ±ğÊÇÎÒÃÇÍ¨¹ı\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇò½á¹¹¸ø³öÁË\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³µÄ¶¨Òå, ²¢ÑĞ¾¿ÁË\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıÇòÏµÍ³Óë\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-Ä£ºıìØ½á¹¹Ö®¼äµÄÏà»¥¿Ì»­¹ØÏµ. ÕâÎª¸ñÖµ´Ö½á¹¹µÄÑĞ¾¿Ìá¹©ÁËÒ»¸öĞÂµÄÀíÂÛ¿ò¼Ü.
 
 
 
 \clearpage
 \begin{thebibliography}{10}
-\small\vspace*{3.2pt}
-\linespread{0}\selectfont
-\addtolength{\itemsep}{-1.0ex}
+\small
 \bibitem{ref1}
 Nicas A, Rosenthal D. Coarse structures on groups[J]. Topology and its Applications, 2012, 159(14): 3215-3228.
 
@@ -540,9 +544,9 @@ Pang B, Mi J S, Xiu Z Y. L-fuzzifying approximation operators in fuzzy rough set
 \end{thebibliography}
 
 \newpage
-\chapter*{è‡´è°¢}
-\addcontentsline{toc}{chapter}{è‡´è°¢}
-åœ¨æœ¬è®ºæ–‡å®Œæˆè¿‡ç¨‹ä¸­, æ„Ÿè°¢å¯¼å¸ˆåœ¨é€‰é¢˜ã€ç ”ç©¶ä¸è®ºæ–‡æ’°å†™æ–¹é¢ç»™äºˆçš„æŒ‡å¯¼, æ„Ÿè°¢å­¦é™¢å„ä½è€å¸ˆå’ŒåŒå­¦çš„å¸®åŠ©ä¸æ”¯æŒ, æ„Ÿè°¢å®¶äººçš„ç†è§£ä¸é¼“åŠ±. è°¨å‘æ‰€æœ‰å…³å¿ƒå’Œå¸®åŠ©è¿‡æˆ‘çš„å¸ˆé•¿ã€åŒå­¦å’Œäº²å‹è‡´ä»¥è¯šæŒšè°¢æ„.
+\chapter*{ÖÂĞ»}
+\addcontentsline{toc}{chapter}{ÖÂĞ»}
+ÔÚ±¾ÂÛÎÄÍê³É¹ı³ÌÖĞ, ¸ĞĞ»µ¼Ê¦ÔÚÑ¡Ìâ¡¢ÑĞ¾¿ÓëÂÛÎÄ×«Ğ´·½Ãæ¸øÓèµÄÖ¸µ¼, ¸ĞĞ»Ñ§Ôº¸÷Î»ÀÏÊ¦ºÍÍ¬Ñ§µÄ°ïÖúÓëÖ§³Ö, ¸ĞĞ»¼ÒÈËµÄÀí½âÓë¹ÄÀø. ½÷ÏòËùÓĞ¹ØĞÄºÍ°ïÖú¹ıÎÒµÄÊ¦³¤¡¢Í¬Ñ§ºÍÇ×ÓÑÖÂÒÔ³ÏÖ¿Ğ»Òâ.
 
 \newpage
 \end{document}
