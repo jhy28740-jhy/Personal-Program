@@ -1,0 +1,470 @@
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}
+\def\az{\alpha}
+\documentclass[12pt,oneside]{cctbook}
+\usepackage{ccmap}
+\usepackage{pifont,color}
+\usepackage{amssymb,amsmath}
+\usepackage{fancyhdr}
+\input xy
+\xyoption{all}
+\headsep 0.5 true cm
+\topmargin 0pt
+\oddsidemargin 12pt
+\textwidth 15.3 true cm
+\textheight 22.6 true cm
+\parindent 2\ccwd
+\renewcommand{\baselinestretch}{1.0}
+\def\vz{\varepsilon}
+\def\tri{\bigtriangleup}
+\def\sect#1{\section{#1}}
+\def \bigjt #1#2{\ \tabcolsep=2pt\begin{tabular}{c}#1\cr
+\noalign {\vskip-4.0mm}\rightarrowfill \cr \noalign
+{\vskip-4.0mm}#2\end {tabular}\ }
+\newtheorem{definition}{\bf{定义}}[section]
+\newtheorem{proposition}{\bf{命题}}[section]
+\newtheorem{property}{\bf{性质}}[section]
+\newtheorem{theorem}{\bf{定理}}[section]
+\newtheorem{lemma}{\bf{引理}}[section]
+\newtheorem{corollary}[theorem]{\hspace{2em}{\bf{推论}}}
+\newtheorem{axiom}{\hspace{2em}{\bf{公理}}}[section]
+\newtheorem{exercise}{\hspace{2em}{\bf{习题}}}[section]
+\newtheorem{question}{\hspace{2em}{\bf{问题}}}
+\newtheorem{example}{\bf{例}}
+\newtheorem{notation}{\hspace{2em}{\bf{记号}}}
+\newtheorem{remark}{{\bf{注记}}}[section]
+\newenvironment{proof}[1][~ 证明：]{\textbf{#1~~~}}{\hfill\hspace{1cm}$\square$}
+\usepackage{titlesec}
+\numberwithin{equation}{section}
+\providecommand{\refname}{}
+\renewcommand{\refname}{\centerline{参考文献}}
+\setlength{\baselineskip}{1.3em}
+\setlength{\parskip}{1ex}
+\allowdisplaybreaks
+\allowdisplaybreaks[4]
+
+\begin{document}
+\def\dis{\displaystyle}
+\def\dlimsup{\displaystyle\limsup}
+\def\dist{\mathop\mathrm{\, dist\, }}
+\def\supp{\mathop\mathrm{\, supp\, }}
+\def\atom{\mathop\mathrm{\, atom\, }}
+\def\loc{{\mathop\mathrm{\, loc\, }}}
+\def\essinf{\mathop\mathrm{\, ess\, inf\, }}
+\def\esup{\mathop\mathrm{\, ess\, sup\, }}
+\def\fin{{\mathop\mathrm{fin}}}
+\def\lf{\left}
+\def\r{\right}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+\begin{titlepage}
+\vspace*{1cm} \LARGE\heiti
+\begin{center}
+{\heiti\zihao{2} $(L,M)$-模糊粗结构}
+\end{center}
+\vspace*{8mm}\songti
+
+\begin{center}
+{\Large\zihao{4} 赵子函}
+\end{center}
+
+\Large\vspace*{2mm}
+\begin{center}
+(\zihao{4}安徽师范大学数学与统计学院, 安徽, 芜湖, 241002)
+\end{center}\vspace{6mm}
+\vfill\large
+\begin{center}
+{\zihao{4}安徽师范大学硕士学位论文}
+\end{center}
+\begin{center}
+{\zihao{4}二零二六年八月}
+\end{center}
+\end{titlepage}
+
+\newpage
+\pagestyle{plain}
+\pagenumbering{Roman}
+\chapter*{}
+\addcontentsline{toc}{chapter}{摘要}
+\begin{center}
+{\heiti\zihao{3} $(L,M)$-模糊粗结构}
+\end{center}
+\begin{center}
+\vspace{0.2cm} {\zihao{4}\heiti 摘\quad\quad 要}\\
+\end{center}
+\baselineskip24pt
+{\zihao{-4}
+
+基于完全分配格\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$M$\nobreak\hspace{0pt}, 我们提出了一种格值粗结构的新方法. 首先,我们引入了\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵、\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟粗结构、\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半粗结构的概念,并研究了\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗空间之间的映射性质. 其次, 我们从\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊关系等方面出发, 构造了典型的\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构实例. 最后, 我们引入了\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球结构的概念, 并用其刻画\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构.
+
+\vspace{0.5cm} {\heiti\zihao{4}关键词:}\,
+\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构；\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗空间；\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊关系；\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球结构
+}
+
+\newpage
+\chapter*{}
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{center}
+\vspace{0.3cm}{\Large\bf Research on $(L,M)$-Fuzzy Coarse Structure}
+\end{center}
+\begin{center}
+\vspace{0.2cm} {\large \bf Abstract}
+\end{center}
+\zihao{-4}
+
+Based on completely distributive lattices \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt} and \hspace{0pt}\penalty0$M$\nobreak\hspace{0pt}, we propose a novel approach to lattice-valued coarse structures. First, we introduce the concepts of \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy entourage, \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy quasi coarse structures, and\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy semi coarse structures, and investigate mapping properties between \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse spaces. Second, we construct canonical example of \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse structures from perspectives such as \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}- fuzzy relations. Finally, we introduce the notion of \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy ball structures and employ them to characterize \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse structures.
+
+\vspace{0.3cm}
+{\large\bf Keywords:}\,
+\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse structure; \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy coarse space; \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy relation; \hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-fuzzy ball structure
+
+\newpage
+{\color{white}1}
+\newpage
+
+\tableofcontents
+\mainmatter
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\zihao{-4}
+\baselineskip24pt
+
+\chapter{续\ \论}
+\vspace{0.2cm}
+在经典拓扑学的研究中, 研究者们长期聚焦于由拓扑定义的小尺度结构, 如邻域系统、连续性等, 度量空间中连续性的研究便是典型范例. 然而, 在定义度量空间上映射的连续性时, 度量本身蕴含的大量信息往往被忽略. 与经典拓扑学相对, 数学研究有时需关注其对偶情形, 即大尺度几何（亦称粗几何）. 粗几何这一学科现已与拓扑学、指标理论等建立了深刻联系\cite{ref1}. Roe在其专著中对粗几何进行了系统论述\cite{ref2}.
+
+模糊集的概念由Zadeh首创, 在Zadeh的开创性论文中, 模糊集被视为一个函数\hspace{0pt}\penalty0$f:X\to \left ( { 0,1 } \right )$\nobreak\hspace{0pt}, 其值\hspace{0pt}\penalty0$f\left ( { x } \right )$\penalty0\hspace{0pt}通常解释为元素\hspace{0pt}\penalty0$x$\penalty0\hspace{0pt}属于该模糊集的确定程度\cite{ref3}. 众所周知, 模糊集理论已发展成为一个极为活跃的研究领域. 尽管粗几何理论在数学的诸多分支中扮演着重要角色, 但在Zarichnyi于2009年的工作之前\cite{ref4}, 粗几何从未在模糊背景下被系统研究. 据我们所知, 迄今为止关于模糊粗结构本身的研究并不多（近期一些论文探讨了模糊度量空间中的大尺度几何性质, 但其粗结构集本身仍是经典的）. 而且, 现有的模糊粗结构研究多基于单一格\hspace{0pt}\penalty0$L$\nobreak\hspace{0pt}, 这种单格框架在处理某些复杂的渐近行为或需要同时刻画不同层次的不确定性时可能会不够合适\cite{ref5}. 为更精细、更灵活地描述大尺度模糊结构, 亟需引入双格框架.
+
+受严从华和王永超对粗结构模糊化工作的启发\cite{ref6}, 本文将引入\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构的概念, 并给出其等价刻画. 本文的结构如下：在第二节中, 我们列出一些完全分配格、模糊关系、单格模糊粗结构的基本概念与结果. 在第三节中, 我们给出\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构概念和\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗空间之间的态射, 并列举了\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构实例. 在第四节中, 我们引入\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球结构的概念, 并建立其与\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构之间的相互刻画关系.
+
+
+\chapter{预备知识}
+
+\section{格论,模糊集的相关知识}
+\vspace{0.2cm}
+在本文中, 称一个非空集合\hspace{0pt}\penalty0$P$\penalty0\hspace{0pt}为一个偏序集, 如果它中的一个二元关系\hspace{0pt}\penalty0$\leq$\penalty0\hspace{0pt}满足自反性、反对称性和传递性. 称\hspace{0pt}\penalty0$P$\penalty0\hspace{0pt}的子集\hspace{0pt}\penalty0$D$\penalty0\hspace{0pt}为有向的, 如果它是非空的, 并且\hspace{0pt}\penalty0$D$\penalty0\hspace{0pt}的每个有限子集在\hspace{0pt}\penalty0$D$\penalty0\hspace{0pt}中都有上界\cite{ref7}.
+
+本文中, \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$M$\penalty0\hspace{0pt}都是完全分配格, 它们的最大元记为\hspace{0pt}\penalty0$~\top$\nobreak\hspace{0pt}, 最小元记为\hspace{0pt}\penalty0$\bot$\nobreak\hspace{0pt}. \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}上的一个二元关系\hspace{0pt}\penalty0$\prec$\penalty0\hspace{0pt}定义为, 对\hspace{0pt}\penalty0$\forall a,b\in L$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$a\prec b$\penalty0\hspace{0pt}当且仅当对\hspace{0pt}\penalty0$\forall M\subseteq L$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$b\le \vee M$\nobreak\hspace{0pt}, 存在一个\hspace{0pt}\penalty0$d\in M$\nobreak\hspace{0pt}, 使得\hspace{0pt}\penalty0$a\le d$\nobreak\hspace{0pt}. 映射\hspace{0pt}\penalty0$\beta :L\to 2 ^ { L }$\penalty0\hspace{0pt}定义为\hspace{0pt}\penalty0$\beta(a)=\{b\in L:b\prec a\}$\nobreak\hspace{0pt}, 且满足对\hspace{0pt}\penalty0$\forall \left \{ \begin{array}{l} a_{ i } \end{array} \right \}_{ i\in I } \subseteq L$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\beta\left(\bigvee_{i\in I}a_i\right)=\bigcup_{i\in I}\beta(a_i)$\penalty0\hspace{0pt}\cite{ref7}.
+
+\textbf{定义2.1.1.}  \hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上的一个非空子集\hspace{0pt}\penalty0$\mathcal{C}\subseteq L ^ { X\times X }$\penalty0\hspace{0pt}称为\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-熵,如果它满足以下性质：
+
+（E1）\hspace{0pt}\penalty0$\Delta _{ X } \in \mathcal{C}$\nobreak\hspace{0pt}；
+
+（E2）如果\hspace{0pt}\penalty0$E\in \mathcal{C}$\nobreak\hspace{0pt},且\hspace{0pt}\penalty0$D\le E$\nobreak\hspace{0pt},则\hspace{0pt}\penalty0$D\in \mathcal{C}$\nobreak\hspace{0pt}；
+
+（E3）\hspace{0pt}\penalty0$\forall E,F\in \mathcal{C}$\nobreak\hspace{0pt},则\hspace{0pt}\penalty0$E\vee F\in \mathcal{C}$\nobreak\hspace{0pt}；
+
+一个\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-熵\hspace{0pt}\penalty0$\mathcal{C}\subseteq L ^ { X\times X }$\penalty0\hspace{0pt}称为\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-拟粗结构,如果它又满足（E4）：
+
+（E4）\hspace{0pt}\penalty0$\forall E,F\in \mathcal{C}$\nobreak\hspace{0pt},则\hspace{0pt}\penalty0$E\circ F\in \mathcal{C}$\nobreak\hspace{0pt}；
+
+一个\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-熵\hspace{0pt}\penalty0$\mathcal{C}\subseteq L ^ { X\times X }$\penalty0\hspace{0pt}称为\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-半粗结构,如果它又满足（E5）：
+
+（E5）\hspace{0pt}\penalty0$\forall E\in \mathcal{C}$\nobreak\hspace{0pt},则\hspace{0pt}\penalty0$E ^ { -1 } \in \mathcal{C}$\nobreak\hspace{0pt}.
+
+此外, 一个\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-熵\hspace{0pt}\penalty0$\mathcal{C}\subseteq L ^ { X\times X }$\penalty0\hspace{0pt}称为\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-粗结构, 如果它既是\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-拟粗结构, 又是\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-半粗结构.相应地, \hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}又分别称为\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-熵空间, \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-拟粗空间, \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-半粗空间, \hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-粗空间\cite{ref7}.
+
+\textbf{定义2.1.2}  对集合\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}及\hspace{0pt}\penalty0$\forall E,E_{ 1 } ,E_{ 2 } \subseteq X\times X$\nobreak\hspace{0pt}, 我们定义
+$$E^{-1}=\{(y,x)\in X\times X:(x,y)\in E\},$$
+$$E_{ 1 } \circ E_{ 2 } =\left \{ \begin{array}{l} \left ( { x,y } \right )\in X\times X:\exists z\in X,\left ( { x,z } \right )\in E_{ 1 } ,\left ( { z,y } \right )\in E_{ 2 } \end{array} \right \}.$$
+对于上述运算，其单位元是\hspace{0pt}\penalty0$\Delta _{ X } \in L ^ { X\times X }$\nobreak\hspace{0pt}，定义为
+$$\Delta_X(x,y)=\begin{cases}\top,&x=y,\\ \bot,&x\ne y,\end{cases}. \text{\cite{ref7}}$$
+\textbf{定义2.1.3}  映射\hspace{0pt}\penalty0$R:X\times X\to M$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊关系, 称为：
+
+（1）自反: \hspace{0pt}\penalty0$R\left ( { x,x } \right )=\top$\nobreak\hspace{0pt}；
+
+（2）对称: \hspace{0pt}\penalty0$R\left ( { x,y } \right )=R\left ( { y,x } \right )$\nobreak\hspace{0pt}；
+
+（3）传递: \hspace{0pt}\penalty0$R\circ R\le R$\nobreak\hspace{0pt}, 其中\hspace{0pt}\penalty0$R\circ R(x,y)=\bigvee_{ z\in X } R(x,z)\wedge R(z,y)$\nobreak\hspace{0pt}.
+
+一个满足自反、对称和传递的\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊关系\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}称为\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊等价关系, 如果\hspace{0pt}\penalty0$R:X\times X\to M$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊关系, 则称\hspace{0pt}\penalty0$\left ( { X,R } \right )$\penalty0\hspace{0pt}为\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊关系空间\cite{ref9}.
+
+
+\chapter{$(L,M)$-模糊粗结构的刻画}
+\section{$(L,M)$-模糊粗结构}
+\vspace{0.2cm}
+\textbf{定义3.1.1.}  集合\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上的一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构是一个映射\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}\hspace{0pt}\penalty0$:L ^ { X\times X } \to M$\penalty0\hspace{0pt}满足以下条件：
+
+（ME1）\hspace{0pt}\penalty0$\mathcal{C}\left ( { \Delta _{ X } } \right )=\top$\nobreak\hspace{0pt}；
+
+（ME2）\hspace{0pt}\penalty0$\forall E,F\in L ^ { X\times X }$\nobreak\hspace{0pt}, 且\hspace{0pt}\penalty0$E\le F$\nobreak\hspace{0pt},则\hspace{0pt}\penalty0$\mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E } \right )$\nobreak\hspace{0pt}；
+
+（ME3）\hspace{0pt}\penalty0$\forall E,F\in L ^ { X\times X }$\nobreak\hspace{0pt}, 则\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E\vee F } \right )$\nobreak\hspace{0pt}；
+
+\quad 一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}称为\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟粗结构, 若它又满足（ME4）：
+
+（ME4）\hspace{0pt}\penalty0$\forall E,F\in L^{X\times X}$\nobreak\hspace{0pt}, 则\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E\circ F } \right )$\nobreak\hspace{0pt}；
+
+\quad 一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}称为\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半粗结构, 若它又满足（ME5）：
+
+（ME5）\hspace{0pt}\penalty0$\forall E\in L^{X\times X}$\nobreak\hspace{0pt}, 则\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )=\mathcal{C}\left ( { E ^ { -1 } } \right )$\nobreak\hspace{0pt}.
+
+若一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵结构\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}既是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊半粗结构, 又是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊拟粗结构, 则称为\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗结构. 相应地, \hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}分别称为\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵空间, \hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊半粗空间, \hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊拟粗空间, \hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗空间.
+
+\textbf{注 3.1.2.}  上述定义中的（ME2）和（ME3）可等价于（ME2\&3）：\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )=\mathcal{C}\left ( { E\vee F } \right )$\nobreak\hspace{0pt}.
+
+\textbf{定义3.1.3.}  集合\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上的映射\hspace{0pt}\penalty0$\mathcal{S}:L ^ { X\times X } \to M$\penalty0\hspace{0pt}称为一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵结构（或\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊拟粗结构、\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊半粗结构、\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗结构）\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}的基, 若它满足：对\hspace{0pt}\penalty0$\forall E\in L ^ { X\times X }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )=\bigvee_{ E\le B } \mathcal{S}\left ( { B } \right )$\nobreak\hspace{0pt}.
+
+\textbf{定义3.1.4.}  集合\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上的映射\hspace{0pt}\penalty0$\mathcal{S}:L ^ { X\times X } \to M$\penalty0\hspace{0pt}称为一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵结构的基, 若它满足：
+
+\quad （B1）\hspace{0pt}\penalty0$\bigvee_{\Delta_X\leq B}\mathcal{S}(B)=\top$\nobreak\hspace{0pt}；
+
+\quad （B2）\hspace{0pt}\penalty0$\forall B_{ 1 } ,B_{ 2 } \in L ^ { X\times X }$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\mathcal{S}\left ( { B_{ 1 } } \right )\wedge \mathcal{S}\left ( { B_{ 2 } } \right )\le \bigvee_{ B_{ 1 } \vee B_{ 2 } \le B } \mathcal{S}\left ( { B } \right )$\nobreak\hspace{0pt}；
+
+\quad \hspace{0pt}\penalty0$\mathcal{S}:L ^ { X\times X } \to M$\penalty0\hspace{0pt}称为一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊拟粗结构的基, 如果它还满足（B3）：
+
+\quad （B3）\hspace{0pt}\penalty0$\forall B_{ 1 } ,B_{ 2 } \in L ^ { X\times X }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{S}\left ( { B_{ 1 } } \right )\wedge \mathcal{S}\left ( { B_{ 2 } } \right )\le \bigvee_{ B_{ 1 } \circ B_{ 2 } \le B } \mathcal{S}\left ( { B } \right )$\nobreak\hspace{0pt}；
+
+\quad \hspace{0pt}\penalty0$\mathcal{S}:L ^ { X\times X } \to M$\penalty0\hspace{0pt}称为一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊半粗结构的基, 如果它还满足（B4）：
+
+\quad （B4）\hspace{0pt}\penalty0$\forall E\in L ^ { X\times X }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{S}\left ( { E } \right )\le \bigvee_{ E ^ { -1 } \le B } \mathcal{S}\left ( { B } \right )$\nobreak\hspace{0pt}；
+
+若\hspace{0pt}\penalty0$\mathcal{S}$\penalty0\hspace{0pt}同时满足（B1）（B4）, 则称为\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗结构的基.
+
+由一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵结构（或\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊拟粗结构、\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊半粗结构、\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗结构）\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}的基\hspace{0pt}\penalty0$S$\nobreak\hspace{0pt}, 可以通过\hspace{0pt}\penalty0$\mathcal{C}\left ( { E } \right )=\bigvee_{ E\le B } \mathcal{S}\left ( { B } \right )$\penalty0\hspace{0pt}生成一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵结构（或\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊拟粗结构, \hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊半粗结构,\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗结构）.
+
+\textbf{定义3.1.5.}  两个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵空间之间的映射\hspace{0pt}\penalty0$f:\left ( { X,\mathcal{C}_{ X } } \right )\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}称为：
+
+\quad （1）\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊保有界映射, 若对\hspace{0pt}\penalty0$\forall E\in L ^ { X\times X }$\nobreak\hspace{0pt}, 有\hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { E } \right )\le \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { E } \right ) } \right )$\nobreak\hspace{0pt}；
+
+\quad （2）\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊有效逆紧映射, 若对\hspace{0pt}\penalty0$\forall F\in L ^ { X\times X }$\nobreak\hspace{0pt},有\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { F } \right )\le \mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { F } \right ) } \right )$\nobreak\hspace{0pt}；
+
+\quad （3）\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗蕴含映射, 若\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}既是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊保有界, 又是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊有效逆紧的；
+
+\quad （4）\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗映射, 若\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}既是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊保有界的, 又是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊有效逆紧的.
+
+\textbf{命题3.1.6.}  已知\hspace{0pt}\penalty0$\left ( { X,\mathcal{C}_{ X } } \right )$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}是两个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵空间, 映射\hspace{0pt}\penalty0$f:X\to Y$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\mathcal{S}_{ X } ,\mathcal{S}_{ Y }$\penalty0\hspace{0pt}分别是\hspace{0pt}\penalty0$\mathcal{C}_{ X }$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\mathcal{C}_{ Y }$\penalty0\hspace{0pt}的基, 则：
+
+\quad （1）\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊保有界映射当且仅当\hspace{0pt}\penalty0$\mathcal{S}_{ X } \left ( { B } \right )\le \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { B } \right ) } \right )$\nobreak\hspace{0pt}；
+
+\quad （2）\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊有效逆紧映射当且仅当\hspace{0pt}\penalty0$\mathcal{S}_{ Y } \left ( { D } \right )\le \mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { D } \right ) } \right )$\nobreak\hspace{0pt}.
+
+\textbf{证明：} （1）``必要性'': 由于\hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { B } \right )=\bigvee_{ B\le E } \mathcal{S}_{ X } \left ( { E } \right )$\nobreak\hspace{0pt}, 故\hspace{0pt}\penalty0$\mathcal{S}_{ X } \left ( { B } \right )\le \mathcal{C}_{ X } \left ( { B } \right )\le \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { B } \right ) } \right )$\nobreak\hspace{0pt}.
+
+``充分性'': \hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { B } \right )=\bigvee_{ B\le E } \mathcal{S}_{ X } \left ( { E } \right )\le \bigvee_{ B\le E } \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { E } \right ) } \right )=\mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { B } \right ) } \right )$\nobreak\hspace{0pt}, 故得证\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊保有界映射.
+
+（2）``必要性'': 由于\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { D } \right )=\bigvee_{ D\le F } \mathcal{S}_{ Y } \left ( { F } \right )$\nobreak\hspace{0pt}, 则\hspace{0pt}\penalty0$\mathcal{S}_{ Y } \left ( { D } \right )\le \mathcal{C}_{ Y } \left ( { D } \right )\le \mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { D } \right ) } \right )$\nobreak\hspace{0pt}.
+
+``充分性'': 因\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { D } \right )=\bigvee_{ D\le F } \mathcal{S}_{ Y } \left ( { F } \right )\le \bigvee_{ D\le F } \mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { F } \right ) } \right )=\mathcal{C}_{ X } \left ( { f ^ { \leftarrow } \left ( { D } \right ) } \right )$\nobreak\hspace{0pt}, 故\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊有效逆紧映射.
+
+\textbf{定义3.1.7.}  \hspace{0pt}\penalty0$\left ( { X,\mathcal{C}_{ X } } \right )$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}是两个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗空间,
+
+（1）\hspace{0pt}\penalty0$f,g:X\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}是两个映射, \hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$g$\penalty0\hspace{0pt}称为有界接近的, 表示为\hspace{0pt}\penalty0$f\sim g$\nobreak\hspace{0pt}, 如果
+$$\bigvee_{ E_{ Y } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ Y } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ Y } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right ) } \right )=\top\text{；}$$
+（2）映射\hspace{0pt}\penalty0$f:\left ( { X,\mathcal{C}_{ X } } \right )\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}称为\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗等价, 若对\hspace{0pt}\penalty0$\forall E_{ X } \in L ^ { X\times X }$\nobreak\hspace{0pt}, 有\hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { E_{ X } } \right )\le \mathcal{C}_{ Y } \left ( { f ^ { \to } \left ( { E_{ X } } \right ) } \right )$\nobreak\hspace{0pt}, 且存在映射\hspace{0pt}\penalty0$g:\left ( { Y,\mathcal{C}_{ Y } } \right )\to \left ( { X,\mathcal{C}_{ X } } \right )$\nobreak\hspace{0pt}, 满足对\hspace{0pt}\penalty0$\forall E_{ Y } \in L ^ { Y\times Y }$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { E_{ Y } } \right )\le \mathcal{C}_{ X } \left ( { g ^ { \to } \left ( { E_{ Y } } \right ) } \right )$\nobreak\hspace{0pt}, 有\hspace{0pt}\penalty0$f\circ g\sim id_{ Y }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$g\circ f\sim id_{ X }$\nobreak\hspace{0pt}. （即\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊保有界映射, 存在\hspace{0pt}\penalty0$g$\penalty0\hspace{0pt}也是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊保有界映射, 使得\hspace{0pt}\penalty0$f\circ g\sim id_{ Y }$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$g\circ f\sim id_{ X }$\nobreak\hspace{0pt}. ）
+
+\textbf{命题3.1.8.}  \hspace{0pt}\penalty0$f,g:X\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}是两个映射, 若\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$g$\penalty0\hspace{0pt}是有界接近的, 则映射\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}与\hspace{0pt}\penalty0$g$\penalty0\hspace{0pt}等价.
+
+\textbf{证明：} ``自反性'': 由于
+\begin{eqnarray*}\bigvee_{E_Y\in L^{Y\times Y}}\left(\mathcal{C}_Y(E_Y)\wedge\bigwedge_{x\in X}E_Y(f(x),f(x))\right)&\geq&\mathcal{C}_Y(\Delta_Y)\wedge\bigwedge_{x\in X}\Delta_Y(f(x),f(x))\\&=&\top,\end{eqnarray*}
+即\hspace{0pt}\penalty0$f\sim f$\nobreak\hspace{0pt},满足自反性.
+
+``对称性'': 假设两个映射\hspace{0pt}\penalty0$f,g$\penalty0\hspace{0pt}满足\hspace{0pt}\penalty0$f\sim g$\nobreak\hspace{0pt}, 则
+\begin{eqnarray*}\bigvee_{E_Y\in L^{Y\times Y}}\left(\mathcal{C}_Y(E_Y^{-1})\wedge\bigwedge_{x\in X}E_Y^{-1}(g(x),f(x))\right)&\geq&\bigvee_{E_Y\in L^{Y\times Y}}\left(\mathcal{C}_Y(E_Y)\wedge\bigwedge_{x\in X}E_Y(f(x),g(x))\right)\\&=&\top,\end{eqnarray*}
+故\hspace{0pt}\penalty0$g\sim f$\penalty0\hspace{0pt}得证, 满足对称性.
+
+``传递性'': 假设又存在一个映射\hspace{0pt}\penalty0$h:X\to \left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}满足\hspace{0pt}\penalty0$f\sim g$\penalty0\hspace{0pt}且\hspace{0pt}\penalty0$g\sim h$\nobreak\hspace{0pt}, 则
+\begin{eqnarray*}\bigvee_{ E_{ s } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ s } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ s } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right ) } \right )&=&\top,\\\bigvee_{ E_{ t } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ t } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ t } \left ( { g\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right ) } \right )&=&\top,\end{eqnarray*}
+又设\hspace{0pt}\penalty0$\forall a\in \beta \left ( { \top } \right )$\nobreak\hspace{0pt}, 满足
+\begin{eqnarray*}a&\prec&\bigvee_{ E_{ s } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ s } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ s } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right ) } \right ),\\a&\prec&\bigvee_{ E_{ t } \in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E_{ t } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ t } \left ( { g\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right ) } \right ),\end{eqnarray*}
+则存在\hspace{0pt}\penalty0$E_{ 1 } \in L ^ { Y\times Y }$\nobreak\hspace{0pt}, 使得\hspace{0pt}\penalty0$a\le \mathcal{C}_{ Y } \left ( { E_{ 1 } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ 1 } \left ( { f\left ( { x } \right ),g\left ( { x } \right ) } \right ) } \right )$\nobreak\hspace{0pt}, 且\hspace{0pt}\penalty0$a\le \mathcal{C}_{ Y } \left ( { E_{ 1 } } \right )$\nobreak\hspace{0pt}, 同理, 存在\hspace{0pt}\penalty0$E_{ 2 } \in L ^ { Y\times Y }$\nobreak\hspace{0pt}, 使得\hspace{0pt}\penalty0$a\le \mathcal{C}_{ Y } \left ( { E_{ 2 } } \right )\wedge \left ( { \bigwedge_{ x\in X } E_{ 2 } \left ( { g\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right )$\nobreak\hspace{0pt}, 且\hspace{0pt}\penalty0$a\le \mathcal{C}_{ Y } \left ( { E_{ 2 } } \right )$\nobreak\hspace{0pt}. 令\hspace{0pt}\penalty0$E=E_{ 1 } \circ E_{ 2 }$\nobreak\hspace{0pt}, 显然\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { E_{ 1 } \circ E_{ 2 } } \right )\ge \mathcal{C}_{ Y } \left ( { E_{ 1 } } \right )\wedge \mathcal{C}_{ Y } \left ( { E_{ 2 } } \right )\ge a$\nobreak\hspace{0pt},
+\begin{eqnarray*}(E_1\circ E_2)(f(x),h(x))&=&\bigvee_{z\in Y}E_2(f(x),z)\wedge E_1(z,h(x))\\&\geq& E_2(f(x),g(x))\wedge E_1(g(x),h(x))\\&\geq& a,\end{eqnarray*}
+得\hspace{0pt}\penalty0$\mathcal{C}_{ Y } \left ( { E } \right )\wedge \left ( { \bigwedge_{ x\in X } E\left ( { f\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right )\ge a$\nobreak\hspace{0pt}. 故\hspace{0pt}\penalty0$\mathcal{C}_Y(E)\wedge\bigwedge_{x\in X}E(f(x),h(x))=\top$\nobreak\hspace{0pt}, 则
+$$\bigvee_{ E\in L ^ { Y\times Y } } \left ( { \mathcal{C}_{ Y } \left ( { E } \right )\wedge \left ( { \bigwedge_{ x\in X } E\left ( { f\left ( { x } \right ),h\left ( { x } \right ) } \right ) } \right ) } \right )=\top,$$
+满足传递性.
+
+\textbf{例3.1.9.}  映射\hspace{0pt}\penalty0$R:X\times X\to M$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上一个\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊关系, 定义
+$$\forall E\in L ^ { X\times X }, \mathcal{C}_R(E)=\begin{cases}\top,&E\leq R,\\ \bot,&E\nleqslant R,\end{cases},$$
+则:
+
+（1）若\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}为自反的, 则\hspace{0pt}\penalty0$\mathcal{C}_{ R }$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊熵结构；
+
+（2）若\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}为对称的, 则\hspace{0pt}\penalty0$\mathcal{C}_{ R }$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊半粗结构；
+
+（3）若\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}为传递的, 则\hspace{0pt}\penalty0$\mathcal{C}_{ R }$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊拟粗结构；
+
+（4）若\hspace{0pt}\penalty0$R$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊等价关系, 则\hspace{0pt}\penalty0$\mathcal{C}_{ R }$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$\left ( { L,M } \right )$\penalty0\hspace{0pt}-模糊粗结构.
+
+
+\section{$(L,M)$-模糊球结构}
+\vspace{0.2cm}
+\textbf{定义3.2.1.}  （1）一个映射\hspace{0pt}\penalty0$\mathcal{B}:X\times P\times X\to L$\penalty0\hspace{0pt}称为集合\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上关于集合\hspace{0pt}\penalty0$P$\penalty0\hspace{0pt}的一个\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-球映射,如果满足：\hspace{0pt}\penalty0$\forall x\in X$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, 有\hspace{0pt}\penalty0$\mathcal{B}\left ( { x,r,x } \right )=\top$\nobreak\hspace{0pt}. 进一步, 记\hspace{0pt}\penalty0$R_{ \mathcal{B} } =\left \{ \begin{array}{l} \mathcal{B}_{ r } \in L ^ { X\times X } :r\in P \end{array} \right \}$\penalty0\hspace{0pt}是二元映射族,其中二元映射\hspace{0pt}\penalty0$\mathcal{B}_{ r } :X\times X\to L$\penalty0\hspace{0pt}定义为：\hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, 有\hspace{0pt}\penalty0$\mathcal{B}_{ r } \left ( { x,y } \right )=\mathcal{B}\left ( { x,r,y } \right )$\nobreak\hspace{0pt}.
+
+（2）称映射\hspace{0pt}\penalty0$N:R_{\mathcal{B}}\to M$\penalty0\hspace{0pt}为\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}上的\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球结构, 若对\hspace{0pt}\penalty0$\forall s,t\in P$\nobreak\hspace{0pt}, 有
+$$\mathcal{N}\left ( { \mathcal{B}_{ s } \vee \mathcal{B}_{ t } } \right )\ge \mathcal{N}\left ( { \mathcal{B}_{ s } } \right )\wedge \mathcal{N}\left ( { \mathcal{B}_{ t } } \right ).$$
+对于\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上的关于集合\hspace{0pt}\penalty0$P$\penalty0\hspace{0pt}的一个\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-球映射\hspace{0pt}\penalty0$\mathcal{B}:X\times P\times X\to L$\penalty0\hspace{0pt}和一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球结构\hspace{0pt}\penalty0$N:R_{\mathcal{B}}\to M$\nobreak\hspace{0pt}, 称四元组\hspace{0pt}\penalty0$\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}为一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统.
+
+\textbf{定义3.2.2.}  \hspace{0pt}\penalty0$\mathcal{B} =\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 称\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}满足：
+
+\quad （1）弱上乘保持性, 若\hspace{0pt}\penalty0$\forall s,t\in P$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{N}\left ( { \mathcal{B}_{ s } \vee \mathcal{B}_{ t } } \right )\le \bigvee_{ \mathcal{B}_{ s } \vee \mathcal{B}_{ t } \le \mathcal{B}_{ r } } \mathcal{N}\left ( { \mathcal{B}_{ r } } \right )$\nobreak\hspace{0pt}；
+
+（2）上乘保持性, 若\hspace{0pt}\penalty0$\forall s,t\in P$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{N}\left ( { \mathcal{B}_{ s } \circ \mathcal{B}_{ t } } \right )\le \bigvee_{ \mathcal{B}_{ s } \circ \mathcal{B}_{ t } \le \mathcal{B}_{ r } } \mathcal{N}\left ( { \mathcal{B}_{ r } } \right )$\nobreak\hspace{0pt}, 其中\hspace{0pt}\penalty0$\mathcal{B}_s\circ\mathcal{B}_t:X\times X\to M$\penalty0\hspace{0pt}定义为: \hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ s } \circ \mathcal{B}_{ t } } \right )\left ( { x,y } \right )=\bigvee_{ z\in X } \mathcal{B}_{ t } \left ( { x,z } \right )\wedge \mathcal{B}_{ s } \left ( { z,y } \right )$\nobreak\hspace{0pt}；
+
+（3）上对称性, 若\hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{N}\left ( { \mathcal{B}_{ r } } \right )\le \mathcal{N}\left ( { \mathcal{B}_{ r } ^ { * } } \right )$\nobreak\hspace{0pt},其中\hspace{0pt}\penalty0$\mathcal{B}_r^*:X\times X\to M$\penalty0\hspace{0pt}定义为: \hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\mathcal{B}_{ r } ^ { * } \left ( { x,y } \right )=\mathcal{B}_{ r } \left ( { y,x } \right )$\nobreak\hspace{0pt}.
+
+\textbf{定义3.2.3.}  设\hspace{0pt}\penalty0$\mathcal{B} =\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 则\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}被称为:
+
+（1）\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟球空间, 若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}满足上乘保持性；
+
+（2）\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半球空间, 若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}既满足弱上乘保持性, 又满足上对称性；
+
+（3）\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球空间, 若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}既是\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊伪球空间, 又是\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半球空间.
+
+\textbf{定义3.2.4.}  设\hspace{0pt}\penalty0$\mathcal{B} _{ P } =\left ( { X,P,\mathcal{B}_{ P } ,\mathcal{N}_{ P } } \right )$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\mathcal{B} _{ Q } =\left ( { X,Q,\mathcal{B}_{ Q } ,\mathcal{N}_{ Q } } \right )$\penalty0\hspace{0pt}为上\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}的\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 记\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\nobreak\hspace{0pt}, 若对任意\hspace{0pt}\penalty0$r\in P$\nobreak\hspace{0pt}, 有\hspace{0pt}\penalty0$\mathcal{N}_{ P } ((\mathcal{B}_{ P } )_{ r } )\le \bigvee_{ s\in Q_{ r } } \mathcal{N}_{ Q } ((\mathcal{B}_{ Q } )_{ s } )$\nobreak\hspace{0pt}, 其中
+$$Q_{ r } =\{s\in Q:\forall x,y\in X,\mathcal{B}_{ P } (x,r,y)\le \mathcal{B}_{ Q } (x,s,y)\}.$$
+进一步, 我们记\hspace{0pt}\penalty0$\mathcal{B} _{ P } \simeq \mathcal{B} _{ Q }$\nobreak\hspace{0pt}, 若\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\mathcal{B} _{ Q } \prec \mathcal{B} _{ P }$\penalty0\hspace{0pt}都成立.
+
+\textbf{定义3.2.5.}  设\hspace{0pt}\penalty0$\mathcal{B} _{ X } =\left ( { X,P,\mathcal{B}_{ X } ,\mathcal{N}_{ X } } \right )$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\mathcal{B}_Y=(Y,P,\mathcal{B}_Y,\mathcal{N}_Y)$\penalty0\hspace{0pt}为\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 称映射\hspace{0pt}\penalty0$f:X\to Y$\penalty0\hspace{0pt}为一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球保持映射, 如果对任意\hspace{0pt}\penalty0$r\in P$\penalty0\hspace{0pt}和任意\hspace{0pt}\penalty0$x,y\in X$\nobreak\hspace{0pt}, 都有\hspace{0pt}\penalty0$\mathcal{N}_{ X } ((\mathcal{B}_{ X } )_{ r } )\le \bigvee_{ s\in Q_{ r } ^{ f } } \mathcal{N}_{ Y } ((\mathcal{B}_{ Y } )_{ s } )$\nobreak\hspace{0pt}, 其中\hspace{0pt}\penalty0$Q_{ r } ^{ f }=\{s\in Q:\forall x,y\in X,\mathcal{B}_{ X } (x,r,y)\le \mathcal{B}_{ Y } (f(x),s,f(y))\}$\nobreak\hspace{0pt}.
+
+接下来, 我们要建立\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统与\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构之间的关系.
+
+\textbf{命题3.2.6.}   设\hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵空间, 记\hspace{0pt}\penalty0$P_X=\{E\in L^{X\times X}:\Delta_X\leq E\}$\nobreak\hspace{0pt}, 对\hspace{0pt}\penalty0$\forall E\in P_{ X }$\nobreak\hspace{0pt}, 定义映射\hspace{0pt}\penalty0$\mathcal{B}_{\mathcal{C}}:X\times E\times X\to L$\penalty0\hspace{0pt}为: \hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\forall E\in P_{ X }$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$\mathcal{B}_{ \mathcal{C} } \left ( { x,E,y } \right )=E\left ( { x,y } \right )$\nobreak\hspace{0pt}, 则\hspace{0pt}\penalty0$\mathcal{B}_{ \mathcal{C} }$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}上关于\hspace{0pt}\penalty0$P_{ X }$\penalty0\hspace{0pt}的\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-球映射. 进一步, 令\hspace{0pt}\penalty0$R_{ \mathcal{B}_{ \mathcal{C} } } =\left \{ \begin{array}{l} \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \in L ^ { X\times X } :E\in P_{ X } \end{array} \right \}$\nobreak\hspace{0pt}.其中对\hspace{0pt}\penalty0$\forall F\in P_{ X }$\nobreak\hspace{0pt}, 定义映射\hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } :X\times X\to L$\penalty0\hspace{0pt}为: \hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } (x,y)=\mathcal{B}_{ \mathcal{C} } \left ( { x,F,y } \right )$\nobreak\hspace{0pt}. 定义映射\hspace{0pt}\penalty0$N_{\mathcal{C}}:R_{\mathcal{B}_{\mathcal{C}}}\to M$\penalty0\hspace{0pt}为:
+$$\forall E\in P_{ X }, \mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } } \right )=\mathcal{C}\left ( { E } \right ).$$
+则\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} } =\left ( { X,P_{ X } ,\mathcal{B}_{ \mathcal{C} } ,\mathcal{N}_{ \mathcal{C} } } \right )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 且\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}满足弱上乘保持性. 此外,
+
+（1）若\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半粗结构, 则\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半球空间；
+
+（2）若\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟粗结构, 则\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟球空间；
+
+（3）若\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构, 则\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球空间.
+
+\textbf{证明：} 对任意\hspace{0pt}\penalty0$E\in P_{ X }$\nobreak\hspace{0pt}, 由\hspace{0pt}\penalty0$\Delta _{ X } \le E\in L ^ { X\times X }$\nobreak\hspace{0pt}, 得\hspace{0pt}\penalty0$\left(\mathcal{B}_{\mathcal{C}}\right)_E(x,x)=E(x,x)\geq\Delta_X(x,x)=\top$\nobreak\hspace{0pt}, 这说明\hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$L$\penalty0\hspace{0pt}-球映射, 对任意\hspace{0pt}\penalty0$E,F\in P_{ X }$\nobreak\hspace{0pt}, 由\hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵空间, 得
+\begin{eqnarray*}\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_E)\wedge\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_F)&=&\mathcal{C}(E)\wedge\mathcal{C}(F)\\&=&\mathcal{C}(E\vee F)\\&=&\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_{E\vee F})\\&=&\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_E\vee(\mathcal{B}_{\mathcal{C}})_F),\end{eqnarray*}
+故\hspace{0pt}\penalty0$\mathcal{N}_{ \mathcal{C} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球结构, 因此, \hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统.
+
+对任意\hspace{0pt}\penalty0$E,F\in P_{ X }$\nobreak\hspace{0pt}, 有\hspace{0pt}\penalty0$E\vee F\in P_X$\nobreak\hspace{0pt}, 且对任意\hspace{0pt}\penalty0$H\in P$\nobreak\hspace{0pt}, 当\hspace{0pt}\penalty0$E\vee F\le H$\penalty0\hspace{0pt}时, 有\hspace{0pt}\penalty0$(\mathcal{B}_{\mathcal{C}})_{E\vee F}\leq(\mathcal{B}_{\mathcal{C}})_H$\nobreak\hspace{0pt}. 由
+\begin{eqnarray*}\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_E\vee(\mathcal{B}_{\mathcal{C}})_F)&=&\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_{E\vee F})\\&\leq&\bigvee_{E\vee F\leq H\in P}\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_H)\\&=&\bigvee_{(\mathcal{B}_{\mathcal{C}})_{E\vee F}\leq(\mathcal{B}_{\mathcal{C}})_H}\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_H),\end{eqnarray*}
+知\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}满足弱上乘保持性.
+
+（1）若\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半粗结构, 则对\hspace{0pt}\penalty0$\forall E\in P$\nobreak\hspace{0pt},
+$$\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } } \right )=\mathcal{C}\left ( { E } \right )\le \mathcal{C}\left ( { E ^ { -1 } } \right )=\mathcal{N}_{ \mathcal{C} } \left ( { \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } ^ { * } } \right ),$$
+故\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}满足上对称性, 因此\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半球空间.
+
+（2）若\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟粗结构, 对\hspace{0pt}\penalty0$\forall E,F\in P$\nobreak\hspace{0pt}, 显然有\hspace{0pt}\penalty0$E\circ F\in P$\nobreak\hspace{0pt}, 由
+\begin{eqnarray*}\left(\left(\mathcal{B}_{\mathcal{C}}\right)_E\circ\left(\mathcal{B}_{\mathcal{C}}\right)_F\right)(x,y)&=&\bigvee_{z\in X}\left(\mathcal{B}_{\mathcal{C}}\right)_F(x,z)\wedge\left(\mathcal{B}_{\mathcal{C}}\right)_E(z,y)\\&=&\bigvee_{z\in X}F(x,z)\wedge E(z,y)\\&=&(E\circ F)(x,y)=\left(\mathcal{B}_{\mathcal{C}}\right)_{E\circ F}(x,y)\end{eqnarray*}
+知\hspace{0pt}\penalty0$\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E } \circ \left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ F } =\left ( { \mathcal{B}_{ \mathcal{C} } } \right )_{ E\circ F }$\nobreak\hspace{0pt}, 于是
+\begin{eqnarray*}\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_E\circ(\mathcal{B}_{\mathcal{C}})_F)&=&\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_{E\circ F})\\&\leq&\bigvee_{E\circ F\leq H\in P}\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_H)\\&=&\bigvee_{(\mathcal{B}_{\mathcal{C}})_{E\circ F}\leq(\mathcal{B}_{\mathcal{C}})_H}\mathcal{N}_{\mathcal{C}}((\mathcal{B}_{\mathcal{C}})_H),\end{eqnarray*}
+故\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}满足上乘保持性, 因此\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟球空间.
+
+（3）若\hspace{0pt}\penalty0$\mathcal{C}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构, 则由（1）和（2）, 知道\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球空间.
+
+\textbf{命题3.2.7.}  设\hspace{0pt}\penalty0$\left ( { X,\mathcal{C}_{ X } } \right )$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\left ( { Y,\mathcal{C}_{ Y } } \right )$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵空间, 则\hspace{0pt}\penalty0$f:X\to Y$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊保有界映射当且仅当\hspace{0pt}\penalty0$f:(X,P_{ X } ,\mathcal{B}_{ \mathcal{C}_{ X } } ,\mathcal{N}_{ \mathcal{C}_{ X } } )\to (Y,P_{ Y } ,\mathcal{B}_{ \mathcal{C}_{ Y } } ,\mathcal{N}_{ \mathcal{C}_{ Y } } )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球保持映射.
+
+\textbf{证明：} ``必要性'': 对任意\hspace{0pt}\penalty0$E\in P_{ X }$\nobreak\hspace{0pt}, 容易验证\hspace{0pt}\penalty0$f_{ L } ^{ \to }(E)\in (P_{ Y } )_{ E } ^{ f }$\nobreak\hspace{0pt}, 于是
+$$\mathcal{N}_{ \mathcal{C}_{ X } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ X } } } \right )_{ E } } \right )=\mathcal{C}_{ X } \left ( { E } \right )\le \mathcal{C}_{ Y } \left ( { f_{ L } ^{ \to }(E) } \right )=\mathcal{N}_{ \mathcal{C}_{ Y } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ Y } } } \right )_{ f_{ L } ^{ \to }(E) } } \right )\le \bigvee_{ F\in (P_{ Y } )_{ E } ^{ f } } \mathcal{N}_{ \mathcal{C}_{ Y } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ Y } } } \right )_{ F } } \right ),$$
+这说明\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球保持映射.
+
+``充分性'': 对\hspace{0pt}\penalty0$\forall E\in P_{ X }$\penalty0\hspace{0pt}及\hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt}, 若\hspace{0pt}\penalty0$F\in (P_{ Y } )_{ E } ^{ f }$\nobreak\hspace{0pt}, 则\hspace{0pt}\penalty0$E(x,y)\le F(f(x),f(y))$\nobreak\hspace{0pt}, 即\hspace{0pt}\penalty0$f_{ L } ^{ \to }(E)\le F$\nobreak\hspace{0pt}. 于是\hspace{0pt}\penalty0$\mathcal{C}_{ X } \left ( { E } \right )=\mathcal{N}_{ \mathcal{C}_{ X } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ X } } } \right )_{ E } } \right )\le \bigvee_{ F\in (P_{ Y } )_{ E } ^{ f } } \mathcal{N}_{ \mathcal{C}_{ Y } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ Y } } } \right )_{ F } } \right )=\mathcal{N}_{ \mathcal{C}_{ Y } } \left ( { \left ( { \mathcal{B}_{ \mathcal{C}_{ Y } } } \right )_{ f_{ L } ^{ \to }(E) } } \right )=\mathcal{C}_{ Y } \left ( { f_{ L } ^{ \to }(E) } \right )$\nobreak\hspace{0pt}, 故\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊保有界映射.
+
+命题3.2.6 说明了一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构可以诱导生成一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球空间. 接下来, 我们从一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球空间构造出一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构.
+
+\textbf{命题3.2.8.}  设\hspace{0pt}\penalty0$\mathcal{B} =\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, \hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, 定义映射\hspace{0pt}\penalty0$E_{ r } :X\times X\to L$\penalty0\hspace{0pt}为：\hspace{0pt}\penalty0$\forall x,y\in X$\nobreak\hspace{0pt},\hspace{0pt}\penalty0$E_{ r } \left ( { x,y } \right )=\mathcal{B}_{ r } \left ( { x,y } \right )$\nobreak\hspace{0pt}. 显然有\hspace{0pt}\penalty0$\mathcal{E}=\left \{ \begin{array}{l} E_{ r } :r\in P \end{array} \right \}\subset L ^ { X\times X }$\nobreak\hspace{0pt}. 定义映射\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} } :L ^ { X\times X } \to M$\penalty0\hspace{0pt}为
+$$\forall E\in L^{X\times X}, \mathcal{S}_{\mathcal{B}}(E)=\begin{cases}N(\mathcal{B}_r),&E=E_r\in\mathcal{E};\\\bot,&E\notin\mathcal{E}.\end{cases}$$
+则\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构的基, 它生成的\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构记为\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\nobreak\hspace{0pt}. 此外,
+
+（1）若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半球空间, 则\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半粗结构；
+
+（2）若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟球空间, 则\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟粗结构；
+
+（3）若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球空间, 则\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构.
+
+\textbf{证明：} （B1）\hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, \hspace{0pt}\penalty0$\forall x\in X$\nobreak\hspace{0pt}, 由\hspace{0pt}\penalty0$E_{ r } \left ( { x,x } \right )=\mathcal{B}_{ r } \left ( { x,x } \right )=\top =\Delta _{ X } \left ( { x,x } \right )$\nobreak\hspace{0pt}, 得
+\begin{eqnarray*}\bigvee_{\Delta_X\leq E_r}\mathcal{N}_{\mathcal{B}}(E_r)&=&\bigvee_{\Delta_X\leq B_r}\mathcal{N}(\mathcal{B}_r)\\&=&\top.\end{eqnarray*}
+（B2）\hspace{0pt}\penalty0$\forall E_r,E_s\in L^{X\times X}$\nobreak\hspace{0pt}, 有
+\begin{eqnarray*}\mathcal{S}_{\mathcal{B}}(E_r)\wedge\mathcal{S}_{\mathcal{B}}(E_s)&=&\mathcal{N}(\mathcal{B}_r)\wedge\mathcal{N}(\mathcal{B}_s)\\&\leq&\mathcal{N}(\mathcal{B}_r\vee\mathcal{B}_s)\\&\leq&\bigvee_{\mathcal{B}_r\vee\mathcal{B}_s\leq\mathcal{B}_t}\mathcal{N}(\mathcal{B}_t)\\&=&\bigvee_{E_r\vee E_s\leq E_t}\mathcal{S}_{\mathcal{B}}(E_t)\\&\leq&\bigvee_{E_r\vee E_s\leq E}\mathcal{S}_{\mathcal{B}}(E),\end{eqnarray*}
+故\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构的基.
+
+（1）若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半球空间, 则\hspace{0pt}\penalty0$\forall r\in P$\nobreak\hspace{0pt}, 有
+$$\mathcal{S}_{\mathcal{B}}(E_r)=\mathcal{N}(\mathcal{B}_r)=\mathcal{N}(\mathcal{B}_r^*)=\mathcal{S}_{\mathcal{B}}(E_r^{-1})\leq\bigvee_{E_r^{-1}\leq E_t}\mathcal{S}_{\mathcal{B}}(E_t)\leq\bigvee_{E_r^{-1}\leq E}\mathcal{S}_{\mathcal{B}}(E),$$
+故\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半粗结构的基, \hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半粗结构.
+
+（2）若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟球空间, 则\hspace{0pt}\penalty0$\forall r,s\in P$\nobreak\hspace{0pt}, 有
+\begin{eqnarray*}\mathcal{S}_{\mathcal{B}}(E_r)\wedge\mathcal{S}_{\mathcal{B}}(E_s)&=&\mathcal{N}(\mathcal{B}_r)\wedge\mathcal{N}(\mathcal{B}_s)\\&\leq&\mathcal{N}(\mathcal{B}_r\vee\mathcal{B}_s)\leq\mathcal{N}(\mathcal{B}_r\circ\mathcal{B}_s)\\&\leq&\bigvee_{\mathcal{B}_r\circ\mathcal{B}_s\leq\mathcal{B}_t}\mathcal{N}(\mathcal{B}_t)=\bigvee_{E_r\circ E_s\leq E_t}\mathcal{S}_{\mathcal{B}}(E_t)\\&\leq&\bigvee_{E_r\circ E_s\leq E}\mathcal{S}_{\mathcal{B}}(E),\end{eqnarray*}
+故\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟粗结构的基, \hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟粗结构.
+
+（3）若\hspace{0pt}\penalty0$\mathcal{B}$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球空间, 则显然\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} }$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构.
+
+\textbf{定理3.2.9.}  设\hspace{0pt}\penalty0$\left ( { X,\mathcal{C} } \right )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵空间, 则\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ \mathcal{C} } } =\mathcal{C}$\nobreak\hspace{0pt}.
+
+\textbf{证明：} 设\hspace{0pt}\penalty0$E\in L ^ { X\times X }$\nobreak\hspace{0pt}, 则\hspace{0pt}\penalty0$\mathcal{S}_{ \mathcal{B} _{ \mathcal{C} } } \left ( { F } \right )=\mathcal{N}_{ \mathcal{C} } \left ( { \mathcal{B}_{ F } } \right )=\mathcal{C}\left ( { F } \right )$\nobreak\hspace{0pt}. 于是对任意\hspace{0pt}\penalty0$E\in L ^ { X\times X }$\nobreak\hspace{0pt}, 有
+$$\mathcal{B}_{\mathcal{C}}(E)=\bigvee_{E\leq F}\mathcal{S}_{\mathcal{B}_{\mathcal{C}}}(F)=\bigvee_{E\leq F}\mathcal{C}(F)=\mathcal{C}(E),$$
+故\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ \mathcal{C} } } =\mathcal{C}$\nobreak\hspace{0pt}.
+
+\textbf{命题3.2.10.}  设\hspace{0pt}\penalty0$\mathcal{B} _{ X } =\left ( { X,P,\mathcal{B}_{ X } ,\mathcal{N}_{ X } } \right )$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\mathcal{B} _{ Y } =\left ( { Y,Q,\mathcal{B}_{ Y } ,\mathcal{N}_{ Y } } \right )$\penalty0\hspace{0pt}是\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 则\hspace{0pt}\penalty0$f:X\to Y$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球保持映射当且仅当\hspace{0pt}\penalty0$f:(X,\mathcal{C}_{ \mathcal{B} _{ X } } )\to (Y,\mathcal{C}_{ \mathcal{B} _{ Y } } )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊保有界映射.
+
+\textbf{证明：} ``必要性'':对任意\hspace{0pt}\penalty0$E\in L ^ { X\times X }$\nobreak\hspace{0pt}, 有
+\begin{eqnarray*}\mathcal{C}_{\mathcal{B}_X}(E)&=&\bigvee_{E\leq F}\mathcal{S}_{\mathcal{B}_X}(E)=\bigvee_{E\leq E_r}\mathcal{N}_X((\mathcal{B}_X)_r)\\&\leq&\bigvee_{f_L^{\to}(E)\leq f_L^{\to}(E_r)}\bigvee_{s\in(P_Y)_r^f}\mathcal{N}_Y((\mathcal{B}_X)_s)\\&\leq&\bigvee_{f_L^{\to}(E)\leq E_s}\mathcal{N}_Y((\mathcal{B}_X)_s)\\&=&\mathcal{C}_{\mathcal{B}_Y}(f_L^{\to}(E)),\end{eqnarray*}
+这说明\hspace{0pt}\penalty0$f:(X,\mathcal{C}_{ \mathcal{B} _{ X } } )\to (Y,\mathcal{C}_{ \mathcal{B} _{ Y } } )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊保有界映射.
+
+``充分性'':设\hspace{0pt}\penalty0$r\in P_{ X }$\nobreak\hspace{0pt}, 因
+$$\mathcal{N}_X((\mathcal{B}_X)_r)=\mathcal{C}_{\mathcal{B}_X}(E_r)\leq\mathcal{C}_{\mathcal{B}_Y}(f_L^{\to}(E_r))=\bigvee_{f_L^{\to}(E_r)\leq E_s}\mathcal{N}_Y((\mathcal{B}_X)_s)=\bigvee_{s\in(P_Y)_r^f}\mathcal{N}_Y((\mathcal{B}_X)_s),$$
+可得\hspace{0pt}\penalty0$f$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球保持映射.
+
+\textbf{命题3.2.11.}  设\hspace{0pt}\penalty0$\mathcal{B} _{ P } =\left ( { X,P,\mathcal{B}_{ P } ,\mathcal{N}_{ P } } \right )$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\mathcal{B} _{ Q } =\left ( { X,Q,\mathcal{B}_{ Q } ,\mathcal{N}_{ Q } } \right )$\penalty0\hspace{0pt}为上\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}的\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 则\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\penalty0\hspace{0pt}当且仅当\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } \le \mathcal{C}_{ \mathcal{B} _{ Q } }$\nobreak\hspace{0pt}.
+
+\textbf{证明：} ``必要性'':因\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\nobreak\hspace{0pt}, 对任意\hspace{0pt}\penalty0$r\in P$\nobreak\hspace{0pt}, 有\hspace{0pt}\penalty0$\mathcal{N}_{ P } ((\mathcal{B}_{ P } )_{ r } )\le \bigvee_{ s\in Q_{ r } } \mathcal{N}_{ Q } ((\mathcal{B}_{ Q } )_{ s } )$\nobreak\hspace{0pt}. 对任意\hspace{0pt}\penalty0$E\in L ^ { X\times X }$\nobreak\hspace{0pt},
+\begin{eqnarray*}\mathcal{C}_{\mathcal{B}_P}(E)&=&\bigvee_{E\leq F}\mathcal{S}_{\mathcal{B}_P}(F)=\bigvee_{E\leq E_r}\mathcal{S}_{\mathcal{B}_P}(E_r)\\&=&\bigvee_{E\leq E_r}\mathcal{N}_P(\mathcal{B}_r)\leq\bigvee_{E\leq E_r}\bigvee_{s\in Q_r}\mathcal{N}_Q(\mathcal{B}_s)\\&\leq&\bigvee_{E\leq E_s}\mathcal{S}_{\mathcal{B}_Q}(E_s)=\mathcal{C}_{\mathcal{B}_Q}(E),\end{eqnarray*}
+这说明\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } \le \mathcal{C}_{ \mathcal{B} _{ Q } }$\nobreak\hspace{0pt}.
+
+``充分性'':对于任意\hspace{0pt}\penalty0$r\in P$\nobreak\hspace{0pt}, 由\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } \le \mathcal{C}_{ \mathcal{B} _{ Q } }$\nobreak\hspace{0pt}, 得
+\begin{eqnarray*}\mathcal{N}_P((\mathcal{B}_P)_r)&=&\mathcal{C}_{\mathcal{B}_P}(E_r)\leq\mathcal{C}_{\mathcal{B}_Q}(E_r)\\&=&\bigvee_{E_r\leq F}\mathcal{S}_{\mathcal{B}_Q}(F)=\bigvee_{E_r\leq E_s}\mathcal{S}_{\mathcal{B}_Q}(E_s)\\&=&\bigvee_{E_r\leq E_s}\mathcal{N}_Q((\mathcal{B}_Q)_s)=\bigvee_{s\in Q_r}\mathcal{N}_Q((\mathcal{B}_Q)_s),\end{eqnarray*}
+这说明\hspace{0pt}\penalty0$\mathcal{B} _{ P } \prec \mathcal{B} _{ Q }$\nobreak\hspace{0pt}.
+
+\textbf{推论3.2.12.}  设\hspace{0pt}\penalty0$\mathcal{B} _{ P } =\left ( { X,P,\mathcal{B}_{ P } ,\mathcal{N}_{ P } } \right )$\penalty0\hspace{0pt}和\hspace{0pt}\penalty0$\mathcal{B} _{ Q } =\left ( { X,Q,\mathcal{B}_{ Q } ,\mathcal{N}_{ Q } } \right )$\penalty0\hspace{0pt}为上\hspace{0pt}\penalty0$X$\penalty0\hspace{0pt}的\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 则\hspace{0pt}\penalty0$\mathcal{B} _{ P } \simeq \mathcal{B} _{ Q }$\penalty0\hspace{0pt}当且仅当\hspace{0pt}\penalty0$\mathcal{C}_{ \mathcal{B} _{ P } } =\mathcal{C}_{ \mathcal{B} _{ Q } }$\nobreak\hspace{0pt}.
+
+\textbf{定理3.2.13.}  设\hspace{0pt}\penalty0$\mathcal{B} =\left ( { X,P,\mathcal{B},\mathcal{N} } \right )$\penalty0\hspace{0pt}是一个\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统, 则\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C}_{ \mathcal{B} } } \simeq \mathcal{B}$\nobreak\hspace{0pt}.
+
+\textbf{证明：} 由定理3.2.9 ,我们有\hspace{0pt}\penalty0$\mathcal{C}_{\mathcal{B}_{\mathcal{C}_{\mathcal{B}}}}=\mathcal{C}_{\mathcal{B}}$\nobreak\hspace{0pt}. 故由推论3.2.12,可得\hspace{0pt}\penalty0$\mathcal{B} _{ \mathcal{C}_{ \mathcal{B} } } \simeq \mathcal{B}$\nobreak\hspace{0pt}.
+
+
+\chapter{总\ \ 结}
+\vspace{0.2cm}
+在本文中, 我们提出了\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构、\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊拟粗结构、\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊半粗结构和\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊粗结构的概念, 并从\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊关系方面给出了例子. 特别是我们通过\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球结构给出了\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统的定义, 并研究了\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊球系统与\hspace{0pt}\penalty0$(L,M)$\penalty0\hspace{0pt}-模糊熵结构之间的相互刻画关系. 这为格值粗结构的研究提供了一个新的理论框架.
+
+
+
+\clearpage
+\begin{thebibliography}{10}
+\small
+\bibitem{ref1}
+Nicas A, Rosenthal D. Coarse structures on groups[J]. Topology and its Applications, 2012, 159(14): 3215-3228.
+
+\bibitem{ref2}
+Roe J. Lectures on coarse geometry[M]. American Mathematical Soc., 2003.
+
+\bibitem{ref3}
+Zadeh L A. Fuzzy sets[J]. Information and control, 1965, 8(3): 338-353.
+
+\bibitem{ref4}
+Zarichnyi M. Coarse structures and fuzzy metrics[J]. Mat. Stud, 2009, 32(2): 180-184.
+
+\bibitem{ref5}
+Grzegrzolka P. Asymptotic dimension of fuzzy metric spaces[J]. Fuzzy Sets and Systems, 2022, 437: 20-34.
+
+\bibitem{ref6}
+Yan C H. (L,*)-valued coarse structures on powersets[J]. Fuzzy Sets and Systems, 2023, 470: 108659.
+
+\bibitem{ref7}
+Gierz G, Hofmann K H, Keimel K, et al. Continuous lattices and domains[M]. Cambridge university press, 2003.
+
+\bibitem{ref8}
+Wang Y C, Pang B, Shi F G. Lattice-valued coarse structures[J]. Fuzzy Sets and Systems, 2025, 499: 109175.
+
+\bibitem{ref9}
+Pang B, Mi J S, Xiu Z Y. L-fuzzifying approximation operators in fuzzy rough sets[J]. Information Sciences, 2019, 480: 14-33.
+
+\end{thebibliography}
+
+\newpage
+\chapter*{致谢}
+\addcontentsline{toc}{chapter}{致谢}
+在本论文完成过程中, 感谢导师在选题、研究与论文撰写方面给予的指导, 感谢学院各位老师和同学的帮助与支持, 感谢家人的理解与鼓励. 谨向所有关心和帮助过我的师长、同学和亲友致以诚挚谢意.
+
+\newpage
+\end{document}
