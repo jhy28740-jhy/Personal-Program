@@ -1,0 +1,420 @@
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}
+\def\az{\alpha}
+\documentclass[12pt,oneside]{cctbook}
+\usepackage{ccmap}
+\usepackage{pifont,color}
+\usepackage{amssymb,amsmath}
+\usepackage{fancyhdr}
+\input xy
+\xyoption{all} \headsep 0.5 true cm \topmargin 0pt \oddsidemargin
+12pt \textwidth 15.3 true cm \textheight 22.6true cm
+\parindent 2\ccwd
+\renewcommand{\baselinestretch}{1.0}
+\def\vz{\varepsilon}
+\def\tri{\bigtriangleup}
+\def \sect #1{\section*{\centerline{\large \bf \heiti #1}}}
+\def \bigjt #1#2{\ \tabcolsep=2pt\begin {tabular}{c}#1\cr
+\newtheorem{definition}{\bf{定义}}[section]
+\newtheorem{proposition}{\hspace{2em}{\bf{命题}}}[section]
+\newtheorem{property}{\bf{性质}}[section]
+\newtheorem{theorem}{\bf{定理}}
+\newtheorem{lemma}{\bf{引理}}
+\newtheorem{corollary}[theorem]{\hspace{2em}{\bf{推论}}}
+\newtheorem{axiom}{\hspace{2em}{\bf{公理}}}[section]
+\newtheorem{exercise}{\hspace{2em}{\bf{习题}}}[section]
+\newtheorem{question}{\hspace{2em}{\bf{问题}}}
+\newtheorem{example}{\bf{例}}
+\newtheorem{notation}{\hspace{2em}{\bf{记号}}}
+\newtheorem{remark}{\hspace{2em}{\bf{注记}}}
+\renewenvironment{proof}[1][~ 证明]{\textbf{#1:~~~}}{\hfill\hspace{1cm}$\square$}
+\usepackage{titlesec}
+\numberwithin{equation}{section}
+\renewcommand{\refname}{\centerline{参考文献}}
+\setlength{\baselineskip}{1.3em}
+\setlength{\parskip}{1ex}
+\allowdisplaybreaks
+\allowdisplaybreaks[4]
+\begin{document}
+\def\dis{\displaystyle}
+\def\dlimsup{\displaystyle\limsup}
+\def\dist{\mathop\mathrm{\, dist\, }}
+\def\supp{\mathop\mathrm{\, supp\, }}
+\def\atom{\mathop\mathrm{\, atom\, }}
+\def\loc{{\mathop\mathrm{\, loc\, }}}
+\def\essinf{\mathop\mathrm{\, ess\, inf\, }}
+\def\esup{\mathop\mathrm{\, ess\, sup\, }}
+\def\fin{{\mathop\mathrm{fin}}}
+\def\lf{\left}
+\def\r{\right}
+\noalign {\vskip-4.0mm}\rightarrowfill \cr \noalign
+{\vskip-4.0mm}#2\end {tabular}\ }
+\newtheorem{definition}{\bf{定义}}[section]
+\newtheorem{proposition}{\bf{命题}}[section]
+\newtheorem{property}{\bf{性质}}[section]
+\newtheorem{theorem}{\bf{定理}}[section]
+\newtheorem{lemma}{\bf{引理}}[section]
+\newtheorem{corollary}[theorem]{\hspace{2em}{\bf{推论}}}
+\newtheorem{axiom}{\hspace{2em}{\bf{公理}}}[section]
+\newtheorem{exercise}{\hspace{2em}{\bf{习题}}}[section]
+\newtheorem{question}{\hspace{2em}{\bf{问题}}}
+\newtheorem{example}{\bf{例}}
+\newtheorem{notation}{\hspace{2em}{\bf{记号}}}
+\newtheorem{remark}{{\bf{注记}}}[section]
+\newenvironment{proof}[1][~ 证明]{\textbf{#1:~~~}}{\hfill\hspace{1cm}$\square$}
+\allowdisplaybreaks
+\allowdisplaybreaks[4]
+\begin{document}
+\begin{titlepage}
+\vspace*{1cm} \LARGE\heiti
+\begin{center}
+{\heiti\zihao{2}
+格值模糊化粗群}
+\end{center}
+\vspace*{8mm}\songti
+\begin{center}
+{\Large\zihao{4} 赵子函}
+\end{center}
+\Large\vspace*{2mm}
+\begin{center}
+(\zihao{4}安徽师范大学数学与统计学院, 安徽, 芜湖, 241000)
+\end{center}\vspace{6mm}
+\vfill\large
+\begin{center}
+{\zihao{4}安徽师范大学硕士学位论文}
+\end{center}
+\begin{center}
+{\zihao{4}二零二六年八月}
+\end{center}
+\end{titlepage}
+\newpage
+\pagestyle{plain}
+\pagenumbering{Roman}
+\chapter*{}
+\addcontentsline{toc}{chapter}{摘要}
+\begin{center}
+{\heiti\zihao{3}格值模糊化粗群}
+\end{center}
+\begin{center}
+\vspace{0.2cm} {\zihao{4}\heiti 摘\quad\quad 要}\\
+\end{center}
+\baselineskip24pt
+{\zihao{-4}
+摘要： 本文基于完全分配格$\allowbreak{}L$和$\allowbreak{}M$\nobreak\hspace{0pt},提出格值模糊化粗群的公理化定义,并探究了KM-模糊伪度量和格值模糊化粗群之间的诱导关系.其次通过引入格值模糊化群理想概念,证明了其与左（右）格值模糊化粗群的一一对应关系,推广了经典粗群理论的结论.
+
+
+\vspace{0.5cm} {\heiti\zihao{4}}\,
+关键词：格值模糊化粗结构; 格值模糊化粗群;群理想
+
+}
+\newpage
+{\color{white}1}
+\newpage
+\tableofcontents
+\mainmatter
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\zihao{-4}
+\chapter{绪 论}
+\vspace{0.2cm}
+粗几何,研究空间在大尺度视角下的整体结构与形状,其核心概念粗结构由John Roe系统提出,用以刻画空间在无穷远处的等价性,即粗等价\cite{ref1}.这一理论超越了经典拓扑的局部视角，成为连接分析、拓扑与几何的重要桥梁.而群作为基础代数对象,其上的粗结构研究自然催生了粗群的概念.Protasov、Nicas、Rosenthal等人的工作表明,群上的粗结构若能与群运算（如左乘、右乘等）相容,则可由一个特殊的子集族--群理想唯一确定,从而揭示了代数结构与粗几何的深刻联系\cite{ref4}.
+
+随着模糊数学的发展,传统数学结构逐渐被推广至模糊环境.Zadeh提出的模糊集理论为处理不确定性和渐进性提供了强有力的工具\cite{ref6}.近年来,学者们开始尝试将粗几何进行``模糊化'',以适应更复杂、更具现实意义的场景.Zarichnyi首次探讨了模糊度量空间的粗结构,而严从华则正式提出了$\allowbreak{}\left ( { L,* } \right )$-值粗结构的概念,开启了模糊粗结构的系统研究\cite{ref7}.随后,史福贵,庞斌,王永超等人进一步发展了基于完全分配格$\allowbreak{}L$的$\allowbreak{}L$-粗结构理论,形成了更为丰富的格值粗空间理论体系\cite{ref9}.然而，现有的模糊粗结构研究大多基于单一格，而双格值框架下的模糊粗群尚未被系统研究，限制了该理论在更复杂不确定性场景中的应用。
+
+本文正是在上述研究背景下展开的.我们基于完全分配格$\allowbreak{}L$与$\allowbreak{}M$\nobreak\hspace{0pt},首次提出了格值模糊化粗群的完整定义,并深入探讨了其代数与大尺度几何性质,本文的主要结构如下：在第二节中首先回顾了完全分配格、蕴含算子、格值模糊化粗结构等概念和定义;第三节中,我们给出了格值模糊化粗群的公理化定义,并利用左乘与右乘映射,建立了其与一致格值模糊化保有界映射之间的等价刻画;第四节中,我们引入了格值模糊化群理想的概念,并建立了格值模糊化粗群与格值模糊化群理想之间的一一对应关系.
+
+
+\chapter{预备知识}
+\vspace{0.2cm}
+在本文中,称一个非空集合$\allowbreak{}P$为一个偏序集,如果它中的一个二元关系满足自反性、反对称性和传递性.称$\allowbreak{}P$的子集$\allowbreak{}D$为有向的,如果它是非空的,并且$\allowbreak{}D$的每个有限子集在$\allowbreak{}D$中都有上界\cite{ref10}.
+
+本文中,$\allowbreak{}L$和$\allowbreak{}M$都是完全分配格,它们的最大元记为$\allowbreak{}~\top$\nobreak\hspace{0pt},最小元记为$\allowbreak{}\bot$\nobreak\hspace{0pt}.$\allowbreak{}L$上的一个二元关系$\allowbreak{}\prec$定义为,对$\allowbreak{}\forall a,b\in L$\nobreak\hspace{0pt},$\allowbreak{}a\prec b$当且仅当对$\allowbreak{}\forall M\subseteq L$\nobreak\hspace{0pt},$\allowbreak{}b\le \vee M$\nobreak\hspace{0pt},则存在一个$\allowbreak{}d\in M$\nobreak\hspace{0pt},使得$\allowbreak{}a\le d$\cite{ref10}.
+
+对于完全分配格$\allowbreak{}\left ( { L,\wedge ,\vee } \right )$存在一个二元算子$\allowbreak{}\to :L\times L\to L$\nobreak\hspace{0pt},定义为$\allowbreak{}\alpha \to \beta =\vee \left \{ \begin{array}{l} \gamma \in L:\alpha \wedge \gamma \le \beta \end{array} \right \}$\nobreak\hspace{0pt},称$\allowbreak{}\to$为蕴含算子.此外,$\allowbreak{}\wedge$和$\allowbreak{}\to$还满足对$\allowbreak{}\forall \alpha ,\beta ,\gamma \in L$\nobreak\hspace{0pt},$\allowbreak{}\alpha \wedge \gamma \le \beta \Leftrightarrow \gamma \le \left ( { \alpha \to \beta } \right )$\cite{ref10}.
+
+定义2.1\cite{ref11} 非空集$\allowbreak{}X$上的一个模糊伪度量是一个三元组$\allowbreak{}\left ( { X,d,\wedge } \right )$\nobreak\hspace{0pt},其中$\allowbreak{}d$是一个映$\allowbreak{}d:X\times X\times \left [ { 0,\infty } \right )\to \left[ 0,1 \right]$\nobreak\hspace{0pt},满足对$\allowbreak{}\forall x,y,z\in X$及$\allowbreak{}\forall s,t>0$\nobreak\hspace{0pt}：
+
+（KM1）$\allowbreak{}d\left ( { x,y,0 } \right )=0$\nobreak\hspace{0pt};
+
+（KM2）$\allowbreak{}d\left ( { x,x,t } \right )=1$\nobreak\hspace{0pt};
+
+（KM3）$\allowbreak{}d\left ( { x,y,t } \right )=d\left ( { y,x,t } \right )$\nobreak\hspace{0pt};
+
+（KM4）$\allowbreak{}d\left ( { x,y,t } \right )\wedge d\left ( { y,z,s } \right )\le d\left ( { x,z,t+s } \right )$\nobreak\hspace{0pt};
+
+（KM5）$\allowbreak{}d\left ( { x,y,- } \right ):\left [ { 0,\infty } \right )\to \left[ 0,1 \right]$是左连续的;
+
+上述中的模糊伪度量也称为$\allowbreak{}KM$-模糊伪度量.
+
+为回顾格值模糊化粗结构的定义,我们引入以下定义：对$\allowbreak{}\forall E,F\in L ^ { X\times X }$\nobreak\hspace{0pt},$\allowbreak{}E ^ { -1 } \left ( { x,y } \right )=E\left ( { y,x } \right )$\nobreak\hspace{0pt},$\allowbreak{}\left ( { E\circ F } \right )\left ( { x,y } \right )=\allowbreak{}\bigvee_{ z\in X } F\left ( { x,z } \right )\wedge\allowbreak{} E\left ( { z,y } \right )$\nobreak\hspace{0pt},$\allowbreak{}E\left[ x \right]\left ( { y } \right )=E\left ( { x,y } \right )$\nobreak\hspace{0pt}.
+
+定义2.2 集合$\allowbreak{}X$上的一个格值模糊化熵结构是一个映射$\allowbreak{}\mathcal{C}$$\allowbreak{}\nobreak\hspace{0pt}:L ^ { X\times X } \to M$满足以下条件：
+
+\quad （ME1）$\allowbreak{}\mathcal{C}\left ( { \Delta _{ X } } \right )=\top$\nobreak\hspace{0pt};
+
+\quad （ME2）$\allowbreak{}\forall E,F\in L ^ { X\times X }$\nobreak\hspace{0pt},且$\allowbreak{}E\le F$\nobreak\hspace{0pt},则$\allowbreak{}\mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E } \right )$\nobreak\hspace{0pt};
+
+\quad （ME3）$\allowbreak{}\forall E,F\in L ^ { X\times X }$\nobreak\hspace{0pt},则$\allowbreak{}\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E\vee F } \right )$\nobreak\hspace{0pt};
+
+\quad 一个格值模糊化熵结构$\allowbreak{}\mathcal{C}$称为格值模糊化拟粗结构,如果它又满足（ME4）：
+
+\quad （ME4）$\allowbreak{}\forall E,F\in L^{X\times X}$\nobreak\hspace{0pt},则$\allowbreak{}\mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E\circ F } \right )$\nobreak\hspace{0pt};
+
+\quad 一个格值模糊化熵结构$\allowbreak{}\mathcal{C}$称为格值模糊化半粗结构,如果它又满足（ME5）：
+
+\quad （ME5）$\allowbreak{}\forall E,F\in L^{X\times X}$\nobreak\hspace{0pt},则$\allowbreak{}\mathcal{C}\left ( { E } \right )=\mathcal{C}\left ( { E ^ { -1 } } \right )$\nobreak\hspace{0pt}.
+
+\quad 若一个格值模糊化熵结构$\allowbreak{}\mathcal{C}$既是格值模糊化半粗结构,又是格值模糊化拟粗结构,则称为格值模糊化粗结构.相应地,$\allowbreak{}\left ( { X,\mathcal{C} } \right )$分别称为格值模糊化熵空间, 格值模糊化半粗空间, 格值模糊化拟粗空间, 格值模糊化粗空间.
+
+
+\chapter{格值模糊化粗群}
+\vspace{0.2cm}
+\quad 基于前文所述的格值模糊化粗结构框架,我们现在将群的代数结构融入其中,在本节中,我将给出格值模糊化粗群的定义,并探讨格值模糊化粗群和一些群运算之间的关系.
+
+\quad 若$\allowbreak{}G$是一个群且$\allowbreak{}g\in G$\nobreak\hspace{0pt},定义左乘$\allowbreak{}s_{ g } ^{ \lambda }:G\to G$\nobreak\hspace{0pt},右乘$\allowbreak{}s_{ g } ^{ \rho }:G\to G$为：对$\allowbreak{}\forall x\in G$\nobreak\hspace{0pt},$\allowbreak{}s_{ g } ^{ \lambda }\left ( { x } \right )=gx$\nobreak\hspace{0pt},$\allowbreak{}s_{ g } ^{ \rho }\left ( { x } \right )=xg$\nobreak\hspace{0pt}.
+
+对$\allowbreak{}\forall E,F\in L ^ { G\times G }$\nobreak\hspace{0pt},我们定义$\allowbreak{}GE\left ( { x,y } \right )=\bigvee_{ g\in G } E\left ( { gx,gy } \right )$\nobreak\hspace{0pt},$\allowbreak{}EG\left ( { x,y } \right )=\bigvee_{ g\in G } E\left ( { xg,yg } \right )$\nobreak\hspace{0pt}.
+
+定义3.1 $\allowbreak{}G$是一个群,$\allowbreak{}\mathcal{C}$是$\allowbreak{}G$上的一个格值模糊化粗结构,$\allowbreak{}\left ( { G,\mathcal{C} } \right )$称为
+
+一个左格值模糊化粗群,若对$\allowbreak{}\forall E\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}\mathcal{C}\left ( { E } \right )\le \mathcal{C}\left ( { GE } \right )$\nobreak\hspace{0pt};
+
+一个右格值模糊化粗群,若对$\allowbreak{}\forall E\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}\mathcal{C}\left ( { E } \right )\le \mathcal{C}\left ( { EG } \right )$\nobreak\hspace{0pt};
+
+一个格值模糊化粗群,若它既是左格值模糊化粗群,又是右格值模糊化粗群.
+
+此时$\allowbreak{}\mathcal{C}$分别称为左格值模糊化群粗结构,右格值模糊化群粗结构和格值模糊化群粗结构.
+
+注3.2 由于$\allowbreak{}E\le GE$\nobreak\hspace{0pt},则$\allowbreak{}\mathcal{C}\left ( { GE } \right )\le \mathcal{C}\left ( { E } \right )$\nobreak\hspace{0pt},即若$\allowbreak{}\left ( { G,\mathcal{C} } \right )$称为一个左格值模糊化粗群,那么$\allowbreak{}\mathcal{C}\left ( { E } \right )=\mathcal{C}\left ( { GE } \right )$\nobreak\hspace{0pt}.
+
+命题3.3 $\allowbreak{}d:G\times G\times \left[ 0,\infty \right]\to \left[ 0,1 \right]$是一个KM-模糊伪度量,定义$\allowbreak{}\mathcal{C}_{ d } :L ^ { G\times G } \to \left[ 0,1 \right]$满足
+$$\mathcal{C}_{ d } \left ( { E } \right )=\bigvee_{ t>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ),$$
+若$\allowbreak{}d$是左不变的,则$\allowbreak{}\left ( { G,\mathcal{C}_{ d } } \right )$是一个左[0,1]-模糊粗群;
+
+若$\allowbreak{}d$是右不变的,则$\allowbreak{}\left ( { G,\mathcal{C}_{ d } } \right )$是一个右[0,1]-模糊粗群;
+
+若$\allowbreak{}d$是不变的,则$\allowbreak{}\left ( { G,\mathcal{C}_{ d } } \right )$是一个[0,1]-模糊粗群.
+
+证明 先证$\allowbreak{}\mathcal{C}_{ d } :L ^ { G\times G } \to \left[ 0,1 \right]$是一个格值模糊化粗结构：
+
+由已知条件可知
+\begin{eqnarray*} \mathcal{C}_{ d } \left ( { \Delta _{ G } } \right ) &=& \bigvee_{ t>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { \Delta _{ G } \left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \left ( { \bigwedge_{ x=y } \left ( { ~\top \to d\left ( { x,x,t } \right ) } \right )\wedge \bigwedge_{ x\ne y } \left ( { ~\bot \to d\left ( { x,y,t } \right ) } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \left ( { \bigwedge_{ x=y } d\left ( { x,x,t } \right )\wedge \bigwedge_{ x\ne y } \top } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ x\in G } d\left ( { x,x,t } \right )=\top; \end{eqnarray*}
+对$\allowbreak{}\forall E,F\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}E\le F$\nobreak\hspace{0pt},由于$\allowbreak{}F\left ( { x,y } \right )\to d\left ( { x,y,t } \right )\le E\left ( { x,y } \right )\to d\left ( { x,y,t } \right )$\nobreak\hspace{0pt},则显然$\allowbreak{}\mathcal{C}_{ d } \left ( { E } \right )\ge \mathcal{C}_{ d } \left ( { F } \right )$\nobreak\hspace{0pt};
+
+对$\allowbreak{}\forall E,F\in L ^ { G\times G }$\nobreak\hspace{0pt},由于
+\begin{eqnarray*} \mathcal{C}_{ d } \left ( { E } \right ) &=& \bigvee_{ t>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ), \\ \mathcal{C}_{ d } \left ( { F } \right ) &=& \bigvee_{ s>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { F\left ( { x,y } \right )\to d\left ( { x,y,s } \right ) } \right ) , \end{eqnarray*}
+对$\allowbreak{}\forall a\prec \mathcal{C}_{ d } \left ( { E } \right )\wedge \mathcal{C}_{ d } \left ( { F } \right )$\nobreak\hspace{0pt},$\allowbreak{}\exists t,s>0$\nobreak\hspace{0pt},使得$\allowbreak{}a\le\allowbreak{} \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right )$\nobreak\hspace{0pt},$\allowbreak{}a\le\allowbreak{} \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { F\left ( { x,y } \right )\to d\left ( { x,y,s } \right ) } \right )$ ,
+
+则对$\allowbreak{}\forall x,y\in G$\nobreak\hspace{0pt},$\allowbreak{}a\wedge E(x,y)\leq d(x,y,t)$且$\allowbreak{}a\wedge F(x,y)\leq d(x,y,s)$\nobreak\hspace{0pt},令$\allowbreak{}r=max\left \{ \begin{array}{l} s,t \end{array} \right \}$\nobreak\hspace{0pt},则
+\begin{eqnarray*} a\wedge \left ( { E\left ( { x,y } \right )\vee F\left ( { x,y } \right ) } \right ) &=& a\wedge \left ( { E\vee F } \right )\left ( { x,y } \right ) \\  &\le& d\left ( { x,y,t } \right )\wedge d\left ( { x,y,s } \right )\le d\left ( { x,y,r } \right ), \end{eqnarray*}
+故$\allowbreak{}a\le \left ( { E\vee F } \right )\left ( { x,y } \right )\to d\left ( { x,y,r } \right )$\nobreak\hspace{0pt},即$\allowbreak{}a\le\allowbreak{} \bigvee_{ r>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { \left ( { E\vee\allowbreak{} F } \right )\left ( { x,y } \right )\to d\left ( { x,y,r } \right ) } \right )$\nobreak\hspace{0pt},得证;
+
+对$\allowbreak{}\forall E,F\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}\forall a\prec \mathcal{C}_{ d } \left ( { E } \right )\wedge \mathcal{C}_{ d } \left ( { F } \right )$\nobreak\hspace{0pt},$\allowbreak{}\exists t>0,s>0$\nobreak\hspace{0pt},使得
+\begin{eqnarray*} a &\le& \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ),a \\  &\le& \bigwedge_{ \left ( { y,z } \right )\in G\times G } \left ( { F\left ( { y,z } \right )\to d\left ( { y,z,s } \right ) } \right ), \end{eqnarray*}
+则对$\allowbreak{}\forall x,y,z\in G$\nobreak\hspace{0pt},有$\allowbreak{}a\wedge E(x,y)\leq d(x,y,t)$\nobreak\hspace{0pt},$\allowbreak{}a\wedge F(y,z)\leq d(y,z,s)$\nobreak\hspace{0pt},故
+\begin{eqnarray*} a\wedge \left ( { E\left ( { x,y } \right )\wedge F\left ( { x,y } \right ) } \right ) &\le& d\left ( { x,y,t } \right )\wedge d\left ( { x,y,s } \right ) \\  &\le& d\left ( { x,z,t+s } \right ),a\wedge \bigvee_{ y\in G } \left ( { E\left ( { x,y } \right )\wedge F\left ( { y,z } \right ) } \right ) \\  &\le& d\left ( { x,z,t+s } \right ), \end{eqnarray*}
+\begin{eqnarray*} a &\le& \left ( { E\circ F } \right )\left ( { x,z } \right )\to d\left ( { x,z,t+s } \right ),a \\  &\le& \bigvee_{ r>0 } \bigwedge_{ \left ( { x,z } \right )\in G\times G } \left ( { E\circ F } \right )\left ( { x,z } \right )\to d\left ( { x,z,r } \right ), \end{eqnarray*}
+得证$\allowbreak{}\mathcal{C}_{ d } \left ( { E } \right )\wedge\allowbreak{} \mathcal{C}_{ d } \left ( { F } \right )\le\allowbreak{} \mathcal{C}_{ d } \left ( { E\circ F } \right )$\nobreak\hspace{0pt};
+
+（5）对$\allowbreak{}\forall E\in L ^ { G\times G }$\nobreak\hspace{0pt},
+\begin{eqnarray*} \mathcal{C}_{ d } \left ( { E ^ { -1 } } \right ) &=& \bigvee_{ t>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E ^ { -1 } \left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ \left ( { y,x } \right )\in G\times G } \left ( { E\left ( { y,x } \right )\to d\left ( { y,x,t } \right ) } \right ) \\  &=& \mathcal{C}_{ d } \left ( { E } \right )\text{；} \end{eqnarray*}
+下证$\allowbreak{}\left ( { G,\mathcal{C}_{ d } } \right )$是一个左（右）[0,1]-模糊粗群,若$\allowbreak{}d$是左不变的,则
+\begin{eqnarray*} \mathcal{C}_{ d } \left ( { GE } \right ) &=& \bigvee_{ t>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { GE\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { \bigvee_{ g\in G } E\left ( { gx,gy } \right )\to d\left ( { x,y,t } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { \bigwedge_{ g\in G } \left ( { E\left ( { gx,gy } \right )\to d\left ( { x,y,t } \right ) } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \left ( { \bigwedge_{ g\in G } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E\left ( { gx,gy } \right )\to d\left ( { x,y,t } \right ) } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \left ( { \bigwedge_{ g\in G } \bigwedge_{ \left ( { x',y' } \right )\in G\times G } \left ( { E\left ( { x',y' } \right )\to d\left ( { g ^ { -1 } x',g ^ { -1 } y',t } \right ) } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \left ( { \bigwedge_{ \left ( { x',y' } \right )\in G\times G } \left ( { E\left ( { x',y' } \right )\to d\left ( { x',y',t } \right ) } \right ) } \right ) \\  &=& \mathcal{C}_{ d } \left ( { E } \right ); \end{eqnarray*}
+若$\allowbreak{}d$是右不变的,则同理.
+
+定义3.4 $\allowbreak{}\left ( { X,\mathcal{C}_{ X } } \right )$和$\allowbreak{}\left ( { Y,\mathcal{C}_{ Y } } \right )$是两个格值模糊化粗群,$\allowbreak{}\left \{ \begin{array}{l} f_{ i } :\left ( { X,\mathcal{C}_{ X } } \right )\to \left ( { Y,\mathcal{C}_{ Y } } \right ) \end{array} \right \}_{ i\in I }$是一族映射,$\allowbreak{}\left \{ \begin{array}{l} f_{ i } \end{array} \right \}_{ i\in I }$称为一致格值模糊化保有界的,若对$\allowbreak{}\forall E\in L ^ { X\times X }$\nobreak\hspace{0pt},$\allowbreak{}\exists F\in L ^ { Y\times Y }$\nobreak\hspace{0pt},使得$\allowbreak{}\mathcal{C}_{ X } \left ( { E } \right )\le \mathcal{C}_{ Y } \left ( { F } \right )$\nobreak\hspace{0pt},且对$\allowbreak{}\forall i\in I$\nobreak\hspace{0pt},$\allowbreak{}\left ( { f_{ i } \times f_{ i } } \right )\left ( { E } \right )\le F$\nobreak\hspace{0pt}.
+
+命题3.5 $\allowbreak{}G$是一个群,$\allowbreak{}\mathcal{C}$是$\allowbreak{}G$上一个格值模糊化粗结构,则:
+
+（1）$\allowbreak{}\left ( { G,\mathcal{C} } \right )$是一个左格值模糊化粗群当且仅当$\allowbreak{}s_{ G } ^{ \lambda }=\left \{ \begin{array}{l} s_{ g } ^{ \lambda }:g\in G \end{array} \right \}$是一致格值模糊化保有界的;
+
+（2）$\allowbreak{}\left ( { G,\mathcal{C} } \right )$是一个右格值模糊化粗群当且仅当$\allowbreak{}s_{ G } ^{ \rho }=\left \{ \begin{array}{l} s_{ g } ^{ \rho }:g\in G \end{array} \right \}$是一致格值模糊化保有界的.
+
+证明 （1）必要性 对$\allowbreak{}\forall E\in L ^ { G\times G }$\nobreak\hspace{0pt},由于$\allowbreak{}\left ( { G,\mathcal{C} } \right )$是一个左格值模糊化粗群,则$\allowbreak{}\mathcal{C}\left ( { E } \right )\le \mathcal{C}\left ( { GE } \right )$\nobreak\hspace{0pt},而对$\allowbreak{}\forall g\in G$\nobreak\hspace{0pt},$\allowbreak{}\left ( { s_{ g } ^{ \lambda }\times s_{ g } ^{ \lambda } } \right )\left ( { E } \right )\le GE$\nobreak\hspace{0pt},故$\allowbreak{}s_{ G } ^{ \lambda }=\left \{ \begin{array}{l} s_{ g } ^{ \lambda }:g\in G \end{array} \right \}$是一致格值模糊化保有界的;
+
+充分性 由于$\allowbreak{}s_{ G } ^{ \lambda }=\left \{ \begin{array}{l} s_{ g } ^{ \lambda }:g\in G \end{array} \right \}$是一致格值模糊化保有界的,即对$\allowbreak{}\forall E\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}\exists F\in L ^ { G\times G }$\nobreak\hspace{0pt},使得对$\allowbreak{}\forall g\in G$\nobreak\hspace{0pt},$\allowbreak{}\mathcal{C}\left ( { E } \right )\le \mathcal{C}\left ( { F } \right )$\nobreak\hspace{0pt},且$\allowbreak{}\left ( { s_{ g } ^{ \lambda }\times s_{ g } ^{ \lambda } } \right )\left ( { E } \right )\le F$\nobreak\hspace{0pt},故
+\begin{eqnarray*} GE\left ( { x,y } \right ) &=& \bigvee_{ g\in G } E\left ( { gx,gy } \right )=\bigvee_{ g\in G } \left ( { s_{ g } ^{ \lambda }\times s_{ g } ^{ \lambda } } \right )E\left ( { x,y } \right ) \\  &\le& F\left ( { x,y } \right ), \end{eqnarray*}
+则$\allowbreak{}\mathcal{C}\left ( { E } \right )\le \mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { GE } \right )$\nobreak\hspace{0pt};
+
+（2）与（1）的证明同理.
+
+
+\chapter{格值模糊化群理想}
+\vspace{0.2cm}
+上一节中我们从粗结构出发定义了格值模糊化粗群,但一个自然的问题随之而来：是否存在一种代数对象能够完全刻画这类结构？受经典粗群理论中``群理想决定粗结构''这一深刻结论的启发,我们将在本节引入格值模糊化群理想的全新概念,并探索其与模糊粗群之间的内在联系.
+
+定义4.1 $\allowbreak{}G$是一个群,$\allowbreak{}G$上一个格值模糊化群理想是映射$\allowbreak{}I:L ^ { G } \to M$\nobreak\hspace{0pt},满足：
+
+（IM1）$\allowbreak{}I\left ( { \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } } \right )=\top$\nobreak\hspace{0pt};
+
+（IM2）$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},$\allowbreak{}A\le B$\nobreak\hspace{0pt},有$\allowbreak{}I(A)\geq I(B)$\nobreak\hspace{0pt};
+
+（IM3）$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},$\allowbreak{}I\left ( { A } \right )\wedge I\left ( { B } \right )\le I\left ( { A\vee B } \right )$\nobreak\hspace{0pt};
+
+（IM4）$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},$\allowbreak{}I\left ( { A } \right )\wedge I\left ( { B } \right )\le I\left ( { AB } \right )$\nobreak\hspace{0pt},其中$\allowbreak{}AB\left ( { z } \right )=\allowbreak{}\bigvee_{ x,y\in G,xy=\allowbreak{}z } \left ( { A\left ( { x } \right )\wedge\allowbreak{} B\left ( { y } \right ) } \right )$\nobreak\hspace{0pt};
+
+（IM5）$\allowbreak{}\forall A\in L ^ { G }$\nobreak\hspace{0pt},$\allowbreak{}I\left ( { A } \right )=I\left ( { A ^ { -1 } } \right )$\nobreak\hspace{0pt},其中$\allowbreak{}A ^ { -1 } \left ( { x } \right )=A\left ( { x ^ { -1 } } \right )$\nobreak\hspace{0pt}.
+
+命题4.2 $\allowbreak{}G$是一个群,$\allowbreak{}I$是$\allowbreak{}G$上一个格值模糊化群理想,定义$\allowbreak{}\mathcal{C}_{ I } ^{ \lambda }:L ^ { G\times G } \to M$满足对$\allowbreak{}\forall E\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}\mathcal{C}_{ I } ^{ \lambda }\left ( { E } \right )=\bigvee_{ E\le E_{ A } ^{ \lambda } } I\left ( { A } \right )$\nobreak\hspace{0pt},其中$\allowbreak{}E_{ A } ^{ \lambda }\left ( { x,y } \right )=A\left ( { x ^ { -1 } y } \right )$\nobreak\hspace{0pt},则$\allowbreak{}\left ( { G,\mathcal{C}_{ I } ^{ \lambda } } \right )$构成一个左格值模糊化粗群.
+
+证明 （ME1）由于
+\begin{eqnarray*} E_{ \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } } ^{ \lambda }\left ( { x,y } \right ) \\  &=& \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } \left ( { x ^ { -1 } y } \right ), \end{eqnarray*}
+当$\allowbreak{}x=y$时,$\allowbreak{}x ^ { -1 } y=e$\nobreak\hspace{0pt},则$\allowbreak{}\chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } =\top$\nobreak\hspace{0pt},当$\allowbreak{}x\ne y$时,$\allowbreak{}x ^ { -1 } y\ne e$\nobreak\hspace{0pt},则$\allowbreak{}\chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } =\bot$\nobreak\hspace{0pt},故$\allowbreak{}E_{ \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } } ^{ \lambda }=\Delta _{ G }$\nobreak\hspace{0pt},则
+\begin{eqnarray*} \mathcal{C}_{ I } ^{ \lambda }\left ( { \Delta _{ G } } \right ) &=& \bigvee_{ \Delta _{ G } \le E_{ A } ^{ \lambda } } I\left ( { A } \right ) \\  &=& \bigvee_{ E_{ \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } } ^{ \lambda }\le E_{ A } ^{ \lambda } } I\left ( { A } \right ) \\  &\ge& I\left ( { \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } } \right )=\top; \end{eqnarray*}
+
+
+（ME2）对$\allowbreak{}\forall E,F\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}E\le F$\nobreak\hspace{0pt},由于$\allowbreak{}\mathcal{C}_{ I } ^{ \lambda }\left ( { F } \right )=\bigvee_{ F\le E_{ A } ^{ \lambda } } I\left ( { A } \right )$\nobreak\hspace{0pt},且$\allowbreak{}F\le E_{ A } ^{ \lambda }$\nobreak\hspace{0pt},则$\allowbreak{}E\le F\le E_{ A } ^{ \lambda }$\nobreak\hspace{0pt},故$\allowbreak{}\bigvee_{ E\le\allowbreak{} E_{ A } ^{ \lambda } } I\left ( { A } \right )\ge\allowbreak{} \bigvee_{ F\le\allowbreak{} E_{ A } ^{ \lambda } } I\left ( { A } \right )$\nobreak\hspace{0pt},即证$\allowbreak{}\mathcal{C}_{ I } ^{ \lambda }\left ( { E } \right )\ge \mathcal{C}_{ I } ^{ \lambda }\left ( { F } \right )$\nobreak\hspace{0pt};
+
+（ME3）对$\allowbreak{}\forall E,F\in L ^ { G\times G }$\nobreak\hspace{0pt},令$\allowbreak{}E\le E_{ A } ^{ \lambda }$且$\allowbreak{}F\le E_{ B } ^{ \lambda }$\nobreak\hspace{0pt},由于
+\begin{eqnarray*} \left ( { E_{ A } ^{ \lambda }\vee E_{ B } ^{ \lambda } } \right )\left ( { x,y } \right ) &=& E_{ A } ^{ \lambda }\left ( { x,y } \right ) \\ \vee E_{ B } ^{ \lambda }\left ( { x,y } \right ) &=& A\left ( { x ^ { -1 } y } \right )\vee B\left ( { x ^ { -1 } y } \right ) \\  &=& \left ( { A\vee B } \right )\left ( { x ^ { -1 } y } \right )=E_{ A\vee B } ^{ \lambda }\left ( { x,y } \right ), \end{eqnarray*}
+则$\allowbreak{}E\vee F\le E_{ A } ^{ \lambda }\vee E_{ B } ^{ \lambda }=E_{ A\vee B } ^{ \lambda }$\nobreak\hspace{0pt},故
+\begin{eqnarray*} \mathcal{C}_{ I } ^{ \lambda }\left ( { E\vee F } \right ) &=& \bigvee_{ E\vee F\le E_{ A\vee B } ^{ \lambda } } I\left ( { A\vee B } \right ) \\  &\ge& \bigvee_{ E\vee F\le E_{ A\vee B } ^{ \lambda } } \left ( { I\left ( { A } \right )\wedge I\left ( { B } \right ) } \right ) \\  &\ge& \bigvee_{ E\le E_{ A } ^{ \lambda },F\le E_{ B } ^{ \lambda } } \left ( { I\left ( { A } \right )\wedge I\left ( { B } \right ) } \right ) \\  &=& \bigvee_{ E\le E_{ A } ^{ \lambda } } I\left ( { A } \right )\wedge \bigvee_{ F\le E_{ B } ^{ \lambda } } I\left ( { B } \right ) \\  &=& \mathcal{C}_{ I } ^{ \lambda }\left ( { E } \right )\wedge \mathcal{C}_{ I } ^{ \lambda }\left ( { F } \right ); \end{eqnarray*}
+（ME4）对$\allowbreak{}\forall E,F\in L ^ { G\times G }$\nobreak\hspace{0pt},令$\allowbreak{}E\le E_{ A } ^{ \lambda }$且$\allowbreak{}F\le E_{ B } ^{ \lambda }$\nobreak\hspace{0pt},由于
+\begin{eqnarray*} \left ( { E_{ A } ^{ \lambda }\circ E_{ B } ^{ \lambda } } \right )\left ( { x,z } \right ) \\  &=& \bigvee_{ y\in G } \left ( { E_{ B } ^{ \lambda }\left ( { x,y } \right )\wedge E_{ A } ^{ \lambda }\left ( { y,z } \right ) } \right ) \\  &=& \bigvee_{ y\in G } \left ( { B\left ( { x ^ { -1 } y } \right )\wedge A\left ( { y ^ { -1 } z } \right ) } \right ) \\  &=& \bigvee_{ y\in G } \left ( { B\left ( { x ^ { -1 } y } \right )\wedge A\left ( { \left ( { x ^ { -1 } y } \right ) ^ { -1 } \left ( { x ^ { -1 } z } \right ) } \right ) } \right ) \\  &=& \bigvee_{ w\in G } \left ( { B\left ( { w } \right )\wedge A\left ( { w ^ { -1 } \left ( { x ^ { -1 } z } \right ) } \right ) } \right ) \\  &=& \left ( { AB } \right )\left ( { x ^ { -1 } z } \right )=E_{ AB } ^{ \lambda }\left ( { x,z } \right ), \end{eqnarray*}
+则$\allowbreak{}E\circ F\le E_{ A } ^{ \lambda }\circ E_{ B } ^{ \lambda }=E_{ AB } ^{ \lambda }$\nobreak\hspace{0pt},故$\allowbreak{}\mathcal{C}_{I}^{\lambda}(E\circ F)\geq\bigvee_{E\circ F\leq E_{AB}^{\lambda}}I(AB)\geq I(A)\wedge I(B)$\nobreak\hspace{0pt},则
+\begin{eqnarray*} \mathcal{C}_{ I } ^{ \lambda }\left ( { E } \right )\wedge \mathcal{C}_{ I } ^{ \lambda }\left ( { F } \right ) \\  &=& \bigvee_{ E\le E_{ A } ^{ \lambda },F\le E_{ B } ^{ \lambda } } \left ( { I\left ( { A } \right )\wedge I\left ( { B } \right ) } \right ) \\  &\le& \mathcal{C}_{ I } ^{ \lambda }\left ( { E\circ F } \right ); \end{eqnarray*}
+（ME5）$\allowbreak{}\forall E,F\in L ^ { G\times G }$\nobreak\hspace{0pt},由于
+\begin{eqnarray*} \left ( { E_{ A } ^{ \lambda } } \right ) ^ { -1 } \left ( { x,y } \right ) &=& E_{ A } ^{ \lambda }\left ( { y,x } \right )=A\left ( { y ^ { -1 } x } \right ) \\  &=& A\left ( { x ^ { -1 } y } \right ) ^ { -1 } =A ^ { -1 } \left ( { x ^ { -1 } y } \right )=E_{ A ^ { -1 } } ^{ \lambda }\left ( { x,y } \right ), \end{eqnarray*}
+则$\allowbreak{}\left ( { E_{ A } ^{ \lambda } } \right ) ^ { -1 } =E_{ A ^ { -1 } } ^{ \lambda }$\nobreak\hspace{0pt},令$\allowbreak{}E ^ { -1 } \le E_{ A } ^{ \lambda }$\nobreak\hspace{0pt},$\allowbreak{}B ^ { -1 } =A$\nobreak\hspace{0pt},则$\allowbreak{}E ^ { -1 } \le E_{ B ^ { -1 } } ^{ \lambda }=\left ( { E_{ B } ^{ \lambda } } \right ) ^ { -1 }$\nobreak\hspace{0pt},即$\allowbreak{}E\le E_{ B } ^{ \lambda }$\nobreak\hspace{0pt},故
+\begin{eqnarray*} \mathcal{C}_{ I } ^{ \lambda }\left ( { E ^ { -1 } } \right ) &=& \bigvee_{ E ^ { -1 } \le E_{ A } ^{ \lambda } } I\left ( { A } \right ) \\  &=& \bigvee_{ E\le E_{ B } ^{ \lambda } } I\left ( { B ^ { -1 } } \right )=\bigvee_{ E\le E_{ B } ^{ \lambda } } I\left ( { B } \right ) \\  &=& \mathcal{C}_{ I } ^{ \lambda }\left ( { E } \right ); \end{eqnarray*}
+最后再证明$\allowbreak{}\left ( { G,\mathcal{C}_{ I } ^{ \lambda } } \right )$是一个左格值模糊化粗群,对$\allowbreak{}\forall A\in L ^ { G }$\nobreak\hspace{0pt},令$\allowbreak{}E\le E_{ A } ^{ \lambda }$\nobreak\hspace{0pt},则$\allowbreak{}GE\le GE_{ A } ^{ \lambda }$\nobreak\hspace{0pt},由于
+\begin{eqnarray*} GE_{ A } ^{ \lambda }\left ( { x,y } \right ) &=& \bigvee_{ g\in G } E_{ A } ^{ \lambda }\left ( { gx,gy } \right ) \\  &=& \bigvee_{ g\in G } A\left ( { x ^ { -1 } g ^ { -1 } gy } \right )=A\left ( { x ^ { -1 } y } \right )=E_{ A } ^{ \lambda }\left ( { x,y } \right ), \end{eqnarray*}
+则
+\begin{eqnarray*} \mathcal{C}_{ I } ^{ \lambda }\left ( { E } \right ) &=& \bigvee_{ E\le E_{ A } ^{ \lambda } } I\left ( { A } \right ) \\  &\le& \bigvee_{ GE\le E_{ A } ^{ \lambda } } I\left ( { A } \right )=\mathcal{C}_{ I } ^{ \lambda }\left ( { GE } \right ), \end{eqnarray*}
+得证.
+
+注4.3 同理,我们可以定义一个右格值模糊化群粗结构$\allowbreak{}\mathcal{C}_{ I } ^{ \rho }:L ^ { G\times G } \to M$\nobreak\hspace{0pt},满足对$\allowbreak{}\forall E\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}\mathcal{C}_{ I } ^{ \rho }\left ( { E } \right )=\bigvee_{ E\le E_{ A } ^{ \rho } } I\left ( { A } \right )$\nobreak\hspace{0pt},其中$\allowbreak{}E_{ A } ^{ \rho }\left ( { x,y } \right )=A\left ( { yx ^ { -1 } } \right )$\nobreak\hspace{0pt},则$\allowbreak{}\left ( { G,\mathcal{C}_{ I } ^{ \rho } } \right )$构成一个右格值模糊化粗群.
+
+命题4.4 $\allowbreak{}\left ( { G,\mathcal{C} } \right )$是一个左格值模糊化粗群,定义$\allowbreak{}I_{ \mathcal{C} } :L ^ { G } \to M$\nobreak\hspace{0pt},满足对$\allowbreak{}\forall A\in L ^ { G }$\nobreak\hspace{0pt},$\allowbreak{}I_{ \mathcal{C} } \left ( { A } \right )=\bigvee_{ A\le E\left[ e \right] } \mathcal{C}\left ( { E } \right )$\nobreak\hspace{0pt},其中$\allowbreak{}E\left[ e \right]\left ( { x } \right )=E\left ( { e,x } \right )$\nobreak\hspace{0pt},则$\allowbreak{}I_{ \mathcal{C} }$是一个格值模糊化群理想.
+
+证明 （IM1）由于$\allowbreak{}\Delta _{ G } \left[ e \right]=e$\nobreak\hspace{0pt},则$\allowbreak{}I_{ \mathcal{C} } \left ( { e } \right )\ge \mathcal{C}\left ( { \Delta _{ G } } \right )=\top$\nobreak\hspace{0pt};
+
+（IM2）对$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},$\allowbreak{}A\le B$\nobreak\hspace{0pt},则当$\allowbreak{}B\le E\left[ e \right]$时,$\allowbreak{}A\le B\le E\left[ e \right]$\nobreak\hspace{0pt},故
+\begin{eqnarray*} I_{ \mathcal{C} } \left ( { A } \right ) &=& \bigvee_{ A\le E\left[ e \right] } \mathcal{C}\left ( { E } \right ) \\  &\ge& \bigvee_{ B\le E\left[ e \right] } \mathcal{C}\left ( { E } \right )=I_{ \mathcal{C} } \left ( { B } \right ); \end{eqnarray*}
+
+
+（IM3）对$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},$\allowbreak{}\forall E,F\in L ^ { G\times G }$满足$\allowbreak{}A\le E\left[ e \right]$及$\allowbreak{}B\le F\left[ e \right]$\nobreak\hspace{0pt},则$\allowbreak{}A\vee B\le E\left[ e \right]\vee F\left[ e \right]=\left ( { E\vee F } \right )\left[ e \right]$\nobreak\hspace{0pt},
+\begin{eqnarray*} I_{ \mathcal{C} } \left ( { A } \right )\wedge I_{ \mathcal{C} } \left ( { B } \right ) &=& \bigvee_{ A\le E\left[ e \right] } \mathcal{C}\left ( { E } \right ) \\ \wedge \bigvee_{ B\le F\left[ e \right] } \mathcal{C}\left ( { F } \right ) &=& \bigvee_{ A\le E\left[ e \right],B\le F\left[ e \right] } \left ( { \mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right ) } \right ) \\  &\le& \bigvee_{ A\vee B\le \left ( { E\vee F } \right )\left[ e \right] } \mathcal{C}\left ( { E\vee F } \right )=I_{ \mathcal{C} } \left ( { A\vee B } \right ); \end{eqnarray*}
+（IM4）对$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},$\allowbreak{}\forall E,F\in L ^ { G\times G }$满足$\allowbreak{}A\le E\left[ e \right]$及$\allowbreak{}B\le F\left[ e \right]$\nobreak\hspace{0pt},令$\allowbreak{}\forall \alpha$满足
+\begin{eqnarray*} \alpha \prec I_{ \mathcal{C} } \left ( { A } \right )\wedge I_{ \mathcal{C} } \left ( { B } \right ) \\  &=& \bigvee_{ A\le E\left[ e \right] } \mathcal{C}\left ( { E } \right )\wedge \bigvee_{ B\le F\left[ e \right] } \mathcal{C}\left ( { F } \right ), \end{eqnarray*}
+则$\allowbreak{}\alpha \prec \bigvee_{ A\le E\left[ e \right] } \mathcal{C}\left ( { E } \right )$且$\allowbreak{}\alpha \prec \bigvee_{ B\le F\left[ e \right] } \mathcal{C}\left ( { F } \right )$\nobreak\hspace{0pt},即$\allowbreak{}A\le E\left[ e \right]$时$\allowbreak{}\alpha \le \mathcal{C}\left ( { E } \right )$\nobreak\hspace{0pt},$\allowbreak{}B\le F\left[ e \right]$时$\allowbreak{}\alpha \le \mathcal{C}\left ( { F } \right )$\nobreak\hspace{0pt},则对$\allowbreak{}\forall x,y\in G$\nobreak\hspace{0pt},$\allowbreak{}A\left ( { x } \right )\le E\left[ e \right]\left ( { x } \right )=E\left ( { e,x } \right )$\nobreak\hspace{0pt},$\allowbreak{}B\left ( { y } \right )\le F\left[ e \right]\left ( { y } \right )=F\left ( { e,y } \right )$\nobreak\hspace{0pt},又由于$\allowbreak{}\left ( { G,\mathcal{C} } \right )$是一个左格值模糊化粗群,则
+\begin{eqnarray*} \left ( { GF } \right )\left ( { x,xy } \right ) &=& \bigvee_{ g\in G } F\left ( { g ^ { -1 } x,g ^ { -1 } xy } \right )\ge F\left ( { e,y } \right ) \\  &\ge& B\left ( { y } \right ), \end{eqnarray*}
+故
+\begin{eqnarray*} \left ( { GF\circ E } \right )\left ( { e,xy } \right ) &=& \bigvee_{ z\in G } \left ( { E\left ( { e,z } \right )\wedge GF\left ( { z,xy } \right ) } \right ) \\  &\ge& E\left ( { e,x } \right )\wedge GF\left ( { x,xy } \right )\ge A\left ( { x } \right )\wedge B\left ( { y } \right ), \end{eqnarray*}
+\begin{eqnarray*} \left ( { AB } \right )\left ( { xy } \right ) &=& \bigvee_{ x,y\in G } A\left ( { x } \right )\wedge B\left ( { y } \right ) \\  &\le& \left ( { GF\circ E } \right )\left ( { e,xy } \right )=\left ( { GF\circ E } \right )\left[ e \right]\left ( { xy } \right ), \end{eqnarray*}
+由于$\allowbreak{}\mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { GF } \right )$\nobreak\hspace{0pt},则
+\begin{eqnarray*} \alpha &\le& \mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { F } \right )\le \mathcal{C}\left ( { E } \right )\wedge \mathcal{C}\left ( { GF } \right ) \\  &\le& \mathcal{C}\left ( { GF\circ E } \right )\le \bigvee_{ AB\le \left ( { GF\circ E } \right )\left[ e \right] } \mathcal{C}\left ( { GF\circ E } \right ) \\  &=& I_{ \mathcal{C} } \left ( { AB } \right ), \end{eqnarray*}
+
+
+故$\allowbreak{}I_{ \mathcal{C} } \left ( { A } \right )\wedge\allowbreak{} I_{ \mathcal{C} } \left ( { B } \right )\le\allowbreak{} I_{ \mathcal{C} } \left ( { AB } \right )$\nobreak\hspace{0pt};
+
+（IM5）令$\allowbreak{}A\le E\left[ e \right]$\nobreak\hspace{0pt},则对$\allowbreak{}\forall x\in G$\nobreak\hspace{0pt},$\allowbreak{}A\left ( { x } \right )\le E\left[ e \right]\left ( { x } \right )$\nobreak\hspace{0pt},故
+\begin{eqnarray*} A ^ { -1 } \left ( { x } \right ) &=& A\left ( { x ^ { -1 } } \right )\le E\left[ e \right]\left ( { x ^ { -1 } } \right )\le GE\left ( { x,e } \right ) \\  &=& G\left ( { E\left ( { e,x } \right ) } \right ) ^ { -1 } =GE ^ { -1 } \left[ e \right]\left ( { x } \right ), \end{eqnarray*}
+\begin{eqnarray*} I_{ \mathcal{C} } \left ( { A } \right ) &=& \bigvee_{ A\le E\left[ e \right] } \mathcal{C}\left ( { E } \right ) \\  &\le& \bigvee_{ A ^ { -1 } \le GE ^ { -1 } \left[ e \right] } \mathcal{C}\left ( { E } \right ) \\  &=& \bigvee_{ A ^ { -1 } \le GE ^ { -1 } \left[ e \right] } \mathcal{C}\left ( { E ^ { -1 } } \right ) \\  &\le& \bigvee_{ A ^ { -1 } \le GE ^ { -1 } \left[ e \right] } \mathcal{C}\left ( { GE ^ { -1 } } \right )=I_{ \mathcal{C} } \left ( { A ^ { -1 } } \right ). \end{eqnarray*}
+命题4.5 $\allowbreak{}G$是一个群,$\allowbreak{}\mathcal{C}$是$\allowbreak{}G$上一个格值模糊化粗结构,若$\allowbreak{}\left ( { G,\mathcal{C} } \right )$是一个左格值模糊化粗群,则$\allowbreak{}\mathcal{C}=\mathcal{C}_{ I_{ \mathcal{C} } } ^{ \lambda }$\nobreak\hspace{0pt}.
+
+证明 由于
+\begin{eqnarray*} \mathcal{C}_{ I_{ \mathcal{C} } } ^{ \lambda }\left ( { E } \right ) &=& \bigvee_{ E\le E_{ A } ^{ \lambda } } I_{ \mathcal{C} } \left ( { A } \right ) \\  &=& \bigvee_{ E\le E_{ A } ^{ \lambda } } \bigvee_{ A\le F\left[ e \right] } \mathcal{C}\left ( { F } \right ), \end{eqnarray*}
+故只需证$\allowbreak{}\mathcal{C}\left ( { E } \right )=\allowbreak{}\bigvee_{ E\le\allowbreak{} E_{ A } ^{ \lambda } } \bigvee_{ A\le\allowbreak{} F\left[ e \right] } \mathcal{C}\left ( { F } \right )$即可;
+
+必要性 由于
+\begin{eqnarray*} E_{ GE\left[ e \right] } ^{ \lambda }\left ( { x,y } \right ) &=& GE\left[ e \right]\left ( { x ^ { -1 } y } \right )=GE\left ( { e,x ^ { -1 } y } \right ) \\  &=& \bigvee_{ g\in G } E\left ( { g,gx ^ { -1 } y } \right )\ge E\left ( { x,y } \right ), \end{eqnarray*}
+则
+$$\mathcal{C}\left ( { E } \right )\le \mathcal{C}\left ( { GE } \right )\le \bigvee_{ E\le E_{ A } ^{ \lambda } } \bigvee_{ A\le F\left[ e \right] } \mathcal{C}\left ( { F } \right );$$
+充分性 令$\allowbreak{}E\le E_{ A } ^{ \lambda }$\nobreak\hspace{0pt},$\allowbreak{}A\le F\left[ e \right]$\nobreak\hspace{0pt},则$\allowbreak{}GE\le GE_{ A } ^{ \lambda }$\nobreak\hspace{0pt},所以对$\allowbreak{}\forall x,y\in G$
+\begin{eqnarray*} GE_{ A } ^{ \lambda }\left ( { x,y } \right ) &=& \bigvee_{ g\in G } E_{ A } ^{ \lambda }\left ( { gx,gy } \right ) \\  &=& \bigvee_{ g\in G } A\left ( { x ^ { -1 } g ^ { -1 } gy } \right )=A\left ( { x ^ { -1 } y } \right )=E_{ A } ^{ \lambda }\left ( { x,y } \right ), \end{eqnarray*}
+\begin{eqnarray*} E_{ F\left[ e \right] } ^{ \lambda }\left ( { x,y } \right ) &=& F\left[ e \right]\left ( { x ^ { -1 } y } \right )=F\left ( { e,x ^ { -1 } y } \right ) \\  &\le& \bigvee_{ g\in G } F\left ( { gx,gy } \right )=GF\left ( { x,y } \right ), \end{eqnarray*}
+即$\allowbreak{}GE\le GE_{ A } ^{ \lambda }\le E_{ A } ^{ \lambda }\le E_{ F\left[ e \right] } ^{ \lambda }\le GF$\nobreak\hspace{0pt},故
+\begin{eqnarray*} \bigvee_{ E\le E_{ A } ^{ \lambda } } \bigvee_{ A\le F\left[ e \right] } \mathcal{C}\left ( { F } \right ) &\le& \bigvee_{ GE\le GF } \mathcal{C}\left ( { F } \right ) \\  &\le& \bigvee_{ GE\le GF } \mathcal{C}\left ( { GF } \right )\le \mathcal{C}\left ( { GF } \right )\le \mathcal{C}\left ( { GE } \right ) \\  &=& \mathcal{C}\left ( { E } \right ). \end{eqnarray*}
+
+
+命题4.6 $\allowbreak{}G$是一个群,$\allowbreak{}I:L ^ { G } \to M$是$\allowbreak{}G$上的一个格值模糊化群理想,则$\allowbreak{}I=I_{ \mathcal{C}_{ I } ^{ \lambda } }$\nobreak\hspace{0pt}.
+
+证明 由于$\allowbreak{}I_{ \mathcal{C}_{ I } ^{ \lambda } } \left ( { A } \right )=\allowbreak{}\bigvee_{ A\le\allowbreak{} E\left[ e \right] } \bigvee_{ E\le\allowbreak{} E_{ K } ^{ \lambda } } I\left ( { K } \right )$\nobreak\hspace{0pt},故只需证$\allowbreak{}I\left ( { A } \right )=\bigvee_{ A\le E\left[ e \right] } \bigvee_{ E\le E_{ K } ^{ \lambda } } I\left ( { K } \right )$即可;
+
+必要性 由于$\allowbreak{}E_{ A } ^{ \lambda }\left[ e \right]\left ( { x } \right )=\allowbreak{}E_{ A } ^{ \lambda }\left ( { e,x } \right )=\allowbreak{}A\left ( { e ^ { -1 } x } \right )=\allowbreak{}A\left ( { x } \right )$\nobreak\hspace{0pt},则$\allowbreak{}E_{ A } ^{ \lambda }\left[ e \right]=A$\nobreak\hspace{0pt},故$\allowbreak{}I\left ( { A } \right )\le\allowbreak{} \bigvee_{ A\le\allowbreak{} E\left[ e \right] } \bigvee_{ E\le\allowbreak{} E_{ K } ^{ \lambda } } I\left ( { K } \right )$\nobreak\hspace{0pt};
+
+充分性 令$\allowbreak{}A\le E\left[ e \right]$\nobreak\hspace{0pt},$\allowbreak{}E\le E_{ K } ^{ \lambda }$\nobreak\hspace{0pt},则
+\begin{eqnarray*} A\left ( { x } \right ) &\le& E\left[ e \right]\left ( { x } \right )=E\left ( { e,x } \right )\le E_{ K } ^{ \lambda }\left ( { e,x } \right ) \\  &=& E_{ K } ^{ \lambda }\left[ e \right]\left ( { x } \right )=K\left ( { x } \right ), \end{eqnarray*}
+\begin{eqnarray*} \bigvee_{ A\le E\left[ e \right] } \bigvee_{ E\le E_{ K } ^{ \lambda } } I\left ( { K } \right ) &\le& \bigvee_{ A\le K } I\left ( { K } \right ) \\  &=& I\left ( { A } \right ). \end{eqnarray*}
+
+
+命题4.7  $\allowbreak{}d:G\times G\times \left[ 0,\infty \right]\to \left[ 0,1 \right]$是一个左不变KM-模糊伪度量,定义$\allowbreak{}I_{ d } :L ^ { G } \to \left[ 0,1 \right]$满足$\allowbreak{}I_{ d } \left ( { A } \right )=\allowbreak{}\bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { A\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right )$\nobreak\hspace{0pt},则$\allowbreak{}I_{ d }$是一个$\allowbreak{}\left[ 0,1 \right]$-模糊群理想.
+
+证明 （IM1）由于
+\begin{eqnarray*} I_{ d } \left ( { \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } \left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ), \end{eqnarray*}
+则$\allowbreak{}I_{ d } \left ( { \chi _{ \left \{ \begin{array}{l} e \end{array} \right \} } } \right )=\top$显然成立;
+
+（IM2）对$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},令$\allowbreak{}A\le B$\nobreak\hspace{0pt},对$\allowbreak{}\forall x\in G$\nobreak\hspace{0pt},有$\allowbreak{}A\left ( { x } \right )\le B\left ( { x } \right )$\nobreak\hspace{0pt},则$\allowbreak{}A\left ( { x } \right )\to d\left ( { e,x,t } \right )\ge B\left ( { x } \right )\to d\left ( { e,x,t } \right )$\nobreak\hspace{0pt},故
+\begin{eqnarray*} \bigwedge_{ x\in G } \left ( { A\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ) \\  &\ge& \bigwedge_{ x\in G } \left ( { B\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ), \end{eqnarray*}
+即$\allowbreak{}I_{ d } \left ( { A } \right )\ge I_{ d } \left ( { B } \right )$\nobreak\hspace{0pt};
+
+（IM3）对$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},则
+\begin{eqnarray*} I_{ d } \left ( { A\vee B } \right ) &=& \bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { \left ( { A\vee B } \right )\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { \left ( { A\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right )\wedge \left ( { B\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { A\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ) \\ \wedge \bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { B\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ) &=& I_{ d } \left ( { A } \right ) \\ \wedge I_{ d } \left ( { B } \right ); \end{eqnarray*}
+（IM4）对$\allowbreak{}\forall A,B\in L ^ { G }$\nobreak\hspace{0pt},由于$\allowbreak{}d\left ( { e,yz,t } \right )\ge\allowbreak{} d\left ( { e,y,\frac { t } { 2 } } \right )\wedge\allowbreak{} d\left ( { e,z,\frac { t } { 2 } } \right )$\nobreak\hspace{0pt},则
+\begin{eqnarray*} \left ( { AB } \right )\left ( { x } \right )\to d\left ( { e,x,t } \right ) &=& \left ( { \bigvee_{ \substack{ yz=x \\ y,z\in G } } A\left ( { y } \right )\wedge B\left ( { z } \right ) } \right )\to d\left ( { e,x,t } \right ) \\  &\ge& \bigwedge_{ \substack{ yz=x \\ y,z\in G } } \left ( { \left ( { A\left ( { y } \right )\to d\left ( { e,y,\frac { t } { 2 } } \right ) } \right )\wedge \left ( { B\left ( { z } \right )\to d\left ( { e,z,\frac { t } { 2 } } \right ) } \right ) } \right ), \end{eqnarray*}
+\begin{eqnarray*} I_{ d } \left ( { AB } \right ) &=& \bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { \left ( { AB } \right )\left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ) \\  &\ge& \bigvee_{ t>0 } \bigwedge_{ \substack{ yz=x \\ y,z\in G } } \left ( { \left ( { A\left ( { y } \right )\to d\left ( { e,y,\frac { t } { 2 } } \right ) } \right )\wedge \left ( { B\left ( { z } \right )\to d\left ( { e,z,\frac { t } { 2 } } \right ) } \right ) } \right ) \\  &\ge& I_{ d } \left ( { A } \right )\wedge I_{ d } \left ( { B } \right ); \end{eqnarray*}
+（IM5）由于$\allowbreak{}A ^ { -1 } \left ( { x } \right )=A\left ( { x ^ { -1 } } \right )$\nobreak\hspace{0pt}，则
+
+\begin{eqnarray*} I_{ d } \left ( { A ^ { -1 } } \right ) &=& \bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { A ^ { -1 } \left ( { x } \right )\to d\left ( { e,x,t } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ x\in G } \left ( { A\left ( { x ^ { -1 } } \right )\to d\left ( { e,x,t } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ x ^ { -1 } \in G } \left ( { A\left ( { x ^ { -1 } } \right )\to d\left ( { e,x ^ { -1 } ,t } \right ) } \right ) \\  &=& I_{ d } \left ( { A } \right ). \end{eqnarray*}
+
+
+命题4.8 $\allowbreak{}d:G\times G\times \left[ 0,\infty \right]\to \left[ 0,1 \right]$是一个左不变KM-模糊伪度量,则$\allowbreak{}\mathcal{C}_{ d } =\mathcal{C}_{ I_{ d } } ^{ \lambda }$\nobreak\hspace{0pt},其中对$\allowbreak{}\forall E\in L ^ { G\times G }$\nobreak\hspace{0pt},$\allowbreak{}\mathcal{C}_{ d } \left ( { E } \right )=\allowbreak{}\bigvee_{ t>0 } \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right )$\nobreak\hspace{0pt}.
+
+证明 由于
+\begin{eqnarray*} \mathcal{C}_{ I_{ d } } \left ( { E } \right ) &=& \bigvee_{ E\le E_{ A } ^{ \lambda } } I_{ d } \left ( { A } \right ) \\  &=& \bigvee_{ E\le E_{ A } ^{ \lambda } } \bigvee_{ t>0 } \bigwedge_{ z\in G } \left ( { A\left ( { z } \right )\to d\left ( { e,z,t } \right ) } \right ), \end{eqnarray*}
+即证对$\allowbreak{}\forall t>0$\nobreak\hspace{0pt},有
+\begin{eqnarray*} \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ) \\  &=& \bigvee_{ E\le E_{ A } ^{ \lambda } } \bigwedge_{ z\in G } \left ( { A\left ( { z } \right )\to d\left ( { e,z,t } \right ) } \right ), \end{eqnarray*}
+（充分性）对$\allowbreak{}\forall A\in L ^ { G }$\nobreak\hspace{0pt},令$\allowbreak{}A\left ( { z } \right )=GE\left ( { e,z } \right )$\nobreak\hspace{0pt}，其中$\allowbreak{}GE\left ( { x,y } \right )=\bigvee_{ g\in G } E\left ( { gx,gy } \right )$\nobreak\hspace{0pt},由于$\allowbreak{}GE$是左不变的，则$\allowbreak{}GE\left ( { x,y } \right )=\allowbreak{}GE\left ( { e,x ^ { -1 } y } \right )=\allowbreak{}A\left ( { x ^ { -1 } y } \right )=\allowbreak{}E_{ A } ^{ \lambda }\left ( { x,y } \right )$\nobreak\hspace{0pt},因此$\allowbreak{}E\le GE=E_{ A } ^{ \lambda }$\nobreak\hspace{0pt},又由于$\allowbreak{}\mathcal{C}_{ d } \left ( { E } \right )=\mathcal{C}_{ d } \left ( { GE } \right )$\nobreak\hspace{0pt},则
+\begin{eqnarray*} I_{ d } \left ( { A } \right ) &=& \bigvee_{ t>0 } \bigwedge_{ z\in G } \left ( { A\left ( { z } \right )\to d\left ( { e,z,t } \right ) } \right ) \\  &=& \bigvee_{ t>0 } \bigwedge_{ z\in G } \left ( { GE\left ( { e,z } \right )\to d\left ( { e,z,t } \right ) } \right ), \end{eqnarray*}
+令$\allowbreak{}z=x ^ { -1 } y$\nobreak\hspace{0pt}，则$\allowbreak{}d\left ( { e,z,t } \right )=d\left ( { x,y,t } \right )$且$\allowbreak{}GE\left ( { e,z } \right )=GE\left ( { x,y } \right )$\nobreak\hspace{0pt},故
+\begin{eqnarray*} \bigwedge_{ z\in G } \left ( { GE\left ( { e,z } \right )\to d\left ( { e,z,t } \right ) } \right ) \\  &=& \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { GE\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ), \end{eqnarray*}
+上式两边对$\allowbreak{}t$取上确界,则$\allowbreak{}I_{ d } \left ( { A } \right )=\mathcal{C}_{ d } \left ( { GE } \right )=\mathcal{C}_{ d } \left ( { E } \right )$\nobreak\hspace{0pt},故$\allowbreak{}\mathcal{C}_{ I_{ d } } ^{ \lambda }\left ( { E } \right )=\allowbreak{}\bigvee_{ E\le\allowbreak{} E_{ A } ^{ \lambda } } I_{ d } \left ( { A } \right )\ge\allowbreak{} \mathcal{C}_{ d }$\nobreak\hspace{0pt};
+
+（必要性）对$\allowbreak{}\forall A\in L ^ { G }$\nobreak\hspace{0pt},若满足$\allowbreak{}E\le E_{ A } ^{ \lambda }$\nobreak\hspace{0pt},则对$\allowbreak{}\forall x,y\in G$\nobreak\hspace{0pt}，$\allowbreak{}E\left ( { x,y } \right )\le E_{ A } ^{ \lambda }\left ( { x,y } \right )=A\left ( { x ^ { -1 } y } \right )$\nobreak\hspace{0pt},由于$\allowbreak{}d\left ( { e,x ^ { -1 } y,t } \right )=d\left ( { x,y,t } \right )$\nobreak\hspace{0pt},因此对$\allowbreak{}\forall t>0$\nobreak\hspace{0pt},
+\begin{eqnarray*} \bigwedge_{ z\in G } \left ( { A\left ( { z } \right )\to d\left ( { e,z,t } \right ) } \right ) \\  &\le& A\left ( { x ^ { -1 } y } \right )\to d\left ( { e,x ^ { -1 } y,t } \right )\le E\left ( { x,y } \right )\to d\left ( { x,y,t } \right ), \end{eqnarray*}
+\begin{eqnarray*} \bigwedge_{ z\in G } \left ( { A\left ( { z } \right )\to d\left ( { e,z,t } \right ) } \right ) \\  &\le& \bigwedge_{ \left ( { x,y } \right )\in G\times G } \left ( { E\left ( { x,y } \right )\to d\left ( { x,y,t } \right ) } \right ), \end{eqnarray*}
+两边对$\allowbreak{}t>0$取上确界，则$\allowbreak{}I_{ d } \left ( { A } \right )\le \mathcal{C}_{ d } \left ( { E } \right )$\nobreak\hspace{0pt},故$\allowbreak{}\mathcal{C}_{ I_{ d } } ^{ \lambda }\left ( { E } \right )=\allowbreak{}\bigvee_{ E\le\allowbreak{} E_{ A } ^{ \lambda } } I_{ d } \left ( { A } \right )\le\allowbreak{} \mathcal{C}_{ d }$\nobreak\hspace{0pt}.
+
+
+\clearpage
+\begin{thebibliography}{10}
+\small
+\bibitem{ref1}
+J. Roe, Index Theory, Coarse Geometry, and Topology of Manifolds, Regional Conference Series in Mathematics, vol. 90, American Mathematical Society (AMS), Providence, RI, 1996.
+
+\bibitem{ref2}
+J. Roe, Lectures on Coarse Geometry, Univ. Lecture Ser., vol. 31, American Mathematical Society, Providence, RI, 2003.
+
+\bibitem{ref3}
+J. Roe, What is a coarse space?, Not. Am. Math. Soc. 53 (2006) 668--669.
+
+\bibitem{ref4}
+I. Protasov, O.I. Protasova, Sketch of group balleans, Mat. Stud. 22 (1) (2004) 10--20.
+
+\bibitem{ref5}
+A. Nicas, D. Rosenthal, Coarse structures on groups, Topol. Appl. 159 (14) (2012) 3215--3228.
+
+\bibitem{ref6}
+L.A. Zadeh, Fuzzy sets, Inf. Control 8 (1965) 338--353.
+
+\bibitem{ref7}
+M. Zarichnyi, Coarse structures and fuzzy metrics, Mat. Stud. 32 (2009) 180--184.
+
+\bibitem{ref8}
+C.H. Yan, (L,*)-valued coarse structures on powersets, Fuzzy Sets Syst. 470 (2023) 108659.
+
+\bibitem{ref9}
+Y.C. Wang, B. Pang, F.G. Shi, Lattice-valued coarse structures, Fuzzy Sets Syst. 499 (2025) 109175.
+
+\bibitem{ref10}
+Gierz G, Hofmann K H, Keimel K, et al. Continuous lattices and domains[M]. Cambridge university press, 2003.
+
+\bibitem{ref11}
+I. Kramosil, J. Michálek, Fuzzy metric and statistical metric spaces, Kybernetika 11 (1975) 326--334.
+\end{thebibliography}
+\end{document}
